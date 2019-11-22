@@ -1,0 +1,114 @@
+body {
+	background-color: #303030;
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+}
+.webTitle {
+	color: #5ebb1e;
+    font-size: 40px;
+    font-weight: bold;
+	border-bottom: solid white 3px;
+	padding-bottom: 20px;
+}
+
+.yourWeight {
+	font-size: 25px;
+	font-weight: bold;
+	color: #AFEEEE;
+	
+}
+.yourHeight {
+	font-size: 25px;
+	font-weight: bold;
+	color: #AFEEEE;
+}
+#kgWeightInput {
+	background-color: #2a2a2a;
+	color: white;
+	border: solid #6ca53c 1.5px;
+	border-radius: 25px;
+	font-size: 15px;
+	padding: 10px;
+	margin-right: 20px;
+}
+#kgWeightInput:focus {
+	background-color: white;
+	color: black;
+}
+#lbWeightInput {
+	background-color: #2a2a2a;
+	color: white;
+	border: solid #6ca53c 1.5px;
+	border-radius: 25px;
+	font-size: 15px;
+	padding: 10px;
+	margin-left: 20px;
+}	
+#lbWeightInput:focus {
+	background-color: white;
+	color: black;
+}
+#cmHeightInput {
+	background-color: #2a2a2a;
+	color: white;
+	border: solid #6ca53c 1.5px;
+	border-radius: 25px;
+	font-size: 15px;
+	padding: 10px;
+	margin-right: 20px;
+}
+#cmHeightInput:focus {
+	background-color: white;
+	color: black;
+}
+#inHeightInput {
+	background-color: #2a2a2a;
+	color: white;
+	border: solid #6ca53c 1.5px;
+	border-radius: 215px;
+	font-size: 15px;
+	padding: 10px;
+	margin-left: 20px;
+}
+#inHeightInput:focus {
+	background-color: white;
+	color: black;
+}
+#kgCalcButton {
+	background-color: #598a2f;
+	color: #bbc3b3;
+	font-size: 15px;
+	border-radius: 5px;
+	border: solid black 0px;
+	margin-top: 15px;
+	margin-right: 75px;
+	padding: 10px;
+	width: 140px;
+}
+#kgCalcButton:hover {
+	color: white;
+}
+#lbCalcButton {
+	background-color: #598a2f;
+	color: #bbc3b3;
+	font-size: 15px;
+	border-radius: 5px;
+	border: solid black 0px;
+	margin-top: 15px;
+	margin-left: 75px;
+	padding: 10px;
+	width: 140px;
+}
+#lbCalcButton:hover {
+	color: white;
+}
+#resulte {
+	color: #5ebb1e;
+	font-size: 25px;
+	
+}
+#range {
+	color: #AFEEEE;
+	font-size: 20px;
+	margin-top: -20px;
+}
