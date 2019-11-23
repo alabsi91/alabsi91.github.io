@@ -86,7 +86,7 @@ body {
 	border: solid black 0px;
 	margin-top: 15px;
 	margin-right: 3%;
-	padding: 12px 45px;
+	padding: 12px 42px;
         
 }
 #kgCalcButton:hover {
@@ -96,11 +96,11 @@ body {
 	background-color: #598a2f;
 	color: #bbc3b3;
 	font-size: 18px;
-	border-radius: 5px;
+	border-radius: 25px;
 	border: solid black 0px;
 	margin-top: 15px;
 	margin-left: 3%;
-	padding: 12px 45px;
+	padding: 12px 42px;
         
 }
 #lbCalcButton:hover {
