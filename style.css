@@ -100,8 +100,9 @@ body {
 	border: solid black 0px;
 	margin-top: 15px;
 	margin-left: 8%;
-	padding: 15px;
-        padding-left: 35px;
+	padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
 }
 #lbCalcButton:hover {
 	color: white;
