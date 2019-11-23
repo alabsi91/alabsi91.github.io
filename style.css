@@ -85,7 +85,7 @@ body {
 	border-radius: 5px;
 	border: solid black 0px;
 	margin-top: 15px;
-	margin-right: 7%;
+	margin-right: 9%;
 	padding: 15px;
 	
 }
@@ -99,7 +99,7 @@ body {
 	border-radius: 5px;
 	border: solid black 0px;
 	margin-top: 15px;
-	margin-left: 7%;
+	margin-left: 9%;
 	padding: 15px;
 }
 #lbCalcButton:hover {
