@@ -87,8 +87,8 @@ body {
 	margin-top: 15px;
 	margin-right: 7%;
 	padding: 10px;
-        padding-left: 17%;
-        padding-right: 17%;
+        max-width: 35%;
+        
 }
 #kgCalcButton:hover {
 	color: white;
