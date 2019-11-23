@@ -1,35 +1,40 @@
 body {
 	background-color: #303030;
-	text-align: center;
+	text-align: ;
 	font-family: Verdana, Geneva, sans-serif;
+	width: 100%;
 }
 .webTitle {
 	color: #5ebb1e;
-    font-size: 40px;
+    font-size: 200%;
     font-weight: bold;
 	border-bottom: solid white 3px;
-	padding-bottom: 20px;
+	padding-bottom: 5%;
+	text-align: center;
 }
 
 .yourWeight {
-	font-size: 25px;
+	font-size: 175%;
 	font-weight: bold;
 	color: #AFEEEE;
-	
+    text-align: center;
 }
 .yourHeight {
-	font-size: 25px;
+	font-size: 175%;
 	font-weight: bold;
 	color: #AFEEEE;
+    text-align: center;
 }
 #kgWeightInput {
 	background-color: #2a2a2a;
 	color: white;
 	border: solid #6ca53c 1.5px;
 	border-radius: 25px;
-	font-size: 15px;
-	padding: 10px;
-	margin-right: 20px;
+	font-size: 90%;
+	padding: 1.5%;
+	margin-right: 3%;
+	margin-left: 12%;
+	width: 30%;
 }
 #kgWeightInput:focus {
 	background-color: white;
@@ -40,9 +45,11 @@ body {
 	color: white;
 	border: solid #6ca53c 1.5px;
 	border-radius: 25px;
-	font-size: 15px;
-	padding: 10px;
-	margin-left: 20px;
+	font-size: 90%;
+	padding: 1.5%;
+	margin-left: 3%;
+	margin-right: 12%;
+	width: 30%;
 }	
 #lbWeightInput:focus {
 	background-color: white;
@@ -53,9 +60,11 @@ body {
 	color: white;
 	border: solid #6ca53c 1.5px;
 	border-radius: 25px;
-	font-size: 15px;
-	padding: 10px;
-	margin-right: 20px;
+	font-size: 90%;
+	padding: 1.5%;
+	margin-right: 3%;
+	margin-left: 12%;
+	width: 30%;
 }
 #cmHeightInput:focus {
 	background-color: white;
@@ -65,10 +74,12 @@ body {
 	background-color: #2a2a2a;
 	color: white;
 	border: solid #6ca53c 1.5px;
-	border-radius: 215px;
-	font-size: 15px;
-	padding: 10px;
-	margin-left: 20px;
+	border-radius: 25px;
+	font-size: 90%;
+	padding: 1.5%;
+	margin-left: 3%;
+	margin-right: 12%;
+	width: 30%;
 }
 #inHeightInput:focus {
 	background-color: white;
@@ -80,10 +91,11 @@ body {
 	font-size: 15px;
 	border-radius: 5px;
 	border: solid black 0px;
-	margin-top: 15px;
-	margin-right: 75px;
-	padding: 10px;
-	width: 140px;
+	margin-top: 1%;
+	margin-right: 10%;
+	margin-left: 18%;
+	padding: 2%;
+	width: 20%;
 }
 #kgCalcButton:hover {
 	color: white;
@@ -95,9 +107,10 @@ body {
 	border-radius: 5px;
 	border: solid black 0px;
 	margin-top: 15px;
-	margin-left: 75px;
-	padding: 10px;
-	width: 140px;
+	margin-left: 10%;
+	margin-right: 18%;
+	padding: 2%;
+	width: 20%;
 }
 #lbCalcButton:hover {
 	color: white;
