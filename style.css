@@ -81,14 +81,14 @@ body {
 #kgCalcButton {
 	background-color: #598a2f;
 	color: #bbc3b3;
-	font-size: 18px;
+	font-size: 15px;
 	border-radius: 25px;
 	border: solid black 0px;
 	margin-top: 15px;
 	margin-right: 7%;
 	padding: 10px;
-        padding-left: 17.5%;
-        padding-right: 17.5%;
+        padding-left: 17%;
+        padding-right: 17%;
 }
 #kgCalcButton:hover {
 	color: white;
