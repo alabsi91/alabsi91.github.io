@@ -94,7 +94,7 @@ div {
 	border: solid black 0px;
 	margin-top: 15px;
 	margin-right: 3%;
-	padding: 10px 42.5px;
+	padding: 10px 42px;
         
 }
 #kgCalcButton:hover {
@@ -108,7 +108,7 @@ div {
 	border: solid black 0px;
 	margin-top: 15px;
 	margin-left: 3%;
-	padding: 10px 42.5px;
+	padding: 10px 42px;
         
 }
 #lbCalcButton:hover {
