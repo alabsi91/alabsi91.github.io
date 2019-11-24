@@ -2,6 +2,13 @@ body {
 	background-color: #303030;
 	text-align: center;
 	font-family: Verdana, Geneva, sans-serif;
+	margin: 0px;
+}
+div {
+	max-width: 375px;
+	margin: auto;
+	padding-top: 20px;
+	padding-bottom: 100px;
 }
 .webTitle {
 	color: #5ebb1e;
@@ -9,6 +16,7 @@ body {
     font-weight: bold;
 	border-bottom: solid white 3px;
 	padding-bottom: 20px;
+	margin: 0px;
 }
 
 .yourWeight {
@@ -86,7 +94,7 @@ body {
 	border: solid black 0px;
 	margin-top: 15px;
 	margin-right: 3%;
-	padding: 12px 45.5px;
+	padding: 10px 44px;
         
 }
 #kgCalcButton:hover {
@@ -100,7 +108,7 @@ body {
 	border: solid black 0px;
 	margin-top: 15px;
 	margin-left: 3%;
-	padding: 12px 45.5px;
+	padding: 10px 44px;
         
 }
 #lbCalcButton:hover {

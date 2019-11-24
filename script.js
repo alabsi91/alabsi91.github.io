@@ -1,8 +1,8 @@
 var yourRange= document.getElementById("range");
+
 function kgCalc() {
 	var kg= document.getElementById("kgWeightInput").value;
     var cm= document.getElementById("cmHeightInput").value;
-	
 	if ( kg < 250 && kg > 20 && cm < 360 && cm > 91 ) {
 	var result= kg/Math.pow(cm/100, 2);
 	var a= result.toFixed(1);
