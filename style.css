@@ -29,7 +29,7 @@ body {
 }
 form {
 	color: white;
-	background-color: black;
+	background-color: #141414;
 	text-align: center;
 	padding: 5px;
 	width: 270px;
@@ -96,7 +96,7 @@ form {
 	border-radius: 25px;
 	border: solid black 0px;
 	margin-top: 15px;
-	padding: 10px 44px;
+	padding: 10px 41.7px;
         
 }
 #kgCalcButton:hover {
@@ -109,7 +109,7 @@ form {
 	border-radius: 25px;
 	border: solid black 0px;
 	margin-top: 15px;
-	padding: 10px 44px;
+	padding: 10px 41.7px;
         
 }
 #lbCalcButton:hover {
