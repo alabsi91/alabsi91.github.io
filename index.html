@@ -6,16 +6,27 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div>
+<div class="main">
 <p class="webTitle">BMI <span style="color:white; font-weight: normal;">Calculator</span></p>
+<br><br>
+<form>
+  <input type="radio" name="systembox" onclick="checksystem()" id="kgbox" checked>Metric Units  
+  <input type="radio" name="systembox" onclick="checksystem()" id="lbbox">Imperial Units
+</form>
+<div id="kgpage">
 <p class="yourWeight">Your Weight</p>
 <input id="kgWeightInput" type="number" placeholder="Kg">
+<p class="yourHeight">Your Height</p>
+<input id="cmHeightInput" type="number" placeholder="Cm"><br>
+<button id="kgCalcButton" onclick="kgCalc()">Calaculate</button>
+</div>
+<div id="lbpage">
+<p class="yourWeight">Your Weight</p>
 <input id="lbWeightInput" type="number" placeholder="Lb">
 <p class="yourHeight">Your Height</p>
-<input id="cmHeightInput" type="number" placeholder="Cm">
 <input id="inHeightInput" type="number" placeholder="In"><br>
-<button id="kgCalcButton" onclick="kgCalc()">Calaculate</button>
 <button id="lbCalcButton" onclick="lbCalc()">Calaculate</button>
+</div>
 <p id="resulte"><br></p>
 <p id="range"><br></p>
 </div>

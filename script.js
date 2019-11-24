@@ -47,3 +47,26 @@ function check(a) {
 	}
 }
 
+function checksystem() {
+	var kgbox= document.getElementById("kgbox");
+	var lbbox= document.getElementById("lbbox");
+    if (kgbox.checked == true) {
+	document.getElementById("lbpage").style.display= "none";
+    document.getElementById("kgpage").style.display= "block"
+	clear();
+	}
+	if (lbbox.checked == true) {
+	document.getElementById("kgpage").style.display= "none";
+	document.getElementById("lbpage").style.display= "block";
+	clear();
+}
+}
+
+function clear() {
+	document.getElementById("kgWeightInput").value="";
+	document.getElementById("cmHeightInput").value="";
+	document.getElementById("range").innerHTML="";
+	document.getElementById("lbWeightInput").value="";
+	document.getElementById("inHeightInput").value="";
+	document.getElementById("resulte").innerHTML="";
+}

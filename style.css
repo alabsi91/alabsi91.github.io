@@ -4,7 +4,10 @@ body {
 	font-family: Verdana, Geneva, sans-serif;
 	margin: 0px;
 }
-div {
+#lbpage {
+	display: none;
+}
+.main {
 	max-width: 375px;
 	margin: auto;
 	padding-top: 20px;
@@ -19,16 +22,20 @@ div {
 	margin: 0px;
 }
 
-.yourWeight {
-	font-size: 25px;
+.yourWeight, .yourHeight  {
+	font-size: 16px;
 	font-weight: bold;
 	color: #AFEEEE;
-	
 }
-.yourHeight {
-	font-size: 25px;
-	font-weight: bold;
-	color: #AFEEEE;
+form {
+	color: white;
+	background-color: black;
+	text-align: center;
+	padding: 5px;
+	width: 270px;
+	margin-left: 47.5px;
+	margin-right: 47.5px;
+	border-radius: 5px;
 }
 #kgWeightInput {
 	background-color: #2a2a2a;
@@ -37,7 +44,6 @@ div {
 	border-radius: 25px;
 	font-size: 15px;
 	padding: 10px;
-	margin-right: 3%;
 	max-width: 35%;
 }
 #kgWeightInput:focus {
@@ -51,7 +57,6 @@ div {
 	border-radius: 25px;
 	font-size: 15px;
 	padding: 10px;
-	margin-left: 3%;
 	max-width: 35%;
 }	
 #lbWeightInput:focus {
@@ -65,7 +70,6 @@ div {
 	border-radius: 25px;
 	font-size: 15px;
 	padding: 10px;
-	margin-right: 3%;
 	max-width: 35%
 }
 #cmHeightInput:focus {
@@ -79,7 +83,6 @@ div {
 	border-radius: 215px;
 	font-size: 15px;
 	padding: 10px;
-	margin-left: 3%;
 	max-width: 35%
 }
 #inHeightInput:focus {
@@ -93,8 +96,7 @@ div {
 	border-radius: 25px;
 	border: solid black 0px;
 	margin-top: 15px;
-	margin-right: 3%;
-	padding: 10px 41.5px;
+	padding: 10px 44px;
         
 }
 #kgCalcButton:hover {
@@ -107,8 +109,7 @@ div {
 	border-radius: 25px;
 	border: solid black 0px;
 	margin-top: 15px;
-	margin-left: 3%;
-	padding: 10px 41.5px;
+	padding: 10px 44px;
         
 }
 #lbCalcButton:hover {
