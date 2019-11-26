@@ -1,127 +1,229 @@
 body {
-	background-color: #303030;
+	background-color: #282828;
 	text-align: center;
-	font-family: Verdana, Geneva, sans-serif;
-	margin: 0px;
+	font-family: Libre Franklin,sans-serif;
+	margin: 3px;
+	color: white;
 }
-#lbpage {
-	display: none;
-}
-.main {
+div {
 	max-width: 375px;
 	margin: auto;
 	padding-top: 20px;
 	padding-bottom: 100px;
 }
-.webTitle {
-	color: #5ebb1e;
-    font-size: 40px;
-    font-weight: bold;
-	border-bottom: solid white 3px;
-	padding-bottom: 20px;
-	margin: 0px;
+.calculator {
+	color: #1ED760;
 }
+#profile {
+	background-color: #1DB954;
+	padding: 0.1px 0px;
+	position: relative;
+}
+#back {
+	position: absolute;
+	top: 16px;
+	left: 5px;
+	color: white;
+	background-color: inherit;
+	border: none;
+	font-size: 30px;
 
-.yourWeight, .yourHeight  {
-	font-size: 16px;
+}
+#back:hover {color: black;}
+#restartbutt {
+	position: absolute;
+	top: 14px;
+	left: 5px;
+	color: black;
+	background-color: inherit;
+	border: none;
+	font-size: 30px;
+}
+#restartbutt:hover {color: #d4d4d4;}
+#bmitip {
+	background-color: inherit;
+	color: #a952ff;
+	position: absolute;
+	right: 25px;
+	top: 60px;
+	border: none;
+}
+#bmitip:hover {color: black;}
+#bmrtip {
+	background-color: inherit;
+	color: #a952ff;
+	position: absolute;
+	right: 25px;
+	top: 365px;
+	border: none;
+}
+#bmrtip:hover {color: black;}
+.topage1 {
+	background-color: #1DB954;
+	color: white;
+	border: none;
+	border-radius: 35px;
 	font-weight: bold;
-	color: #AFEEEE;
-}
-form {
-	color: white;
-	background-color: #141414;
-	text-align: center;
-	padding: 5px;
-	width: 270px;
-	margin-left: 47.5px;
-	margin-right: 47.5px;
-	border-radius: 5px;
-}
-#kgWeightInput {
-	background-color: #2a2a2a;
-	color: white;
-	border: solid #6ca53c 1.5px;
-	border-radius: 25px;
-	font-size: 15px;
-	padding: 10px;
-	max-width: 35%;
-}
-#kgWeightInput:focus {
-	background-color: white;
-	color: black;
-}
-#lbWeightInput {
-	background-color: #2a2a2a;
-	color: white;
-	border: solid #6ca53c 1.5px;
-	border-radius: 25px;
-	font-size: 15px;
-	padding: 10px;
-	max-width: 35%;
-}	
-#lbWeightInput:focus {
-	background-color: white;
-	color: black;
-}
-#cmHeightInput {
-	background-color: #2a2a2a;
-	color: white;
-	border: solid #6ca53c 1.5px;
-	border-radius: 25px;
-	font-size: 15px;
-	padding: 10px;
-	max-width: 35%
-}
-#cmHeightInput:focus {
-	background-color: white;
-	color: black;
-}
-#inHeightInput {
-	background-color: #2a2a2a;
-	color: white;
-	border: solid #6ca53c 1.5px;
-	border-radius: 215px;
-	font-size: 15px;
-	padding: 10px;
-	max-width: 35%
-}
-#inHeightInput:focus {
-	background-color: white;
-	color: black;
-}
-#kgCalcButton {
-	background-color: #598a2f;
-	color: #bbc3b3;
-	font-size: 15px;
-	border-radius: 25px;
-	border: solid black 0px;
-	margin-top: 15px;
-	padding: 10px 41.7px;
-        
-}
-#kgCalcButton:hover {
-	color: white;
-}
-#lbCalcButton {
-	background-color: #598a2f;
-	color: #bbc3b3;
-	font-size: 15px;
-	border-radius: 25px;
-	border: solid black 0px;
-	margin-top: 15px;
-	padding: 10px 41.7px;
-        
-}
-#lbCalcButton:hover {
-	color: white;
-}
-#resulte {
-	color: #5ebb1e;
-	font-size: 25px;
-	
-}
-#range {
-	color: #AFEEEE;
 	font-size: 20px;
-	margin-top: -20px;
+	padding: 25px;
+}
+.topage2 {
+	background-color: #1DB954;
+	color: white;
+	border: none;
+	border-radius: 35px;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 12px 50px;
+}
+#selectsys {
+	background-color: #1DB954;
+	color: white;
+	border: none;
+	border-radius: 35px;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 10px 35px;
+}
+#bmrmethod {
+	background-color: #1DB954;
+	color: white;
+	border: none;
+	border-radius: 35px;
+	font-weight: bold;
+	font-size: 15px;
+	padding: 3px 10px;
+	margin-right: 0px;
+	margin-bottom: 15px;
+}
+#age, #weight, #height, #neck, #waist, #hip {
+	background-color: white;
+	color: black ;
+	border: solid 2px black;
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 14px;
+	width: 220px;
+    padding: 10px;	
+}
+.checkbox {
+	text-align: left;
+	margin-left: 50px;
+	margin-top: 3px;
+}
+#page5 {
+	position: relative;
+}
+#card1  {
+	color: black;
+	width: 325px;
+	height: 150px;
+	background-color: #ededed;
+	margin: auto;
+	margin-top: 34.6px;
+	border-radius: 5px;
+    -webkit-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
+    box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
+}
+#card2 {
+	color: black;
+	width: 325px;
+	height: 250px;
+	background-color: #ededed;
+	margin: auto;
+	margin-top: 34.6px;
+	border-radius: 5px;
+    -webkit-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
+    box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
+}
+.popup {
+	position: absolute;
+	left: 15px;
+	bottom: 30%;
+	background-color: #282828;
+	color: white;
+	border-radius: 0px;
+	text-align: left;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: auto;
+	max-width: 300px;
+	display: none;
+	font-family: sans-serif;
+	font-weight: normal;
+	-webkit-box-shadow: 0px 4px 300px 200px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 4px 300px 200px rgba(0,0,0,0.7);
+    box-shadow: 0px 4px 300px 200px rgba(0,0,0,0.7);
+}
+.popbutt {
+	background-color: #1DB954;
+	color: white;
+	border: none;
+	border-radius: 35px;
+	font-weight: bold;
+	font-size: 15px;
+	padding: 5px 15px;
+	margin-left: 110px;
+	margin-bottom: 15px;
+}
+.container {
+  display: block;
+  color: #1ED760;
+  position: relative;
+  padding-left: 35px;
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  text-align: left;
+  -ms-user-select: none;
+   user-select: none;
+}
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #1DB954;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
