@@ -3,7 +3,7 @@ var user = {
 	age:"0",
 	weight:"0",
 	height:"0",
-	waist:82,
+	waist:"",
 	hip:"",
 	neck:"",
 	activity:"",
@@ -15,7 +15,9 @@ var results = {
 	bmr:"0",
 	dailykcal:"",
 	whtr:"",
-	whtrRange:""
+	whtrRange:"",
+	ibw:"",
+	bfp:""
 };
 function bmi() {
 	if (user.system == "metric") {
@@ -67,7 +69,7 @@ function HarrisBenedictBMR() {
 	break;
 	}
 results.bmr= bmr;
-document.getElementById("bmr").innerHTML=bmr.toFixed(0) + "<span style='font-size: 15px; color: #041432''>" +" kcal/day";
+document.getElementById("bmr").innerHTML=bmr.toFixed(0) + "<span style='font-size: 15px; color: #041432''>" +" kcal/day" + "</span>";
 }
 function MifflinStJeorBMR() {
 	switch (user.gender) {
@@ -197,6 +199,168 @@ function whtrRange() {
 	}
 	document.getElementById("whtrRange").innerHTML=results.whtrRange;
 }
+function ibwBroca() {
+	switch (user.gender) {
+		case "male":
+		 if (user.system == "metric") {
+	         results.ibw= user.height - 100;
+             results.ibw= results.ibw - (results.ibw / 100 * 10);
+		 } else if (user.system == "imperial") {
+			 results.ibw= user.height * 2.54;
+			 results.ibw= results.ibw - 100;
+             results.ibw= results.ibw - (results.ibw / 100 * 10);
+	     }
+		break;
+		case "female":
+		if (user.system == "metric") {
+	         results.ibw= user.height - 100;
+             results.ibw= results.ibw + (results.ibw / 100 * 15);
+		 } else if (user.system == "imperial") {
+			 results.ibw= user.height * 2.54;
+			 results.ibw= results.ibw - 100;
+             results.ibw= results.ibw + (results.ibw / 100 * 15);
+	     }
+		break;
+	}
+	document.getElementById("ibw").innerHTML= results.ibw.toFixed(1) + "<span style='font-size: 15px; color: #041432''>" + " Kilograms" + "</span>";
+}
+function ibwDevine() {
+	switch (user.gender) {
+		case "male":
+		 if (user.system == "metric") {
+			 results.ibw= user.height / 2.54;
+	         results.ibw= results.ibw - 60;
+			 results.ibw= 50 + (results.ibw * 2.3);
+		 } else if (user.system == "imperial") {
+			 results.ibw= user.height - 60;
+			 results.ibw= 50 + (results.ibw * 2.3);
+	     }
+		break;
+		case "female":
+		if (user.system == "metric") {
+	         results.ibw= user.height / 2.54;
+	         results.ibw= results.ibw - 60;
+			 results.ibw= 45.5 + (results.ibw * 2.3);
+		 } else if (user.system == "imperial") {
+			 rresults.ibw= user.height - 60;
+			 results.ibw= 45.5 + (results.ibw * 2.3);
+	     }
+		break;
+	}
+	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: #041432''>" + " Kilograms" + "</span>";
+}
+function ibwRobinson() {
+	switch (user.gender) {
+		case "male":
+		 if (user.system == "metric") {
+			 results.ibw= user.height / 2.54;
+	         results.ibw= results.ibw - 60;
+			 results.ibw= 52 + (results.ibw * 1.9);
+		 } else if (user.system == "imperial") {
+			 results.ibw= user.height - 60;
+			 results.ibw= 52 + (results.ibw * 1.9);
+	     }
+		break;
+		case "female":
+		if (user.system == "metric") {
+	         results.ibw= user.height / 2.54;
+	         results.ibw= results.ibw - 60;
+			 results.ibw= 49 + (results.ibw * 1.7);
+		 } else if (user.system == "imperial") {
+			 rresults.ibw= user.height - 60;
+			 results.ibw= 49 + (results.ibw * 1.7);
+	     }
+		break;
+	}
+	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: #041432''>" + " Kilograms" + "</span>";
+}
+function ibwMillier() {
+	switch (user.gender) {
+		case "male":
+		 if (user.system == "metric") {
+			 results.ibw= user.height / 2.54;
+	         results.ibw= results.ibw - 60;
+			 results.ibw= 56.2 + (results.ibw * 1.41);
+		 } else if (user.system == "imperial") {
+			 results.ibw= user.height - 60;
+			 results.ibw= 56.2 + (results.ibw * 1.41);
+	     }
+		break;
+		case "female":
+		if (user.system == "metric") {
+	         results.ibw= user.height / 2.54;
+	         results.ibw= results.ibw - 60;
+			 results.ibw= 53.1 + (results.ibw * 1.36);
+		 } else if (user.system == "imperial") {
+			 rresults.ibw= user.height - 60;
+			 results.ibw= 53.1 + (results.ibw * 1.36);
+	     }
+		break;
+	}
+	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: #041432''>" + " Kilograms" + "</span>";
+}
+function ibwHamwi() {
+	switch (user.gender) {
+		case "male":
+		 if (user.system == "metric") {
+			 results.ibw= user.height / 2.54;
+	         results.ibw= results.ibw - 60;
+			 results.ibw= 48 + (results.ibw * 2.7);
+		 } else if (user.system == "imperial") {
+			 results.ibw= user.height - 60;
+			 results.ibw= 48 + (results.ibw * 2.7);
+	     }
+		break;
+		case "female":
+		if (user.system == "metric") {
+	         results.ibw= user.height / 2.54;
+	         results.ibw= results.ibw - 60;
+			 results.ibw= 45.5 + (results.ibw * 2.2);
+		 } else if (user.system == "imperial") {
+			 rresults.ibw= user.height - 60;
+			 results.ibw= 45.5 + (results.ibw * 2.2);
+	     }
+		break;
+	}
+	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: #041432''>" + " Kilograms" + "</span>";
+}
+function ibwLemmens() {
+		 if (user.system == "metric") {
+	         results.ibw= 22 * Math.pow(user.height/100, 2);
+		 } else if (user.system == "imperial") {
+			 results.ibw= user.height / 39.37;
+			 results.ibw= 22 * Math.pow(results.ibw, 2);
+		 }
+
+	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: #041432''>" + " Kilograms" + "</span>";
+}
+function ibwmethod() {
+	var formula= document.getElementById("ibwmethod").value;
+	if (formula == "borca") {
+		ibwBroca();
+	} else if (formula == "davine") {
+		ibwDevine();
+	} else if (formula == "robinson") {
+		ibwRobinson();
+	} else if (formula == "miller") {
+		ibwMillier();
+	} else if (formula == "hamwi") {
+		ibwHamwi();
+	} else if (formula == "lemmens") {
+		ibwLemmens();
+	}
+}
+function BFPbmi() {
+	switch (user.gender) {
+		case ("male"):
+		 results.bfp= 1.20 * results.bmi + 0.23 * user.age - 16.2;
+		 break;
+		 case ("female"):
+		 results.bfp= 1.20 * results.bmi + 0.23 * user.age - 5.4;
+		 break;
+	}
+	document.getElementById("bfp").innerHTML= results.bfp.toFixed(1) + "%";
+}
 function topage1() {
 	document.getElementById("page1").style.display="block";
 	document.getElementById("profile").style.display="block";
@@ -307,6 +471,12 @@ function topage5() {
 	HarrisBenedictBMR();
 	activityMultipier();
 	whtr();
+	ibwBroca();
+	BFPbmi();
+	var step1 = 1.29579 - 0.35004 * Math.log(10) * (user.waist + user.hip - user.neck) + 0.22100 * Math.log(10) * (user.height);
+	var bf = (495 / step1) - 450;
+	var fm= bf * user.weight;
+	console.log(fm);
 }
 function toback() {
 	if (document.getElementById("page1").style.display == "block") {
@@ -348,5 +518,12 @@ function whtrpop() {
 	    document.getElementById("whtrpop").style.display="none";
 	} else {
 		document.getElementById("whtrpop").style.display="block";
+	}
+}
+function ibwpop() {
+	if (document.getElementById("ibwpop").style.display == "block") {
+	    document.getElementById("ibwpop").style.display="none";
+	} else {
+		document.getElementById("ibwpop").style.display="block";
 	}
 }

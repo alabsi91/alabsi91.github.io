@@ -59,15 +59,15 @@
         <div id="page3" style="display: none">
             <br>
             <h2>Add your neck size</h2>
-            <input id="neck" type="number" placeholder="Your Neck Size">
+            <input id="neck" type="number" placeholder="Your Neck Size" value="38">
             <br>
             <br>
             <h2>Add your waist size</h2>
-            <input id="waist" type="number" placeholder="Your Waist Size">
+            <input id="waist" type="number" placeholder="Your Waist Size" value="81">
             <br>
             <br>
             <h2>Add your hip size</h2>
-            <input id="hip" type="number" placeholder="Your Hip Size">
+            <input id="hip" type="number" placeholder="Your Hip Size" value="90">
             <br><br><br><br><br><br>
             <button class="topage2" onclick="topage4()">NEXT → </button>
             <br>
@@ -120,12 +120,8 @@
                 <h1 style="margin-top: 0px; margin-bottom: 0px; color: #a21b60">BMI</h1>
                 <h2 style="margin-top: 5px">Your Body Mass Index</h2>
 				<h1 id="bmi" style="color: #007f80"><br></h1>
-                <h2 id="bmiRange">
-                <br>
-                </h2>
-                <h3 id="bmiGoal">
-                <br>
-                </h3>
+                <h2 id="bmiRange"><br></h2>
+                <h3 id="bmiGoal"><br></h3>
             </div>
 			
             <div id="card2">
@@ -150,7 +146,32 @@
                 <h2 style="margin-top: 5px; font-size: 23px">Your Waist to Height Ratio</h2>
                 <h1 id="whtr" style="color: #007f80"><br></h1><br>
                 <h2 id="whtrRange" style="margin-bottom: 0px; margin-top: 0px"><br></h2>
-				<h3 id="whtrGoal">
+				<h3 id="whtrGoal"></h3>
+            </div>
+			
+			<div id="card4">
+                <button id="ibwtip" class="material-icons" onclick="ibwpop()">error_outline</button>
+                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #a21b60">IBW</h1><br>
+				<h4 style="margin-top: 0px; margin-bottom: 3px">IBW Method By:</h4>
+                <select id="ibwmethod" onchange="ibwmethod()">
+                    <option value="borca">The Borca Index</option>
+                    <option value="davine">The Davine Formula</option>
+					<option value="robinson">Robinson Formula</option>
+					<option value="miller">The Miller Formula</option>
+					<option value="hamwi">The Hamwi Formula</option>
+					<option value="lemmens">Lemmens Formula</option>
+                </select>
+				<br><br>
+                <h2 style="margin-top: 5px; font-size: 23px">Your Ideal Weight</h2>
+                <h1 id="ibw" style="color: #007f80"><br></h1><br>
+            </div>
+			
+			<div id="card5">
+                <button id="bfptip" class="material-icons" onclick="bfppop()">error_outline</button>
+                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #a21b60">BFP</h1><br>
+                <h2 style="margin-top: 5px; font-size: 23px">Your Body Fat Percentage</h2>
+                <h1 id="bfp" style="color: #007f80"><br></h1><br>
+                <h2 id="whtrRange" style="margin-bottom: 0px; margin-top: 0px"><br></h2>
             </div>
 
             <div class="popup" id="bmipop">
@@ -169,6 +190,12 @@
                 <h3>WHtR METHOD</h3>
                 <p style="font-family: sans-serif">Waist to Height Ratio calculates your estimated waist-height ratio, which effectively indicates centralized obesity and cardiometabolic risk. WHtR is a measure of body fat distribution. Its higher value indicates a higher risk of cardiovascular diseases associated with obesity.</p>
 			<button class="popbutt" onclick="whtrpop()">DONE</button>
+            </div>
+			
+			<div class="popup" id="ibwpop">
+                <h3>IDEAL WEIGHT</h3>
+                <p style="font-family: sans-serif">The IBW (Ideal Weight) indicates the ideal bodyweight based on your gender and height. Different formulas are used for the calculation of IBW. You can change the formula selection from the drop-down menu.</p>
+			<button class="popbutt" onclick="ibwpop()">DONE</button>
             </div>
 			
         </div>
