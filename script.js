@@ -3,7 +3,7 @@ var user = {
 	age:"0",
 	weight:"0",
 	height:"0",
-	waist:"82",
+	waist:82,
 	hip:"",
 	neck:"",
 	activity:"",
@@ -30,15 +30,19 @@ function bmi() {
 function bmiRange() {
 		if (results.bmi < 18.5 && user.age >= 20) {
 			results.bmirange= "Underweight";
+			document.getElementById("bmiRange").style.color= "#d0a50b";
 			document.getElementById("bmiGoal").innerHTML="You Should Gain Some Weight";
 		} else if (results.bmi >= 18.5 && 24.9 > results.bmi && user.age >= 20) {
 			results.bmirange= "Normal Weight";
+			document.getElementById("bmiRange").style.color= "#31b735";
 			document.getElementById("bmiGoal").innerHTML="You Should Sustain Your Weight";
 		} else if (results.bmi > 25 && 29.9 > results.bmi && user.age >= 20) {
 			results.bmirange= "Overweight";
+			document.getElementById("bmiRange").style.color= "#d0a50b";
 			document.getElementById("bmiGoal").innerHTML="You Should Lose Some Weight";
 		} else if (results.bmi > 30 && user.age >= 20) {
 			results.bmirange= "Obese";
+			document.getElementById("bmiRange").style.color= "#dc2900";
 			document.getElementById("bmiGoal").innerHTML="You Should Lose Weight";
 		} else {
 			results.bmirange= "Child or Teen";
@@ -63,7 +67,7 @@ function HarrisBenedictBMR() {
 	break;
 	}
 results.bmr= bmr;
-document.getElementById("bmr").innerHTML=bmr.toFixed(0) + "<span style='font-size: 15px'>" +" kcal/day";
+document.getElementById("bmr").innerHTML=bmr.toFixed(0) + "<span style='font-size: 15px; color: #041432''>" +" kcal/day";
 }
 function MifflinStJeorBMR() {
 	switch (user.gender) {
@@ -83,7 +87,7 @@ function MifflinStJeorBMR() {
 	    break;
 	}
 results.bmr= bmr;
-document.getElementById("bmr").innerHTML=bmr.toFixed(0) + "<span style='font-size: 15px'>" + "kcal/day"+ "</span>" ;
+document.getElementById("bmr").innerHTML=bmr.toFixed(0) + "<span style='font-size: 15px; color: #041432'>" + " kcal/day"+ "</span>" ;
 }
 function activityMultipier() {
 	if (user.activity == "sedentary") {
@@ -97,7 +101,7 @@ function activityMultipier() {
 	} else if (user.activity == "extra") {
 		results.dailykcal = results.bmr*1.9;
 	}
-	document.getElementById("intake").innerHTML= results.dailykcal.toFixed(0) + "<span style='font-size: 15px'>"  + " kcal/day"+ "</span>";
+	document.getElementById("intake").innerHTML= results.dailykcal.toFixed(0) + "<span style='font-size: 15px; color: #041432'>"  + " kcal/day"+ "</span>";
 }
 function bmrmethod() {
 	if (document.getElementById("bmrmethod").value == "harris") {
@@ -110,54 +114,88 @@ function bmrmethod() {
 }
 function whtr() {
 	results.whtr= user.waist / user.height;
+	document.getElementById("whtr").innerHTML=results.whtr.toFixed(2);
 	whtrRange();
-	document.getElementById("bmi").innerHTML=results.whtr;
 }
 function whtrRange() {
 	switch (user.gender) {
 		case "male":
 	if (results.whtr <= 0.34 && user.age >= 20) {
 		results.whtrRange= "Extremely Slim";
+		document.getElementById("whtrRange").style.color= "#dc2900";
+		document.getElementById("whtrGoal").innerHTML="You Should Gain Weight";
 	} else if (results.whtr > 0.35 && 0.42 > results.whtr && user.age >= 20) {
-		results.whtrRange= "slim";
+		results.whtrRange= "Slim";
+		document.getElementById("whtrRange").style.color= "#d0a50b";
+		document.getElementById("whtrGoal").innerHTML="You Should Gain Some Weight";
 	} else if (results.whtr > 0.43 && 0.52 > results.whtr && user.age >= 20) {
-		results.whtrRange= "healthy";
+		results.whtrRange= "Healthy";
+		document.getElementById("whtrRange").style.color= "#31b735";
+		document.getElementById("whtrGoal").innerHTML="You Should Sustain Your Weight";
 	} else if (results.whtr > 0.53 && 0.57 > results.whtr && user.age >= 20) {
-		results.whtrRange= "overweight";
+		results.whtrRange= "Overweight";
+		document.getElementById("whtrRange").style.color= "#d0a50b";
+		document.getElementById("whtrGoal").innerHTML="You Should Lose Some Weight";
 	} else if (results.whtr > 0.58 && 0.62 > results.whtr && user.age >= 20) {
-		results.whtrRange= "very overweight";
+		results.whtrRange= "Very overweight";
+		document.getElementById("whtrRange").style.color= "#dc2900";
+		document.getElementById("whtrGoal").innerHTML="You Should Lose Some Weight";
 	} else if (results.whtr >= 0.63 && user.age >= 20) {
-		results.whtrRange= "obese";
+		results.whtrRange= "Obese";
+		document.getElementById("whtrGoal").innerHTML="You Should Lose Weight";
+		document.getElementById("whtrRange").style.color= "#dc2900";
 	}
 	break;
 		case "female":
 		if (results.whtr <= 0.34 && user.age >= 20) {
 		results.whtrRange= "Extremely Slim";
+		document.getElementById("whtrRange").style.color= "#dc2900";
+		document.getElementById("whtrGoal").innerHTML="You Should Gain Weight";
 	} else if (results.whtr > 0.35 && 0.41 > results.whtr && user.age >= 20) {
-		results.whtrRange= "slim";
+		results.whtrRange= "Slim";
+		document.getElementById("whtrRange").style.color= "#d0a50b";
+		document.getElementById("whtrGoal").innerHTML="You Should Gain Some Weight";
 	} else if (results.whtr > 0.42 && 0.48 > results.whtr && user.age >= 20) {
-		results.whtrRange= "healthy";
+		results.whtrRange= "Healthy";
+		document.getElementById("whtrRange").style.color= "#31b735";
+		document.getElementById("whtrGoal").innerHTML="You Should Sustain Your Weight";
 	} else if (results.whtr > 0.49 && 0.53 > results.whtr && user.age >= 20) {
-		results.whtrRange= "overweight";
+		results.whtrRange= "Overweight";
+		document.getElementById("whtrRange").style.color= "#d0a50b";
+		document.getElementById("whtrGoal").innerHTML="You Should Lose Some Weight";
 	} else if (results.whtr > 0.54 && 0.57 > results.whtr && user.age >= 20) {
-		results.whtrRange= "very overweight";
+		results.whtrRange= "Very overweight";
+		document.getElementById("whtrRange").style.color= "#dc2900";
+		document.getElementById("whtrGoal").innerHTML="You Should Lose Weight";
 	} else if (results.whtr >= 0.58 && user.age >= 20) {
-		results.whtrRange= "obese";
+		results.whtrRange= "Obese";
+		document.getElementById("whtrGoal").innerHTML="You Should Lose Weight";
+		document.getElementById("whtrRange").style.color= "#dc2900";
 	}
 	break;
 	}
 	if (results.whtr <= 0.34 && user.age < 20) {
 		results.whtrRange= "Extremely Slim";
+		document.getElementById("whtrRange").style.color= "#dc2900";
+		document.getElementById("whtrGoal").innerHTML="You Should Gain Weight";
 	} else if (results.whtr > 0.35 && 0.45 > results.whtr && user.age < 20) {
-		results.whtrRange= "slim";
+		results.whtrRange= "Slim";
+		document.getElementById("whtrRange").style.color= "#d0a50b";
+		document.getElementById("whtrGoal").innerHTML="You Should Gain Some Weight";
 	} else if (results.whtr > 0.46 && 0.51 > results.whtr && user.age < 20) {
-		results.whtrRange= "healthy";
+		results.whtrRange= "Healthy";
+		document.getElementById("whtrRange").style.color= "#31b735";
+		document.getElementById("whtrGoal").innerHTML="You Should Sustain Your Weight";
 	} else if (results.whtr > 0.52 && 0.63 > results.whtr && user.age < 20) {
-		results.whtrRange= "overweight";
+		results.whtrRange= "Overweight";
+		document.getElementById("whtrRange").style.color= "#d0a50b";
+		document.getElementById("whtrGoal").innerHTML="You Should Lose Some Weight";
 	} else if (results.whtr >= 0.64 && user.age < 20) {
-		results.whtrRange= "obese";
+		results.whtrRange= "Obese";
+		document.getElementById("whtrRange").style.color= "#dc2900";
+		document.getElementById("whtrGoal").innerHTML="You Should Lose Weight";
 	}
-	console.log(results.whtrRange);
+	document.getElementById("whtrRange").innerHTML=results.whtrRange;
 }
 function topage1() {
 	document.getElementById("page1").style.display="block";
@@ -245,7 +283,7 @@ function topage5() {
 	document.getElementById("page5").style.display="block";
 	document.getElementById("page4").style.display="none";
 	document.getElementById("profile").style.display="none";
-	document.getElementById("body").style.backgroundColor="#a952ff";
+    document.getElementById("body").style.backgroundImage="linear-gradient(60deg, #29323c 0%, #485563 100%)";
 	
 	var sedentary= document.getElementById("sedentary");
 	var light= document.getElementById("light");
@@ -268,6 +306,7 @@ function topage5() {
 	bmi();
 	HarrisBenedictBMR();
 	activityMultipier();
+	whtr();
 }
 function toback() {
 	if (document.getElementById("page1").style.display == "block") {
@@ -288,7 +327,7 @@ function toback() {
 function restart() {
 	document.getElementById("welcomePage").style.display="block";
 	document.getElementById("page5").style.display="none";
-    document.getElementById("body").style.backgroundColor="#282828";
+    document.getElementById("body").style.backgroundImage="none";
 }
 function bmipop() {
 	if (document.getElementById("bmipop").style.display == "block") {
@@ -302,5 +341,12 @@ function bmrpop() {
 	    document.getElementById("bmrpop").style.display="none";
 	} else {
 		document.getElementById("bmrpop").style.display="block";
+	}
+}
+function whtrpop() {
+	if (document.getElementById("whtrpop").style.display == "block") {
+	    document.getElementById("whtrpop").style.display="none";
+	} else {
+		document.getElementById("whtrpop").style.display="block";
 	}
 }
