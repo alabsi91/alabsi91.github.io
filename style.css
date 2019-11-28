@@ -7,9 +7,7 @@ body {
 	
 }
 div {
-	/* position: relative; */
 	max-width: 375px;
-	/* height: 500px; */
 	margin: auto;
 	padding-top: 20px;
 	padding-bottom: 100px;
@@ -118,7 +116,7 @@ div {
 	position: absolute;
 	margin: auto;
 	bottom: 0;
-	right: 60px;
+	right: 15%;
 	color: white;
 	border: none;
 	border-radius: 35px;
@@ -280,7 +278,7 @@ div {
 .popup {
 	position: fixed;
 	bottom: 35%;
-	left: 33%;
+	margin-left: 14px;
 	background-color: #282828;
 	color: white;
 	border: solid 1px #1db954;
@@ -289,7 +287,6 @@ div {
 	padding: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
-	margin: auto;
 	max-width: 300px;
 	display: none;
 	font-family: sans-serif;
@@ -300,17 +297,6 @@ div {
 }
 #bmipop {
 	bottom: 25%;
-}
-#bmrpop {
-	/* bottom: 60%; */
-	/* position: fixed; */
-	/* left: 33%; */
-}
-#whtrpop {
-	/* bottom: 38%; */
-}
-#ibwpop {
-	/* bottom: 23%; */
 }
 .popbutt {
 	background-color: #1DB954;
