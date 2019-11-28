@@ -1,11 +1,34 @@
 body {
-	background-color: #100e17;
+	background-color: #071A23;
 	text-align: center;
-	font-family: Libre Franklin,sans-serif;
+	font-family: 'Fira Sans', sans-serif;
 	margin: 3px;
 	color: white;
-	
 }
+.pg {
+	position: absolute;
+	left: 0px;
+	margin: auto;
+	padding: 0px;
+	width: 369px;
+	height: 373px;
+	background-image: url(b1.jpg);
+	background-position: center;
+	background-size: cover;
+	background-color: #071A23;
+	background-blend-mode: overlay;
+}
+
+.blur {
+	position: absolute;
+	left: 0;
+	top: 367px;
+	width: 370px;
+	height: 200px;
+	background-color: #071A23;
+	box-shadow: 0px -21px 50px 48px rgba(7,26,35,1);
+}
+
 div {
 	max-width: 375px;
 	margin: auto;
@@ -14,8 +37,9 @@ div {
 }
 .calculator {
 	position: absolute;
-	top: 150px;
+	top: 282px;
 	font-size: 50px;
+	font-weight: BOLDER;
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -23,13 +47,13 @@ div {
 #welcomePage {
 	position: relative;
 	height: 500px;
-	
+	padding: 0px;
 }
 #profile {
     position: relative;
-	height: 65px;
-	background-color: black;
-	padding: 0.1px 0px;
+    height: 65px;
+    background-color: #153947;
+    padding: 0.1px 0px;
 }
 #profile span {
 	position: absolute;
@@ -115,14 +139,14 @@ div {
 .topage1 {
 	position: absolute;
 	margin: auto;
-	bottom: 0;
-	right: 15%;
+	TOP: 569PX;
+	right: 25.5px;
 	color: white;
 	border: none;
-	border-radius: 35px;
+	border-radius: 15px;
 	font-weight: bold;
 	font-size: 20px;
-	padding: 25px;
+	padding: 16px 83px;
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
 	-webkit-box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
 	-moz-box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
@@ -133,25 +157,27 @@ div {
 	color: black;
 	}
 .topage2 {
+	/* width: 153px; */
+	/* height: 23px; */
 	color: white;
 	border: none;
-	border-radius: 35px;
+	border-radius: 15px;
 	font-weight: bold;
 	font-size: 20px;
-	padding: 25px 60px;
+	padding: 16px 118px;
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
 	-webkit-box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
-    box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
+	box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
 }
 .topage2:hover {
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 50%);
 	color: black;
 }
 #selectsys {
-	background-color: #000000;
+	background-color: #0d3342;
 	color: white;
-	border: solid 2px #ea4259;
+	border: solid 2px #f5af19;
 	border-radius: 35px;
 	font-weight: bold;
 	font-size: 20px;
@@ -169,10 +195,10 @@ div {
 	margin-bottom: 0px;
 }
 #age, #weight, #height, #neck, #waist, #hip {
-	background-color: #3a3348;
+	background-color: #153947;
 	color: white;
-	border: solid 3px white;
-	border-radius: 30px;
+	border: solid 3px #f5af19;
+	border-radius: 15px;
 	font-weight: bold;
 	font-size: 14px;
 	width: 220px;
@@ -182,15 +208,16 @@ div {
 	box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1);
 }
 #page2 input:focus {
-	border: solid 3px #ea4259;
+	border: solid 3px white;
 }
 #page2 input::placeholder {
 	color: #6d6d6e;
 }
-.checkbox {
-	text-align: left;
-	margin-left: 50px;
+.checkbox1 {
+	text-align: center;
+	margin-left: -11px;
 	margin-top: 3px;
+	color: #237D91;
 }
 #page5 {
 	position: relative;
@@ -279,9 +306,9 @@ div {
 	position: fixed;
 	bottom: 35%;
 	margin-left: 14px;
-	background-color: #282828;
+	background-color: #0C2935;
 	color: white;
-	border: solid 1px #1db954;
+	border: solid 1px #F5AF19;
 	border-radius: 10px;
 	text-align: left;
 	padding: 10px;
@@ -299,7 +326,7 @@ div {
 	bottom: 25%;
 }
 .popbutt {
-	background-color: #1DB954;
+	background-color: #F5AF19;
 	color: white;
 	border: none;
 	border-radius: 35px;
@@ -308,20 +335,25 @@ div {
 	padding: 5px 15px;
 	margin-left: 110px;
 	margin-bottom: 15px;
+	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
+}
+.popbutt:hover {
+	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 50%);
+	color: black;
 }
 .container {
   display: block;
-  color: #4cffd6;
+  color: #ffffff;
   position: relative;
-  padding-left: 35px;
-  margin-left: 15px;
+  padding-top: 9px;
+  padding-left: 0px;
+  margin-left: -5px;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 29px;
   -webkit-user-select: none;
   -moz-user-select: none;
-  text-align: left;
+  text-align: center;
   -ms-user-select: none;
-  user-select: none;
 }
 /* Hide the browser's default radio button */
 .container input {
@@ -333,12 +365,13 @@ div {
 /* Create a custom radio button */
 .checkmark {
   position: absolute;
+  z-index: -1;
   top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
+  left: 42px;
+  height: 55px;
+  width: 292px;
+  background-color: #0D3342;
+  border-radius: 7px;
 }
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
@@ -346,7 +379,7 @@ div {
 }
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #fd800c;
+  background-color: #F5AF19;
 }
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
@@ -360,6 +393,69 @@ div {
 }
 /* Style the indicator (dot/circle) */
 .container .checkmark:after {
+ 	top: 8.5px;
+	left: 8.5px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+
+
+.container1 {
+  display: block;
+  color: #ffffff;
+  position: relative;
+  padding-top: 9px;
+  padding-left: 0px;
+  margin-left: -6px;
+  cursor: pointer;
+  font-size: 28px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  text-align: center;
+  -ms-user-select: none;
+}
+/* Hide the browser's default radio button */
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+/* Create a custom radio button */
+.checkmark1 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 17px;
+  height: 77px;
+  width: 345px;
+  background-color: #0D3342;
+  border-radius: 7px;
+}
+/* On mouse-over, add a grey background color */
+.container1:hover input ~ .checkmark1 {
+  background-color: #ccc;
+}
+/* When the radio button is checked, add a blue background */
+.container1 input:checked ~ .checkmark1 {
+  background-color: #F5AF19;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark1:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.container1 input:checked ~ .checkmark1:after {
+  display: block;
+}
+/* Style the indicator (dot/circle) */
+.container1 .checkmark1:after {
  	top: 8.5px;
 	left: 8.5px;
 	width: 8px;

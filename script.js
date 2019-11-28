@@ -17,7 +17,8 @@ var results = {
 	whtr:"",
 	whtrRange:"",
 	ibw:"",
-	bfp:""
+	bfp:"",
+	lbm:""
 };
 function bmi() {
 	if (user.system == "metric") {
@@ -371,6 +372,9 @@ function BFPbmi() {
 		 break;
 	}
 	document.getElementById("bfp").innerHTML= results.bfp.toFixed(1) + "%";
+}
+function lbmBoer () {
+	results.lbm= (0.407 * user.weight)
 }
 function topage1() {
 	document.getElementById("page1").style.display="block";
