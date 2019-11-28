@@ -126,7 +126,8 @@ function bmrmethod() {
 }
 function whtr() {
 	results.whtr= user.waist / user.height;
-	document.getElementById("whtr").innerHTML=results.whtr.toFixed(2);
+	results.whtr= results.whtr.toFixed(2);
+	document.getElementById("whtr").innerHTML=results.whtr;
 	whtrRange();
 }
 function whtrRange() {
@@ -457,7 +458,7 @@ function topage5() {
 	document.getElementById("page5").style.display="block";
 	document.getElementById("page4").style.display="none";
 	document.getElementById("profile").style.display="none";
-    document.getElementById("body").style.backgroundImage="linear-gradient(60deg, #29323c 0%, #485563 100%)";
+    // document.getElementById("body").style.backgroundImage="linear-gradient(60deg, #29323c 0%, #485563 100%)"; //
 	
 	var sedentary= document.getElementById("sedentary");
 	var light= document.getElementById("light");
@@ -483,10 +484,8 @@ function topage5() {
 	whtr();
 	ibwBroca();
 	BFPbmi();
-	var step1 = 1.29579 - 0.35004 * Math.log(10) * (user.waist + user.hip - user.neck) + 0.22100 * Math.log(10) * (user.height);
-	var bf = (495 / step1) - 450;
-	var fm= bf * user.weight;
-	console.log(fm);
+	console.log(user);
+	console.log(results);
 }
 function toback() {
 	if (document.getElementById("page1").style.display == "block") {

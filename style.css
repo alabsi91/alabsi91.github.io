@@ -1,23 +1,48 @@
 body {
-	background-color: #282828;
+	background-color: #100e17;
 	text-align: center;
 	font-family: Libre Franklin,sans-serif;
 	margin: 3px;
 	color: white;
+	
 }
 div {
+	/* position: relative; */
 	max-width: 375px;
+	/* height: 500px; */
 	margin: auto;
 	padding-top: 20px;
 	padding-bottom: 100px;
 }
 .calculator {
-	color: #1ED760;
+	position: absolute;
+	top: 150px;
+	font-size: 50px;
+	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#welcomePage {
+	position: relative;
+	height: 500px;
+	
 }
 #profile {
-	background-color: #1DB954;
+    position: relative;
+	height: 65px;
+	background-color: black;
 	padding: 0.1px 0px;
-	position: relative;
+}
+#profile span {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	height: 5px;
+	width: 375px;
+	margin: auto;
+	padding: 0px;
+	padding-top: 3px;
+	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
 }
 #back {
 	position: absolute;
@@ -39,7 +64,11 @@ div {
 	border: none;
 	font-size: 30px;
 }
-#restartbutt:hover {color: black;}
+#restartbutt:hover {
+	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	}
 #bmitip {
 	background-color: rgba(0, 0, 0, 0);
 	color: black;
@@ -54,7 +83,7 @@ div {
 	color: black;
 	position: absolute;
 	right: 25px;
-	top: 365px;
+	top: 385px;
 	border: none;
 }
 #bmrtip:hover {color: #A40606;}
@@ -63,7 +92,7 @@ div {
 	color: black;
 	position: absolute;
 	right: 25px;
-	top: 820px;
+	top: 840px;
 	border: none;
 }
 #whtrtip:hover {color: #A40606;}
@@ -72,7 +101,7 @@ div {
 	color: black;
 	position: absolute;
 	right: 25px;
-	top: 1125px;
+	top: 1145px;
 	border: none;
 }
 #ibwtip:hover {color: #A40606;}
@@ -81,32 +110,49 @@ div {
 	color: black;
 	position: absolute;
 	right: 25px;
-	top: 1430px;
+	top: 1450px;
 	border: none;
 }
 #bfptip:hover {color: #A40606;}
 .topage1 {
-	background-color: #1DB954;
+	position: absolute;
+	bottom: 25px;
+	right: 45px;
 	color: white;
 	border: none;
 	border-radius: 35px;
 	font-weight: bold;
 	font-size: 20px;
 	padding: 25px;
+	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
+	-webkit-box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
+    box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
 }
+.topage1:hover {
+	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 50%);
+	color: black;
+	}
 .topage2 {
-	background-color: #1DB954;
 	color: white;
 	border: none;
 	border-radius: 35px;
 	font-weight: bold;
 	font-size: 20px;
-	padding: 12px 50px;
+	padding: 25px 60px;
+	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
+	-webkit-box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
+    box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
+}
+.topage2:hover {
+	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 50%);
+	color: black;
 }
 #selectsys {
-	background-color: #1DB954;
+	background-color: #000000;
 	color: white;
-	border: none;
+	border: solid 1px #ea4259;
 	border-radius: 35px;
 	font-weight: bold;
 	font-size: 20px;
@@ -124,14 +170,23 @@ div {
 	margin-bottom: 0px;
 }
 #age, #weight, #height, #neck, #waist, #hip {
-	background-color: white;
-	color: black ;
-	border: solid 2px black;
-	border-radius: 20px;
+	background-color: #3a3348;
+	color: white;
+	border: solid 3px white;
+	border-radius: 30px;
 	font-weight: bold;
 	font-size: 14px;
 	width: 220px;
-    padding: 10px;	
+	padding: 15px 10px;
+	-webkit-box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1);
+	-moz-box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1);
+	box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1);
+}
+#page2 input:focus {
+	border: solid 3px #ea4259;
+}
+#page2 input::placeholder {
+	color: #6d6d6e;
 }
 .checkbox {
 	text-align: left;
@@ -144,13 +199,13 @@ div {
 #card1  {
 	color: black;
 	width: 325px;
-	height: 150px;
+	height: 170px;
 	margin: auto;
 	margin-top: 34.6px;
 	border-radius: 5px;
-    -webkit-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
-    box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
+	box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
 	background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
 }
 .bmibar {
@@ -266,17 +321,17 @@ div {
 }
 .container {
   display: block;
-  color: #1ED760;
+  color: #4cffd6;
   position: relative;
   padding-left: 35px;
   margin-left: 15px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 30px;
   -webkit-user-select: none;
   -moz-user-select: none;
   text-align: left;
   -ms-user-select: none;
-   user-select: none;
+  user-select: none;
 }
 /* Hide the browser's default radio button */
 .container input {
@@ -301,7 +356,7 @@ div {
 }
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #1DB954;
+  background-color: #c82323;
 }
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
@@ -315,8 +370,8 @@ div {
 }
 /* Style the indicator (dot/circle) */
 .container .checkmark:after {
- 	top: 9px;
-	left: 9px;
+ 	top: 8.5px;
+	left: 8.5px;
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
