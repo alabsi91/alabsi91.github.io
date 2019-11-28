@@ -25,9 +25,19 @@ function bmi() {
 	} else {
 		var bmi= (703 * user.weight) / Math.pow(user.height, 2);
 	}
+	if (bmi > 35) {
+		document.getElementById("arrow").style.left= 243 + "px";
+	} else if (bmi < 0) {
+		document.getElementById("arrow").style.left= -7 + "px";
+	} else {
+		var bmibar= bmi * 7.142857;
+	    var bmibar= Math.round(bmibar) - 7;
+	    document.getElementById("arrow").style.left= bmibar + "px";
+	}
 	results.bmi=bmi.toFixed(1);
     document.getElementById("bmi").innerHTML=bmi.toFixed(1);
-	bmiRange()
+	bmiRange();
+	
 }
 function bmiRange() {
 		if (results.bmi < 18.5 && user.age >= 20) {
