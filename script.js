@@ -223,8 +223,8 @@ function ibwBroca() {
 	         results.ibw= user.height - 100;
              results.ibw= results.ibw - (results.ibw / 100 * 10);
 		 } else if (user.system == "imperial") {
-			 results.ibw= user.height * 2.54;
-			 results.ibw= results.ibw - 100;
+			 results.ibw= user.height * 2.54 ;
+			 results.ibw= results.ibw - 100 ;
              results.ibw= results.ibw - (results.ibw / 100 * 10);
 	     }
 		break;
@@ -259,7 +259,7 @@ function ibwDevine() {
 	         results.ibw= results.ibw - 60;
 			 results.ibw= 45.5 + (results.ibw * 2.3);
 		 } else if (user.system == "imperial") {
-			 rresults.ibw= user.height - 60;
+			 results.ibw= user.height - 60;
 			 results.ibw= 45.5 + (results.ibw * 2.3);
 	     }
 		break;
@@ -284,7 +284,7 @@ function ibwRobinson() {
 	         results.ibw= results.ibw - 60;
 			 results.ibw= 49 + (results.ibw * 1.7);
 		 } else if (user.system == "imperial") {
-			 rresults.ibw= user.height - 60;
+			 results.ibw= user.height - 60;
 			 results.ibw= 49 + (results.ibw * 1.7);
 	     }
 		break;
@@ -309,7 +309,7 @@ function ibwMillier() {
 	         results.ibw= results.ibw - 60;
 			 results.ibw= 53.1 + (results.ibw * 1.36);
 		 } else if (user.system == "imperial") {
-			 rresults.ibw= user.height - 60;
+			 results.ibw= user.height - 60;
 			 results.ibw= 53.1 + (results.ibw * 1.36);
 	     }
 		break;
@@ -334,7 +334,7 @@ function ibwHamwi() {
 	         results.ibw= results.ibw - 60;
 			 results.ibw= 45.5 + (results.ibw * 2.2);
 		 } else if (user.system == "imperial") {
-			 rresults.ibw= user.height - 60;
+			 results.ibw= user.height - 60;
 			 results.ibw= 45.5 + (results.ibw * 2.2);
 	     }
 		break;
