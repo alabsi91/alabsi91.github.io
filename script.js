@@ -1,24 +1,24 @@
 var user = {
-	gender:"0",
-	age:"0",
-	weight:"0",
-	height:"0",
-	waist:"",
-	hip:"",
-	neck:"",
+	gender:"",
+	age:0,
+	weight:0,
+	height:0,
+	waist:0,
+	hip:0,
+	neck:0,
 	activity:"",
 	system:"metric"
 };
 var results = {
-	bmi:"0",
-	bmirange:"",
-	bmr:"0",
-	dailykcal:"",
-	whtr:"",
-	whtrRange:"",
-	ibw:"",
-	bfp:"",
-	lbm:""
+	bmi:0,
+	bmirange:0,
+	bmr:0,
+	dailykcal:0,
+	whtr:0,
+	whtrRange:0,
+	ibw:0,
+	bfp:0,
+	lbm:0
 };
 function bmi() {
 	if (user.system == "metric") {
@@ -35,7 +35,7 @@ function bmi() {
 	    var bmibar= Math.round(bmibar) - 7;
 	    document.getElementById("arrow").style.left= bmibar + "px";
 	}
-	results.bmi=bmi.toFixed(1);
+	results.bmi=parseFloat(bmi);
     document.getElementById("bmi").innerHTML=bmi.toFixed(1);
 	bmiRange();
 	
@@ -118,17 +118,17 @@ function activityMultipier() {
 }
 function bmrmethod() {
 	if (document.getElementById("bmrmethod").value == "harris") {
-		HarrisBenedictBMR()
-		activityMultipier()
+		HarrisBenedictBMR();
+		activityMultipier();
 	} else {
-		MifflinStJeorBMR()
-		activityMultipier()
+		MifflinStJeorBMR();
+		activityMultipier();
 	}
 }
 function whtr() {
 	results.whtr= user.waist / user.height;
-	results.whtr= results.whtr.toFixed(2);
-	document.getElementById("whtr").innerHTML=results.whtr;
+	results.whtr= parseFloat(results.whtr);
+	document.getElementById("whtr").innerHTML=results.whtr.toFixed(2);
 	whtrRange();
 }
 function whtrRange() {
@@ -373,6 +373,33 @@ function BFPbmi() {
 	}
 	document.getElementById("bfp").innerHTML= results.bfp.toFixed(1) + "%";
 }
+function BFPnavy() {
+	switch (user.system) {
+		case "metric":
+		if (user.gender == "male") {
+			results.bfp= 495 / (1.0324 - 0.19077 * Math.log10(user.waist - user.neck) + 0.15456 * Math.log10(user.height)) - 450;
+		} else if (user.gender == "female") {
+			results.bfp= 495 / (1.29579 - 0.35004 * Math.log10(user.waist + user.hip - user.neck) + 0.22100 * Math.log10(user.height)) - 450;
+		}
+		break;
+		case "imperial":
+		if (user.gender == "male") {
+			results.bfp= 86.010 * Math.log10(user.waist - user.neck) - 70.041 * Math.log10(user.height) + 36.76;
+		} else if (user.gender == "female") {
+			results.bfp= 163.205 * Math.log10(user.waist + user.hip - user.neck) - 97.684 * Math.log10(user.height) - 78.387;
+		}
+		break;
+	}
+	document.getElementById("bfp").innerHTML= results.bfp.toFixed(1) + "%";
+}
+function bfpmethod() {
+	var formula= document.getElementById("bfpmethod").value;
+	if (formula == "us") {
+		BFPnavy();
+	} else if (formula == "bmimethod") {
+		BFPbmi();
+	}
+}
 function lbmBoer () {
 	results.lbm= (0.407 * user.weight)
 }
@@ -384,6 +411,9 @@ function topage1() {
 function topage2() {
 	document.getElementById("page2").style.display="block";
 	document.getElementById("page1").style.display="none";
+	var age= document.getElementById("age").value;
+    var weight= document.getElementById("weight").value;
+    var height= document.getElementById("height").value;
 	var gender= document.getElementById("mgender").checked;
 	var selectsys= document.getElementById("metric").checked;
 	if (gender == true) {
@@ -412,13 +442,7 @@ function topage2() {
 		document.getElementById("hip").placeholder="Your Hip Size In Inches";
 		break;
 	}
-
-}
-function topage3() {
-	var age= document.getElementById("age").value;
-    var weight= document.getElementById("weight").value;
-    var height= document.getElementById("height").value;
-	switch (user.system) {
+       switch (user.system) {
 		case "metric":
 		if (age < 18 || age > 120) {
 			alert("Please enter a valid age");
@@ -427,8 +451,7 @@ function topage3() {
 		} else if (height < 91 || height > 360) {
 			alert("Please enter a valid height");
 		} else{
-	        document.getElementById("page3").style.display="block";
-	        document.getElementById("page2").style.display="none";
+
 		}
 		break;
 		case "imperial":
@@ -438,31 +461,28 @@ function topage3() {
 			alert("Please enter a valid weight");
 		} else if (height < 47 || height > 155) {
 			alert("Please enter a valid height");
-		} else{
-	        document.getElementById("page3").style.display="block";
-	        document.getElementById("page2").style.display="none";
+		} else {
 		}
 		break;
 	}
-    user.age=age;
-    user.weight=weight;
-    user.height=height;
+    user.age=parseFloat(age);
+    user.weight=parseFloat(weight);
+    user.height=parseFloat(height);
+}
+function topage3() {
+	document.getElementById("page3").style.display="block";
+	document.getElementById("page2").style.display="none";
+	var neck= document.getElementById("neck").value;
+    var waist= document.getElementById("waist").value;
+    var hip= document.getElementById("hip").value;
+	user.neck=parseFloat(neck);
+    user.waist=parseFloat(waist);
+    user.hip=parseFloat(hip);
 }
 function topage4() {
 	document.getElementById("page4").style.display="block";
 	document.getElementById("page3").style.display="none";
-	var neck= document.getElementById("neck").value;
-    var waist= document.getElementById("waist").value;
-    var hip= document.getElementById("hip").value;
-	user.neck=neck;
-    user.waist=waist;
-    user.hip=hip;
-}
-function topage5() {
-	document.getElementById("page5").style.display="block";
-	document.getElementById("page4").style.display="none";
 	document.getElementById("profile").style.display="none";
-    // document.getElementById("body").style.backgroundImage="linear-gradient(60deg, #29323c 0%, #485563 100%)"; //
 	
 	var sedentary= document.getElementById("sedentary");
 	var light= document.getElementById("light");
@@ -487,7 +507,7 @@ function topage5() {
 	activityMultipier();
 	whtr();
 	ibwBroca();
-	BFPbmi();
+	BFPnavy();
 	console.log(user);
 	console.log(results);
 }
@@ -502,14 +522,11 @@ function toback() {
 	} else if (document.getElementById("page3").style.display == "block") {
 		document.getElementById("page2").style.display="block";
 		document.getElementById("page3").style.display="none";
-	} else if (document.getElementById("page4").style.display == "block") {
-		document.getElementById("page3").style.display="block";
-		document.getElementById("page4").style.display="none";
 	}
 }
 function restart() {
 	document.getElementById("welcomePage").style.display="block";
-	document.getElementById("page5").style.display="none";
+	document.getElementById("page4").style.display="none";
     document.getElementById("body").style.backgroundImage="none";
 }
 function bmipop() {
@@ -538,5 +555,12 @@ function ibwpop() {
 	    document.getElementById("ibwpop").style.display="none";
 	} else {
 		document.getElementById("ibwpop").style.display="block";
+	}
+}
+function bfppop() {
+	if (document.getElementById("bfppop").style.display == "block") {
+	    document.getElementById("bfppop").style.display="none";
+	} else {
+		document.getElementById("bfppop").style.display="block";
 	}
 }
