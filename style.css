@@ -156,8 +156,6 @@ div {
 }
 
 .topage2 {
-	/* width: 153px; */
-	/* height: 23px; */
 	color: white;
 	border: none;
 	border-radius: 15px;
@@ -165,9 +163,7 @@ div {
 	font-size: 20px;
 	padding: 16px 118px;
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
-	-webkit-box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
-	-moz-box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
-	box-shadow: 0px 0px 26px 8px rgba(0,0,0,1);
+	
 }
 .topage2:hover {
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 50%);
