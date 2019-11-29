@@ -40,14 +40,15 @@ div {
 #welcomePage {
 	position: relative;
 	height: 500px;
-	padding: 0px;
+	padding: 0;
 }
 #profile {
     position: relative;
     height: 47px;
-    WIDTH: 375px;
+    width: 375px;
+    margin: auto;
     background-color: #153947;
-    padding: 0.1px 0px;
+    padding: 1px 0px;
 }
 #profile span {
 	position: absolute;
@@ -202,6 +203,7 @@ div {
 	border-radius: 0px;
 	font-weight: bold;
 	font-size: 14px;
+	margin: auto;
 	width: 301px;
 	height: 18px;
 	padding: 15px 10px;
@@ -422,7 +424,6 @@ i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;backgrou
   left: -59px;
   padding-top: 5px;
   padding-left: 50px;
-  margin-left: 78px;
   cursor: pointer;
   font-size: 17px;
   font-weight: lighter;
