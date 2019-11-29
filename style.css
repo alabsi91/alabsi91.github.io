@@ -2,7 +2,7 @@ body {
 	background-color: #071A23;
 	text-align: center;
 	font-family: 'Fira Sans', sans-serif;
-	margin: 3px;
+	margin: 0PX;
 	color: white;
 }
 .pg {
@@ -10,25 +10,17 @@ body {
 	left: 0px;
 	margin: auto;
 	padding: 0px;
-	width: 369px;
-	height: 373px;
+	width: 375px;
+	height: 418px;
 	background-image: url(b1.jpg);
 	background-position: center;
 	background-size: cover;
 	background-color: #071A23;
 	background-blend-mode: overlay;
+	-webkit-box-shadow: inset 0px -145px 62px -83px rgba(7,26,35,1);
+	-moz-box-shadow: inset 0px -145px 62px -83px rgba(7,26,35,1);
+	box-shadow: inset 0px -145px 62px -83px rgba(7,26,35,1);
 }
-
-.blur {
-	position: absolute;
-	left: 0;
-	top: 367px;
-	width: 370px;
-	height: 200px;
-	background-color: #071A23;
-	box-shadow: 0px -21px 50px 48px rgba(7,26,35,1);
-}
-
 div {
 	max-width: 375px;
 	margin: auto;
@@ -37,8 +29,8 @@ div {
 }
 .calculator {
 	position: absolute;
-	top: 282px;
-	font-size: 50px;
+	top: 344px;
+	font-size: 39px;
 	font-weight: BOLDER;
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
 	-webkit-background-clip: text;
@@ -51,7 +43,8 @@ div {
 }
 #profile {
     position: relative;
-    height: 65px;
+    height: 47px;
+    WIDTH: 375px;
     background-color: #153947;
     padding: 0.1px 0px;
 }
@@ -68,13 +61,12 @@ div {
 }
 #back {
 	position: absolute;
-	top: 16px;
+	top: 7px;
 	left: 5px;
 	color: white;
 	background-color: inherit;
 	border: none;
 	font-size: 30px;
-
 }
 #back:hover {color: black;}
 #restartbutt {
@@ -93,7 +85,8 @@ div {
 	}
 #bmitip {
 	background-color: rgba(0, 0, 0, 0);
-	color: black;
+	color: white;
+	opacity: 70%;
 	position: absolute;
 	right: 25px;
 	top: 60px;
@@ -102,7 +95,8 @@ div {
 #bmitip:hover {color: #A40606;}
 #bmrtip {
 	background-color: rgba(0, 0, 0, 0);
-	color: black;
+	color: white;
+	opacity: 70%;
 	position: absolute;
 	right: 25px;
 	top: 385px;
@@ -111,7 +105,8 @@ div {
 #bmrtip:hover {color: #A40606;}
 #whtrtip {
 	background-color: rgba(0, 0, 0, 0);
-	color: black;
+	color: white;
+	opacity: 70%;
 	position: absolute;
 	right: 25px;
 	top: 840px;
@@ -120,7 +115,8 @@ div {
 #whtrtip:hover {color: #A40606;}
 #ibwtip {
 	background-color: rgba(0, 0, 0, 0);
-	color: black;
+	color: white;
+	opacity: 70%;
 	position: absolute;
 	right: 25px;
 	top: 1145px;
@@ -129,7 +125,8 @@ div {
 #ibwtip:hover {color: #A40606;}
 #bfptip {
 	background-color: rgba(0, 0, 0, 0);
-	color: black;
+	color: white;
+	opacity: 70%;
 	position: absolute;
 	right: 25px;
 	top: 1450px;
@@ -140,7 +137,7 @@ div {
 	position: absolute;
 	margin: auto;
 	TOP: 569PX;
-	right: 30.5px;
+	right: 27.8px;
 	color: white;
 	border: none;
 	border-radius: 15px;
@@ -155,7 +152,8 @@ div {
 .topage1:hover {
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 50%);
 	color: black;
-	}
+}
+
 .topage2 {
 	/* width: 153px; */
 	/* height: 23px; */
@@ -184,8 +182,8 @@ div {
 	padding: 10px 35px;
 }
 #bmrmethod, #ibwmethod {
-	background-color: black;
-	color: white;
+	background-color: #F5AF19;
+	color: black;
 	border: none;
 	border-radius: 35px;
 	font-weight: normal;
@@ -195,23 +193,77 @@ div {
 	margin-bottom: 0px;
 }
 #age, #weight, #height, #neck, #waist, #hip {
-	background-color: #153947;
+	background-color: transparent;
 	color: white;
-	border: solid 3px #f5af19;
-	border-radius: 15px;
+	border-bottom: solid 1px;
+	border-top: solid transparent;
+	border-left: solid transparent;
+	border-right: solid transparent;
+	border-radius: 0px;
 	font-weight: bold;
 	font-size: 14px;
-	width: 220px;
+	width: 301px;
+	height: 18px;
 	padding: 15px 10px;
-	-webkit-box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1);
+	/* -webkit-box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1); */
 	-moz-box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1);
-	box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1);
-}
-#page2 input:focus {
-	border: solid 3px white;
+	/* box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1); */
 }
 #page2 input::placeholder {
 	color: #6d6d6e;
+}
+#page2 h2 {
+	text-align: left;
+	color: #27A3C9;
+	margin-left: 38px;
+	margin-bottom: -8px;
+	font-size: 20px;
+}
+#page3 h2 {
+	text-align: left;
+	color: #27A3C9;
+	margin-left: 30px;
+	margin-bottom: -8px;
+	font-size: 20px;
+}
+#page1 h3 {
+	text-align: left;
+	color: #27A3C9;
+	margin-left: 25px;
+	margin-bottom: 12px;
+}
+
+i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;background-color: white;z-index: -1;opacity: 5%;border-radius: 9px;}
+.ipg1 {
+	top: 25px;
+}
+.ipg2 {
+	top: 158px;
+}
+.ipg3 {
+	top: 43px;
+}
+.ipg4 {
+	top: 148px;
+}
+.ipg5 {
+	top: 253px;
+}
+.ipg6 {
+	top: 45px;
+}
+.ipg7 {
+	top: 149px;
+}
+.ipg8 {
+	top: 253px;
+}
+.ipg9 {
+	top: 27px;
+	left: 1px;
+	height: 423px;
+	width: 365px;
+	border-radius: 22px;
 }
 .checkbox1 {
 	text-align: center;
@@ -219,8 +271,32 @@ div {
 	margin-top: 3px;
 	color: #237D91;
 }
+#page1 {
+	position: relative;
+}
+#page2 {
+	position: relative;
+}
+#page3 {
+	position: relative;
+}
+#page4 {
+	position: relative;
+}
 #page5 {
 	position: relative;
+}
+#page5 h2 {
+	color: white;
+	opacity: 70%;
+}
+#page5 h3 {
+	color: white;
+}
+#page5 h4 {
+	color: #ffffff;
+	opacity: 70%;
+	font-weight: lighter;
 }
 #card1  {
 	color: black;
@@ -232,7 +308,7 @@ div {
 	-webkit-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
 	-moz-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
 	box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
-	background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+    background-image: linear-gradient( 109.6deg,  rgba(20,30,48,1) 11.2%, rgba(36,59,85,1) 91.1% );
 }
 .bmibar {
 	position: relative;
@@ -264,7 +340,7 @@ div {
 	-webkit-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
 	-moz-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
 	box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
-	background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+	background-image: linear-gradient( 109.6deg,  rgba(20,30,48,1) 11.2%, rgba(36,59,85,1) 91.1% );
 }
 #card3 {
 	color: black;
@@ -276,7 +352,7 @@ div {
     -webkit-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
     -moz-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
     box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
-	background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+	background-image: linear-gradient( 109.6deg,  rgba(20,30,48,1) 11.2%, rgba(36,59,85,1) 91.1% );
 }
 #card4 {
 	color: black;
@@ -288,7 +364,7 @@ div {
     -webkit-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
     -moz-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
     box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
-	background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+	background-image: linear-gradient( 109.6deg,  rgba(20,30,48,1) 11.2%, rgba(36,59,85,1) 91.1% );
 }
 #card5 {
 	color: black;
@@ -300,13 +376,13 @@ div {
     -webkit-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
     -moz-box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
     box-shadow: 0px 4px 21px 0px rgba(0,0,0,0.55);
-	background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+	background-image: linear-gradient( 109.6deg,  rgba(20,30,48,1) 11.2%, rgba(36,59,85,1) 91.1% );
 }
 .popup {
 	position: fixed;
 	bottom: 35%;
 	margin-left: 14px;
-	background-color: #0C2935;
+	background-color: #071A23;
 	color: white;
 	border: solid 1px #F5AF19;
 	border-radius: 10px;
@@ -342,14 +418,16 @@ div {
 	color: black;
 }
 .container {
-  display: block;
+  display: inline;
   color: #ffffff;
   position: relative;
-  padding-top: 9px;
-  padding-left: 0px;
-  margin-left: -5px;
+  left: -59px;
+  padding-top: 5px;
+  padding-left: 50px;
+  margin-left: 78px;
   cursor: pointer;
-  font-size: 29px;
+  font-size: 17px;
+  font-weight: lighter;
   -webkit-user-select: none;
   -moz-user-select: none;
   text-align: center;
@@ -367,9 +445,9 @@ div {
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 42px;
-  height: 55px;
-  width: 292px;
+  left: -9px;
+  height: 32px;
+  width: 164px;
   background-color: #0D3342;
   border-radius: 7px;
 }
@@ -408,11 +486,12 @@ div {
   display: block;
   color: #ffffff;
   position: relative;
-  padding-top: 9px;
+  padding-top: 8px;
   padding-left: 0px;
   margin-left: -6px;
+  margin-bottom: -8px;
   cursor: pointer;
-  font-size: 28px;
+  font-size: 20px;
   -webkit-user-select: none;
   -moz-user-select: none;
   text-align: center;
@@ -431,7 +510,7 @@ div {
   z-index: -1;
   top: 0;
   left: 17px;
-  height: 77px;
+  height: 54px;
   width: 345px;
   background-color: #0D3342;
   border-radius: 7px;

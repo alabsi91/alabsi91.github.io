@@ -80,7 +80,7 @@ function HarrisBenedictBMR() {
 	break;
 	}
 results.bmr= bmr;
-document.getElementById("bmr").innerHTML=bmr.toFixed(0) + "<span style='font-size: 15px; color: #041432''>" +" kcal/day" + "</span>";
+document.getElementById("bmr").innerHTML=bmr.toFixed(0) + "<span style='font-size: 15px; color: white''>" +" kcal/day" + "</span>";
 }
 function MifflinStJeorBMR() {
 	switch (user.gender) {
@@ -100,7 +100,7 @@ function MifflinStJeorBMR() {
 	    break;
 	}
 results.bmr= bmr;
-document.getElementById("bmr").innerHTML=bmr.toFixed(0) + "<span style='font-size: 15px; color: #041432'>" + " kcal/day"+ "</span>" ;
+document.getElementById("bmr").innerHTML=bmr.toFixed(0) + "<span style='font-size: 15px; color: white'>" + " kcal/day"+ "</span>" ;
 }
 function activityMultipier() {
 	if (user.activity == "sedentary") {
@@ -114,7 +114,7 @@ function activityMultipier() {
 	} else if (user.activity == "extra") {
 		results.dailykcal = results.bmr*1.9;
 	}
-	document.getElementById("intake").innerHTML= results.dailykcal.toFixed(0) + "<span style='font-size: 15px; color: #041432'>"  + " kcal/day"+ "</span>";
+	document.getElementById("intake").innerHTML= results.dailykcal.toFixed(0) + "<span style='font-size: 15px; color: white'>"  + " kcal/day"+ "</span>";
 }
 function bmrmethod() {
 	if (document.getElementById("bmrmethod").value == "harris") {
@@ -385,13 +385,13 @@ function topage2() {
 	document.getElementById("page2").style.display="block";
 	document.getElementById("page1").style.display="none";
 	var gender= document.getElementById("mgender").checked;
-	var selectsys= document.getElementById("selectsys");
+	var selectsys= document.getElementById("metric").checked;
 	if (gender == true) {
 	    user.gender="male";
     } else {
 	user.gender="female";
     }
-	if (selectsys.value == "metric") {
+	if (selectsys == true) {
 		user.system= "metric";
 	} else {
 		user.system= "imperial";

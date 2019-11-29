@@ -4,15 +4,14 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BODY MEASUREMENE CALACULATORS</title>
+        <title>BODY MEASUREMENET CALACULATORS</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body id="body">
 	
         <div id="welcomePage">
         <div class="pg"></div>
-		<span class="blur"></span>
-            <p class="calculator">BODY MEASUREMENE CALACULATORS</p>
+            <p class="calculator">BODY MEASUREMENET CALACULATORS</p>
             <br><br><br><br><br><br><br>
             <button class="topage1" onclick="topage1()">BUILD PROFILE</button>
         </div>
@@ -23,18 +22,25 @@
         </div>
 		
         <div id="page1" style="display: none">
+		<i class="ipg"></i>
+		<i class="ipg2"></i>
             <h3>Choose the mesurement system</h3>
-            <select id="selectsys">
-                <option value="metric">Metric</option>
-                <option value="imperial">Imperial</option>
-            </select>
-            <br><br><br><br>
-            <h3>Select your gender</h3>
-            <label class="container">    Male
-                <input id="mgender" type="radio" name="gender" checked="checked">
+			<label class="container" class="container" style="margin-left: 87px; margin-right: -13px">Metric
+                <input id="metric" type="radio" name="system" checked="checked">
                 <span class="checkmark"></span>
             </label>
-            <br>
+            
+            <label class="container" style="padding-left: 45px">Imperial
+                <input id="imperial" type="radio" name="system">
+                <span class="checkmark"></span>
+            </label>
+            <br><br><br><br>
+            <h3>Select your gender</h3>
+            <label class="container">Male
+                <input id="mgender" type="radio" name="gender" checked="checked">   
+                <span class="checkmark" style="width: 163px"></span>
+            </label>
+            
             <label class="container">Female
                 <input id="fgender" type="radio" name="gender">
                 <span class="checkmark"></span>
@@ -45,14 +51,17 @@
 		
         <div id="page2" style="display: none">
             <br>
-            <h2>Add your age</h2>
-            <input id="age" type="number" placeholder="Your Age in years" title="Above 18" value="">
+			<i class="ipg3"></i>
+			<i class="ipg4"></i>
+			<i class="ipg5"></i>
+            <h2>Age</h2>
+            <input id="age" autocomplete="off" type="number" placeholder="Your Age in years" title="Above 18" value="">
             <br><br>
-            <h2>Add your weight</h2>
-            <input id="weight" type="number" placeholder="Your Weight" value="">
+            <h2>Weight</h2>
+            <input id="weight" autocomplete="off" type="number" placeholder="Your Weight" value="">
             <br><br>
-            <h2>Add your height</h2>
-            <input id="height" type="number" placeholder="Your Height" value="">
+            <h2>Height</h2>
+            <input id="height" autocomplete="off" type="number" placeholder="Your Height" value="">
             <br><br><br><br><br><br>
             <button class="topage2" onclick="topage3()">NEXT → </button>
             <br>
@@ -60,15 +69,18 @@
 		
         <div id="page3" style="display: none">
             <br>
-            <h2>Add your neck size</h2>
+			<i class="ipg6"></i>
+			<i class="ipg7"></i>
+			<i class="ipg8"></i>
+            <h2>Neck size</h2>
             <input id="neck" type="number" placeholder="Your Neck Size" value="">
             <br>
             <br>
-            <h2>Add your waist size</h2>
+            <h2>Waist size</h2>
             <input id="waist" type="number" placeholder="Your Waist Size" value="">
             <br>
             <br>
-            <h2>Add your hip size</h2>
+            <h2>Hip size</h2>
             <input id="hip" type="number" placeholder="Your Hip Size" value="">
             <br><br><br><br><br><br>
             <button class="topage2" onclick="topage4()">NEXT → </button>
@@ -76,8 +88,8 @@
         </div>
 		
         <div id="page4" style="display: none">
-            <h1 style="color: #ecff4b">Select activity level</h1>
-            <h4>To help us personalize your results</h4>
+		<i class="ipg9"></i>
+            <h1 style="color: #27A3C9">Select activity level</h1>
             
             <label class="container1">Sedentary
                 <input id="sedentary" type="radio" name="activity" checked="checked">
@@ -119,19 +131,19 @@
 			
             <div id="card1">
                 <button id="bmitip" class="material-icons" onclick="bmipop()">error_outline</button>
-                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #a21b60">BMI</h1>
-                <h2 style="margin-top: 5px">Your Body Mass Index</h2>
-				<h1 id="bmi" style="color: #007f80"><br></h1>
+                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #27A3C9">BMI</h1>
+                <h2 style="margin-top: 5px;color: white;opacity: 70%;">Your Body Mass Index</h2>
+				<h1 id="bmi" style="color: #F5AF19"><br></h1>
                 <h2 id="bmiRange"><br></h2>
 				<div class="bmibar">
                 <span id="arrow"></span>
                 </div>
-                <h3 id="bmiGoal"><br></h3>
+                <h3 id="bmiGoal" style="color: white">You Should Sustain Your Weight</h3>
             </div>
 			    
             <div id="card2">
                 <button id="bmrtip" class="material-icons" onclick="bmrpop()">error_outline</button>
-				<h1 style="margin-top: 0px; margin-bottom: 15px; color: #a21b60">BMR</h1>
+				<h1 style="margin-top: 0px; margin-bottom: 15px; color: #27A3C9">BMR</h1>
                 <h4 style="margin-top: 0px; margin-bottom: 3px">BMR Method By:</h4>
                 <select id="bmrmethod" onchange="bmrmethod()">
                     <option value="harris">Harris Benedict Equation</option>
@@ -139,24 +151,24 @@
                 </select>
 				<br><br>
                 <h2 style="margin-top: 5px; margin-bottom: 0px; font-size: 23px">Your Basal Metabolic Rate</h2>
-                <h1 id="bmr" style="color: #007f80"><br></h1><br>
-                <h2 style="margin-bottom: 0px; margin-top: 0px">Daily Calorie Intake</h2><h3 style="margin-top: 3px">based on your activity</h3>
-                <h1 id="intake" style="color: #007f80"><br></h1>
+                <h1 id="bmr" style="color: #F5AF19"><br></h1><br>
+                <h2 style="margin-bottom: 0px; margin-top: 0px">Daily Calorie Intake</h2><h3 style="opacity: 70%; margin-top: 3px">based on your activity</h3>
+                <h1 id="intake" style="color: #F5AF19"><br></h1>
             </div>
 			
 			<div id="card3">
                 <button id="whtrtip" class="material-icons" onclick="whtrpop()">error_outline</button>
 				
-                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #a21b60">WHtR</h1>
+                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #27A3C9">WHtR</h1>
                 <h2 style="margin-top: 5px; font-size: 23px">Your Waist to Height Ratio</h2>
-                <h1 id="whtr" style="color: #007f80"><br></h1><br>
+                <h1 id="whtr" style="color: #F5AF19"><br></h1><br>
                 <h2 id="whtrRange" style="margin-bottom: 0px; margin-top: 0px"><br></h2>
 				<h3 id="whtrGoal"></h3>
             </div>
 			
 			<div id="card4">
                 <button id="ibwtip" class="material-icons" onclick="ibwpop()">error_outline</button>
-                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #a21b60">IBW</h1><br>
+                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #27A3C9">IBW</h1><br>
 				<h4 style="margin-top: 0px; margin-bottom: 3px">IBW Method By:</h4>
                 <select id="ibwmethod" onchange="ibwmethod()">
                     <option value="borca">The Borca Index</option>
@@ -168,14 +180,14 @@
                 </select>
 				<br><br>
                 <h2 style="margin-top: 5px; font-size: 23px">Your Ideal Weight</h2>
-                <h1 id="ibw" style="color: #007f80"><br></h1><br>
+                <h1 id="ibw" style="color: #F5AF19"><br></h1><br>
             </div>
 			
 			<div id="card5">
                 <button id="bfptip" class="material-icons" onclick="bfppop()">error_outline</button>
-                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #a21b60">BFP</h1><br>
+                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #27A3C9">BFP</h1><br>
                 <h2 style="margin-top: 5px; font-size: 23px">Your Body Fat Percentage</h2>
-                <h1 id="bfp" style="color: #007f80"><br></h1><br>
+                <h1 id="bfp" style="color: #F5AF19"><br></h1><br>
                 <h2 id="whtrRange" style="margin-bottom: 0px; margin-top: 0px"><br></h2>
             </div>
 
