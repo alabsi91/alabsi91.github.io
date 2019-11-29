@@ -20,6 +20,11 @@ var results = {
 	bfp:0,
 	lbm:0
 };
+var ar = {
+	p0Title: "حساب قياسات الجسم",
+	p0Button: "أنشأ ملفك الشخصي"
+	
+};
 function bmi() {
 	if (user.system == "metric") {
 	var bmi= user.weight / Math.pow(user.height/100, 2);
@@ -409,8 +414,6 @@ function topage1() {
 	document.getElementById("welcomePage").style.display="none";
 }
 function topage2() {
-	document.getElementById("page2").style.display="block";
-	document.getElementById("page1").style.display="none";
 	var age= document.getElementById("age").value;
     var weight= document.getElementById("weight").value;
     var height= document.getElementById("height").value;
@@ -426,22 +429,7 @@ function topage2() {
 	} else {
 		user.system= "imperial";
 	}
-	switch (user.system) {
-		case "metric":
-		document.getElementById("weight").placeholder="Your Weight In Kilograms";
-		document.getElementById("height").placeholder="Your Height In Centimeters";
-		document.getElementById("neck").placeholder="Your Neck Size In Centimeters";
-		document.getElementById("waist").placeholder="Your Waist Size In Centimeters";
-		document.getElementById("hip").placeholder="Your Hip Size In Centimeters";
-		break;
-		case "imperial":
-		document.getElementById("weight").placeholder="Your Weight In Pounds";
-		document.getElementById("height").placeholder="Your Height In Inches";
-		document.getElementById("neck").placeholder="Your Neck Size In Inches";
-		document.getElementById("waist").placeholder="Your Waist Size In Inches";
-		document.getElementById("hip").placeholder="Your Hip Size In Inches";
-		break;
-	}
+	
        switch (user.system) {
 		case "metric":
 		if (age < 18 || age > 120) {
@@ -451,7 +439,8 @@ function topage2() {
 		} else if (height < 91 || height > 360) {
 			alert("Please enter a valid height");
 		} else{
-
+           document.getElementById("page2").style.display="block";
+	       document.getElementById("page1").style.display="none";
 		}
 		break;
 		case "imperial":
@@ -462,6 +451,8 @@ function topage2() {
 		} else if (height < 47 || height > 155) {
 			alert("Please enter a valid height");
 		} else {
+		    document.getElementById("page2").style.display="block";
+	        document.getElementById("page1").style.display="none";
 		}
 		break;
 	}
@@ -529,6 +520,20 @@ function restart() {
 	document.getElementById("page4").style.display="none";
     document.getElementById("body").style.backgroundImage="none";
 }
+function metricSystem() {
+		document.getElementById("weight").placeholder="Your Weight In Kilograms";
+		document.getElementById("height").placeholder="Your Height In Centimeters";
+		document.getElementById("neck").placeholder="Your Neck Size In Centimeters";
+		document.getElementById("waist").placeholder="Your Waist Size In Centimeters";
+		document.getElementById("hip").placeholder="Your Hip Size In Centimeters";
+}
+function imperialSystem() {
+	    document.getElementById("weight").placeholder="Your Weight In Pounds";
+		document.getElementById("height").placeholder="Your Height In Inches";
+		document.getElementById("neck").placeholder="Your Neck Size In Inches";
+		document.getElementById("waist").placeholder="Your Waist Size In Inches";
+		document.getElementById("hip").placeholder="Your Hip Size In Inches";
+}
 function bmipop() {
 	if (document.getElementById("bmipop").style.display == "block") {
 	    document.getElementById("bmipop").style.display="none";
@@ -563,4 +568,8 @@ function bfppop() {
 	} else {
 		document.getElementById("bfppop").style.display="block";
 	}
+}
+function ar() {
+	document.getElementById("title1").innerHTML=ar.p0Title;
+	document.getElementById("topage1").innerHTML=ar.p0Button;
 }

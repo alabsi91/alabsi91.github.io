@@ -28,8 +28,9 @@ div {
 	padding-bottom: 100px;
 }
 .calculator {
-	position: absolute;
+	position: inherit;
 	top: 344px;
+	margin: auto;
 	font-size: 39px;
 	font-weight: BOLDER;
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
@@ -134,10 +135,9 @@ div {
 }
 #bfptip:hover {color: #A40606;}
 .topage1 {
-	position: absolute;
+	position: inherit;
 	margin: auto;
-	TOP: 569PX;
-	right: 27.8px;
+	top: 262px;
 	color: white;
 	border: none;
 	border-radius: 15px;

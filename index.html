@@ -11,9 +11,9 @@
 	
         <div id="welcomePage">
         <div class="pg"></div>
-            <p class="calculator">BODY MEASUREMENET CALACULATORS</p>
+            <p class="calculator" id="title1" >BODY MEASUREMENET CALACULATORS</p>
             <br><br><br><br><br><br><br>
-            <button class="topage1" onclick="topage1()">BUILD PROFILE</button>
+            <button class="topage1" id="topage1" onclick="topage1()">BUILD PROFILE</button>
         </div>
 		
         <div id="profile" style="display: none">
@@ -24,12 +24,12 @@
         <div id="page1" style="display: none">
 		<i class="ipg"></i>
             <h3>Mesurement system</h3>
-			<label class="container" class="container" style="margin-left: 85px; margin-right: -13px">Metric
+			<label class="container" style="margin-left: 85px; margin-right: -13px" onclick="metricSystem()">Metric
                 <input id="metric" type="radio" name="system" checked="checked">
                 <span class="checkmark"></span>
             </label>
             
-            <label class="container" style="padding-left: 45px">Imperial
+            <label class="container" style="padding-left: 45px" onclick="imperialSystem()">Imperial
                 <input id="imperial" type="radio" name="system">
                 <span class="checkmark"></span>
             </label>
@@ -50,10 +50,10 @@
             <input id="age" autocomplete="off" type="number" placeholder="Your Age in years" title="Above 18" value="28">
             <br><br>
             <h2>Weight</h2>
-            <input id="weight" autocomplete="off" type="number" placeholder="Your Weight" value="66">
+            <input id="weight" autocomplete="off" type="number" placeholder="Your Weight In Kilograms" value="66">
             <br><br>
             <h2>Height</h2>
-            <input id="height" autocomplete="off" type="number" placeholder="Your Height" value="170">
+            <input id="height" autocomplete="off" type="number" placeholder="Your Height In Centimeters" value="170">
             <br><br><br><br><br>
             <button class="topage2" onclick="topage2()">NEXT</button>
         </div>
