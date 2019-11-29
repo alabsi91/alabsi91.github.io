@@ -234,7 +234,7 @@ function ibwBroca() {
 	     }
 		break;
 	}
-	document.getElementById("ibw").innerHTML= results.ibw.toFixed(1) + "<span style='font-size: 15px; color: #041432''>" + " Kilograms" + "</span>";
+	document.getElementById("ibw").innerHTML= results.ibw.toFixed(1) + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 }
 function ibwDevine() {
 	switch (user.gender) {
@@ -259,7 +259,7 @@ function ibwDevine() {
 	     }
 		break;
 	}
-	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: #041432''>" + " Kilograms" + "</span>";
+	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 }
 function ibwRobinson() {
 	switch (user.gender) {
@@ -284,7 +284,7 @@ function ibwRobinson() {
 	     }
 		break;
 	}
-	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: #041432''>" + " Kilograms" + "</span>";
+	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 }
 function ibwMillier() {
 	switch (user.gender) {
@@ -309,7 +309,7 @@ function ibwMillier() {
 	     }
 		break;
 	}
-	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: #041432''>" + " Kilograms" + "</span>";
+	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 }
 function ibwHamwi() {
 	switch (user.gender) {
@@ -334,7 +334,7 @@ function ibwHamwi() {
 	     }
 		break;
 	}
-	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: #041432''>" + " Kilograms" + "</span>";
+	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 }
 function ibwLemmens() {
 		 if (user.system == "metric") {
@@ -344,7 +344,7 @@ function ibwLemmens() {
 			 results.ibw= 22 * Math.pow(results.ibw, 2);
 		 }
 
-	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: #041432''>" + " Kilograms" + "</span>";
+	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 }
 function ibwmethod() {
 	var formula= document.getElementById("ibwmethod").value;
