@@ -720,4 +720,24 @@ function lbmpop() {
 		document.getElementById("lbmpop").style.display="block";
 	}
 }
-
+function neckpop() {
+	if (document.getElementById("neckpop").style.display == "block") {
+	    document.getElementById("neckpop").style.display="none";
+	} else {
+		document.getElementById("neckpop").style.display="block";
+	}
+}
+function waistpop() {
+	if (document.getElementById("waistpop").style.display == "block") {
+	    document.getElementById("waistpop").style.display="none";
+	} else {
+		document.getElementById("waistpop").style.display="block";
+	}
+}
+function hippop() {
+	if (document.getElementById("hippop").style.display == "block") {
+	    document.getElementById("hippop").style.display="none";
+	} else {
+		document.getElementById("hippop").style.display="block";
+	}
+}

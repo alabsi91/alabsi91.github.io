@@ -94,7 +94,35 @@ div {
 	top: 7px;
 	border: none;
 }
-#bmitip:hover, #bmrtip:hover, #whtrtip:hover, #ibwtip:hover, #bfptip:hover, #lbmtip:hover {color: #A40606;}
+#bmitip:hover, #bmrtip:hover, #whtrtip:hover, #ibwtip:hover, #bfptip:hover, #lbmtip:hover {color: #ff5200;}
+#necktip {
+	position: absolute;
+	right: 10px;
+	top: 49px;
+	background-color: transparent;
+	color: white;
+	border: none;
+	opacity: 75%;
+}
+#necktip:hover, #waisttip:hover, #hiptip:hover {color: #ff5200;}
+#waisttip {
+	position: absolute;
+	right: 10px;
+	top: 152px;
+	background-color: transparent;
+	color: white;
+	border: none;
+	opacity: 75%;
+}
+#hiptip {
+	position: absolute;
+	right: 10px;
+	top: 256px;
+	background-color: transparent;
+	color: white;
+	border: none;
+	opacity: 75%;
+}
 .topage1 {
 	position: inherit;
 	margin: auto;
@@ -163,9 +191,7 @@ div {
 	width: 301px;
 	height: 18px;
 	padding: 15px 10px;
-	/* -webkit-box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1); */
 	-moz-box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1);
-	/* box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1); */
 }
 #page2 input::placeholder {
 	color: #6d6d6e;

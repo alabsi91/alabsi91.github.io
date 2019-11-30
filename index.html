@@ -60,6 +60,9 @@
 		
         <div id="page2" style="display: none">
             <br>
+			<button id="necktip" class="material-icons" onclick="neckpop()">help_outline</button>
+			<button id="waisttip" class="material-icons" onclick="waistpop()">help_outline</button>
+			<button id="hiptip" class="material-icons" onclick="hippop()">help_outline</button>
 			<i class="ipg6"></i>
 			<i class="ipg7"></i>
 			<i class="ipg8"></i>
@@ -76,6 +79,35 @@
             <br><br><br><br><br><br>
             <button class="topage2" onclick="topage3()">NEXT</button>
             <br>
+			
+			<div class="popup" id="neckpop">
+                <h3>Neck Measurement</h3>
+                <p style="font-family: sans-serif">Wrap the measuring tape around the neck, beginning at about one inch from the meeting of your neck and shoulders. 
+				This may also coincide with the bottom part of your Adam's apple.
+				Come fully around the neck, leaving no dangling space in between the neck and the tape.  
+				Make sure the tape is level and not being held at an angle.
+				</p>
+				<button class="popbutt" onclick="neckpop()">DONE</button>
+            </div>
+			
+			<div class="popup" id="waistpop">
+                <h3>Waist Measurement</h3>
+                <p style="font-family: sans-serif">Start at the top of your hip bone, then bring the tape measure all the way around your body, level with your belly button.
+				Make sure it's not too tight and that it's straight, even at the back. Don't hold your breath while measuring.
+				Check the number on the tape measure right after you exhale.
+				</p>
+				<button class="popbutt" onclick="waistpop()">DONE</button>
+            </div>
+
+				<div class="popup" id="hippop">
+                <h3>Hip Measurement</h3>
+                <p style="font-family: sans-serif">Your natural waist is the smallest part of your torso, where your body dips in. 
+				Your hips are below that, and they are usually wider than your waist. 
+				Your hip measurement includes your butt and your hips.
+				Your hip measurements should be taken at where your hips are the widest.
+				</p>
+				<button class="popbutt" onclick="hippop()">DONE</button>
+            </div>
         </div>
 		
         <div id="page3" style="display: none">
@@ -192,7 +224,7 @@
 			
 			<div id="card6">
                 <button id="lbmtip" class="material-icons" onclick="lbmpop()">error_outline</button>
-                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #27A3C9">IBW</h1><br>
+                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #27A3C9">LBM</h1><br>
 				<h4 style="margin-top: 0px; margin-bottom: 3px">IBW Method By:</h4>
                 <select id="lbmmethod" onchange="lbmmethod()">
                     <option value="Boer">The Boer Formula</option>
