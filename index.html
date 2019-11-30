@@ -189,6 +189,24 @@
 				<h2 style="margin-top: 20px; margin-bottom: 3px;  font-size: 23px">Body Fat (BMI method)</h2>
                 <h1 id="bfpbmi" style="color: #F5AF19; margin-bottom: 0px; margin-top: 0px"><br></h1>
             </div>
+			
+			<div id="card6">
+                <button id="lbmtip" class="material-icons" onclick="lbmpop()">error_outline</button>
+                <h1 style="margin-top: 0px; margin-bottom: 0px; color: #27A3C9">IBW</h1><br>
+				<h4 style="margin-top: 0px; margin-bottom: 3px">IBW Method By:</h4>
+                <select id="lbmmethod" onchange="lbmmethod()">
+                    <option value="Boer">The Boer Formula</option>
+                    <option value="James">The James Formula</option>
+					<option value="Hume">The Hume Formula</option>
+                </select>
+				<br><br>
+                <h2 style="margin-top: 20px; margin-bottom: 3px;  font-size: 23px">Lean Body Mass</h2>
+                <h1 id="lbm" style="color: #F5AF19; margin-bottom: 0px; margin-top: 0px"><br></h1>
+				<h2 style="margin-top: 20px; margin-bottom: 3px;  font-size: 23px">Lean Body Mass Percentage</h2>
+                <h1 id="lbmP" style="color: #F5AF19; margin-bottom: 0px; margin-top: 0px"><br></h1>
+				<h2 style="margin-top: 20px; margin-bottom: 3px;  font-size: 23px">Body Fat Percentage</h2>
+                <h1 id="lbmF" style="color: #F5AF19; margin-bottom: 0px; margin-top: 0px"><br></h1>
+            </div>
 
             <div class="popup" id="bmipop">
                 <h3>BMI METHOD</h3>
@@ -220,6 +238,11 @@
 				<button class="popbutt" onclick="bfppop()">DONE</button>
             </div>
 			
+			<div class="popup" id="lbmpop">
+                <h3>Lean Body Mass</h3>
+                <p style="font-family: sans-serif">The Lean Body Mass Calculator computes a person's estimated lean body mass (LBM) based on body weight, height, gender, and age. For comparison purposes, the calculator provides the results of multiple formulas.</p>
+				<button class="popbutt" onclick="lbmpop()">DONE</button>
+            </div>			
         </div>
         <script src="script.js"></script>
     </body>
