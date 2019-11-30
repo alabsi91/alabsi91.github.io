@@ -39,7 +39,7 @@ div {
 }
 #welcomePage {
 	position: relative;
-	height: 500px;
+	height: 700px;
 	padding: 0;
 }
 #profile {
@@ -263,13 +263,16 @@ i {
 	height: 321px;
 }
 .ipg6 {
-	top: 116px;
+	top: 112px;
+	height: 100px;
 }
 .ipg7 {
-	top: 226px;
+	top: 223px;
+	height: 100px;
 }
 .ipg8 {
-	top: 336px;
+	top: 334px;
+	height: 100px;
 }
 .ipg9 {
 	top: 27px;
