@@ -18,12 +18,10 @@ var results = {
 	whtrRange:0,
 	ibw:0,
 	bfp:0,
+	bfpFM:0,
+	bfpLM:0,
+	bfprange:0,
 	lbm:0
-};
-var ar = {
-	p0Title: "حساب قياسات الجسم",
-	p0Button: "أنشأ ملفك الشخصي"
-	
 };
 function bmi() {
 	if (user.system == "metric") {
@@ -52,7 +50,7 @@ function bmiRange() {
 			document.getElementById("bmiGoal").innerHTML="You Should Gain Some Weight";
 		} else if (results.bmi >= 18.5 && 24.9 > results.bmi && user.age >= 20) {
 			results.bmirange= "Normal Weight";
-			document.getElementById("bmiRange").style.color= "#31b735";
+			document.getElementById("bmiRange").style.color= "#40ff45";
 			document.getElementById("bmiGoal").innerHTML="You Should Sustain Your Weight";
 		} else if (results.bmi > 25 && 29.9 > results.bmi && user.age >= 20) {
 			results.bmirange= "Overweight";
@@ -149,7 +147,7 @@ function whtrRange() {
 		document.getElementById("whtrGoal").innerHTML="You Should Gain Some Weight";
 	} else if (results.whtr > 0.43 && 0.52 > results.whtr && user.age >= 20) {
 		results.whtrRange= "Healthy";
-		document.getElementById("whtrRange").style.color= "#31b735";
+		document.getElementById("whtrRange").style.color= "#40ff45";
 		document.getElementById("whtrGoal").innerHTML="You Should Sustain Your Weight";
 	} else if (results.whtr > 0.53 && 0.57 > results.whtr && user.age >= 20) {
 		results.whtrRange= "Overweight";
@@ -176,7 +174,7 @@ function whtrRange() {
 		document.getElementById("whtrGoal").innerHTML="You Should Gain Some Weight";
 	} else if (results.whtr > 0.42 && 0.48 > results.whtr && user.age >= 20) {
 		results.whtrRange= "Healthy";
-		document.getElementById("whtrRange").style.color= "#31b735";
+		document.getElementById("whtrRange").style.color= "#40ff45";
 		document.getElementById("whtrGoal").innerHTML="You Should Sustain Your Weight";
 	} else if (results.whtr > 0.49 && 0.53 > results.whtr && user.age >= 20) {
 		results.whtrRange= "Overweight";
@@ -203,7 +201,7 @@ function whtrRange() {
 		document.getElementById("whtrGoal").innerHTML="You Should Gain Some Weight";
 	} else if (results.whtr > 0.46 && 0.51 > results.whtr && user.age < 20) {
 		results.whtrRange= "Healthy";
-		document.getElementById("whtrRange").style.color= "#31b735";
+		document.getElementById("whtrRange").style.color= "#40ff45";
 		document.getElementById("whtrGoal").innerHTML="You Should Sustain Your Weight";
 	} else if (results.whtr > 0.52 && 0.63 > results.whtr && user.age < 20) {
 		results.whtrRange= "Overweight";
@@ -376,34 +374,68 @@ function BFPbmi() {
 		 results.bfp= 1.20 * results.bmi + 0.23 * user.age - 5.4;
 		 break;
 	}
-	document.getElementById("bfp").innerHTML= results.bfp.toFixed(1) + "%";
+	document.getElementById("bfpbmi").innerHTML= results.bfp.toFixed(1) + "<span style='font-size: 18px; color: white''>" + " %" + "</span>";
 }
 function BFPnavy() {
 	switch (user.system) {
 		case "metric":
 		if (user.gender == "male") {
 			results.bfp= 495 / (1.0324 - 0.19077 * Math.log10(user.waist - user.neck) + 0.15456 * Math.log10(user.height)) - 450;
+			results.bfp= results.bfp.toFixed(1);
 		} else if (user.gender == "female") {
 			results.bfp= 495 / (1.29579 - 0.35004 * Math.log10(user.waist + user.hip - user.neck) + 0.22100 * Math.log10(user.height)) - 450;
+			results.bfp= results.bfp.toFixed(1);
 		}
 		break;
 		case "imperial":
 		if (user.gender == "male") {
 			results.bfp= 86.010 * Math.log10(user.waist - user.neck) - 70.041 * Math.log10(user.height) + 36.76;
+			results.bfp= results.bfp.toFixed(1);
 		} else if (user.gender == "female") {
 			results.bfp= 163.205 * Math.log10(user.waist + user.hip - user.neck) - 97.684 * Math.log10(user.height) - 78.387;
+			results.bfp= results.bfp.toFixed(1);
 		}
 		break;
 	}
-	document.getElementById("bfp").innerHTML= results.bfp.toFixed(1) + "%";
+	results.bfpFM= (results.bfp / 100) * user.weight;
+	results.bfpFM= results.bfpFM.toFixed(1);
+	results.bfpLM= user.weight - results.bfpFM;
+	document.getElementById("bfp").innerHTML= results.bfp + "<span style='font-size: 18px; color: white''>" + " %" + "</span>";
+	document.getElementById("bfpFM").innerHTML= results.bfpFM + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
+	document.getElementById("bfpLM").innerHTML= results.bfpLM + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
+	bfprange();
+	BFPbmi();
 }
-function bfpmethod() {
-	var formula= document.getElementById("bfpmethod").value;
-	if (formula == "us") {
-		BFPnavy();
-	} else if (formula == "bmimethod") {
-		BFPbmi();
+function bfprange() {
+	switch (user.gender) {
+		case "male":
+	if (results.bfp >= 2 && results.bfp <= 5) {
+		results.bfprange= "Essential Fat";
+	} else if (results.bfp > 5 && results.bfp <= 13) {
+		results.bfprange= "Athletes";
+	} else if (results.bfp > 13 && results.bfp <= 17) {
+		results.bfprange= "Fitness";
+	} else if (results.bfp > 17 && results.bfp <= 25) {
+		results.bfprange= "Average";
+	} else if (results.bfp > 25) {
+		results.bfprange= "Obese";
 	}
+	break;
+	case "female":
+	if (results.bfp >= 10 && results.bfp <= 13) {
+		results.bfprange= "Essential Fat";
+	} else if (results.bfp > 13 && results.bfp <= 20) {
+		results.bfprange= "Athletes";
+	} else if (results.bfp > 20 && results.bfp <= 24) {
+		results.bfprange= "Fitness";
+	} else if (results.bfp > 24 && results.bfp <= 31) {
+		results.bfprange= "Average";
+	} else if (results.bfp > 32) {
+		results.bfprange= "Obese";
+	}
+	break;
+	}
+	document.getElementById("bfpRange").innerHTML= results.bfprange;
 }
 function lbmBoer () {
 	results.lbm= (0.407 * user.weight)
@@ -568,8 +600,4 @@ function bfppop() {
 	} else {
 		document.getElementById("bfppop").style.display="block";
 	}
-}
-function ar() {
-	document.getElementById("title1").innerHTML=ar.p0Title;
-	document.getElementById("topage1").innerHTML=ar.p0Button;
 }

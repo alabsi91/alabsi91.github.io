@@ -18,7 +18,7 @@
 		
         <div id="profile" style="display: none">
             <h2 id="profileh2"></h2>
-            <button id="back" onclick="toback()" title="Go back" class="material-icons">arrow_back</button>
+            <button id="back" onclick="toback()" title="Go back" class="material-icons">navigate_before</button>
         </div>
 		
         <div id="page1" style="display: none">
@@ -86,7 +86,7 @@
                 <input id="sedentary" type="radio" name="activity" checked="checked">
                 <span class="checkmark1"></span>
             </label>
-            <h4 class="checkbox1">Little or no exercis, desk job</h4>
+            <h4 class="checkbox1">Little or no exercise, desk job</h4>
 			
             <label class="container1">Light active
                 <input id="light" type="radio" name="activity">
@@ -98,19 +98,19 @@
                 <input id="moderate" type="radio" name="activity">
                 <span class="checkmark1"></span>
             </label>
-            <h4 class="checkbox1">Moderate exercis/ sports 6-7 days/week</h4>
+            <h4 class="checkbox1">Moderate exercise/ sports 6-7 days/week</h4>
 			
             <label class="container1">Very Active
                 <input id="very" type="radio" name="activity">
                 <span class="checkmark1"></span>
             </label>
-            <h4 class="checkbox1">hard exercis every day</h4>
+            <h4 class="checkbox1">hard exercise every day</h4>
 			
             <label class="container1">Extra Active
                 <input id="extra" type="radio" name="activity">
                 <span class="checkmark1"></span>
             </label>
-            <h4 class="checkbox1">hard exercis 2 or more times per day</h4>
+            <h4 class="checkbox1">hard exercise 2 or more times per day</h4>
 			
             <br><br>
             <button class="topage2" onclick="topage4()">DONE</button>
@@ -177,14 +177,17 @@
 			<div id="card5">
                 <button id="bfptip" class="material-icons" onclick="bfppop()">error_outline</button>
                 <h1 style="margin-top: 0px; margin-bottom: 0px; color: #27A3C9">BFP</h1><br>
-				<h4 style="margin-top: 0px; margin-bottom: 3px">BFP Method By:</h4>
-                <select id="bfpmethod" onchange="bfpmethod()">
-                    <option value="us">U.S Navy Formula</option>
-                    <option value="bmimethod">BMI Method</option>
                 </select>
-                <h2 style="margin-top: 20px; font-size: 23px">Your Body Fat Percentage</h2>
-                <h1 id="bfp" style="color: #F5AF19"><br></h1><br>
-                <h2 id="whtrRange" style="margin-bottom: 0px; margin-top: 0px"><br></h2>
+                <h2 style="margin-top: -6px; margin-bottom: 3px; font-size: 23px">Body Fat (U.S. Navy Method)</h2>
+                <h1 id="bfp" style="color: #F5AF19; margin-bottom: 0px; margin-top: 0px"><br></h1>
+				<h2 style="margin-top: 20px; margin-bottom: 3px;  font-size: 23px">Body Fat Category</h2>
+                <h1 id="bfpRange" style="font-size: 30px; color: #F5AF19; margin-bottom: 0px; margin-top: 0px"><br></h1>
+				<h2 style="margin-top: 20px; margin-bottom: 3px;  font-size: 23px">Body Fat Mass</h2>
+                <h1 id="bfpFM" style="color: #F5AF19; margin-bottom: 0px; margin-top: 0px"><br></h1>
+				<h2 style="margin-top: 20px; margin-bottom: 3px;  font-size: 23px">Lean Body Mass</h2>
+                <h1 id="bfpLM" style="color: #F5AF19; margin-bottom: 0px; margin-top: 0px"><br></h1>
+				<h2 style="margin-top: 20px; margin-bottom: 3px;  font-size: 23px">Body Fat (BMI method)</h2>
+                <h1 id="bfpbmi" style="color: #F5AF19; margin-bottom: 0px; margin-top: 0px"><br></h1>
             </div>
 
             <div class="popup" id="bmipop">
