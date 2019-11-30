@@ -89,6 +89,9 @@ div {
 	background-color: rgba(0, 0, 0, 0);
 	color: white;
 	opacity: 70%;
+	-moz-opacity: 70%;
+	-khtml-opacity: 70%;
+	-webkit-opacity: 70%;
 	position: absolute;
 	right: 1px;
 	top: 7px;
@@ -103,6 +106,9 @@ div {
 	color: white;
 	border: none;
 	opacity: 75%;
+	-moz-opacity: 75%;
+	-khtml-opacity: 75%;
+	-webkit-opacity: 75%;
 }
 #necktip:hover, #waisttip:hover, #hiptip:hover {color: #ff5200;}
 #waisttip {
@@ -113,6 +119,9 @@ div {
 	color: white;
 	border: none;
 	opacity: 75%;
+	-moz-opacity: 75%;
+	-khtml-opacity: 75%;
+	-webkit-opacity: 75%;
 }
 #hiptip {
 	position: absolute;
@@ -122,6 +131,9 @@ div {
 	color: white;
 	border: none;
 	opacity: 75%;
+	-moz-opacity: 75%;
+	-khtml-opacity: 75%;
+	-webkit-opacity: 75%;
 }
 .topage1 {
 	position: inherit;
@@ -224,8 +236,21 @@ div {
 	margin-bottom: 12px;
 	margin-top: 0px;
 }
-
-i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;background-color: white;z-index: -1;opacity: 5%;border-radius: 9px;}
+i {
+	position: absolute;
+	left: 10px;
+	width: 354px;
+	height: 94px;
+	margin: auto;
+	background-color: white;
+	z-index: -1;
+	opacity: 5%;
+	-moz-opacity: 5%;
+	-khtml-opacity: 5%;
+	filter: 0.5;
+	-webkit-opacity: 5%;
+	border-radius: 9px;
+	}
 .ipg {
 	top: 16px;
 	height: 150px;
@@ -274,6 +299,9 @@ i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;backgrou
 #page4 h2 {
 	color: white;
 	opacity: 70%;
+	-moz-opacity: 70%;
+	-khtml-opacity: 70%;
+	-webkit-opacity: 70%;
 }
 #page4 h3 {
 	color: white;
@@ -281,6 +309,9 @@ i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;backgrou
 #page4 h4 {
 	color: #ffffff;
 	opacity: 70%;
+	-moz-opacity: 70%;
+	-khtml-opacity: 70%;
+	-webkit-opacity: 70%;
 	font-weight: lighter;
 }
 #page2 h1 {
@@ -453,7 +484,10 @@ i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;backgrou
 /* Hide the browser's default radio button */
 .container input {
   position: absolute;
-  opacity: 0;
+  opacity: 0;	
+  -moz-opacity: 0;
+  -khtml-opacity: 0%;
+  -webkit-opacity: 0;
   cursor: pointer;
   margin-bottom: 3px;
 }
@@ -518,7 +552,10 @@ i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;backgrou
 /* Hide the browser's default radio button */
 .container1 input {
   position: absolute;
-  opacity: 0;
+  opacity: 0;	
+  -moz-opacity: 0;
+  -khtml-opacity: 0%;
+  -webkit-opacity: 0%;
   cursor: pointer;
   margin-bottom: 3px;
 }
