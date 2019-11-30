@@ -125,8 +125,8 @@ div {
 }
 .topage1 {
 	position: inherit;
+	bottom: -294px;
 	margin: auto;
-	top: 262px;
 	color: white;
 	border: none;
 	border-radius: 15px;
@@ -144,6 +144,7 @@ div {
 }
 
 .topage2 {
+	position: inherit;
 	color: white;
 	border: none;
 	border-radius: 15px;
@@ -151,11 +152,16 @@ div {
 	font-size: 20px;
 	padding: 16px 118px;
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
-	
 }
 .topage2:hover {
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 50%);
 	color: black;
+}
+#page2 .topage2 {
+	bottom: -95px;
+}
+#page3 .topage2 {
+	bottom: -24px;
 }
 #selectsys {
 	background-color: #0d3342;
