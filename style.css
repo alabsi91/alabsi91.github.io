@@ -98,7 +98,7 @@ div {
 #necktip {
 	position: absolute;
 	right: 10px;
-	top: 49px;
+	top: 119px;
 	background-color: transparent;
 	color: white;
 	border: none;
@@ -108,7 +108,7 @@ div {
 #waisttip {
 	position: absolute;
 	right: 10px;
-	top: 152px;
+	top: 219px;
 	background-color: transparent;
 	color: white;
 	border: none;
@@ -117,7 +117,7 @@ div {
 #hiptip {
 	position: absolute;
 	right: 10px;
-	top: 256px;
+	top: 322px;
 	background-color: transparent;
 	color: white;
 	border: none;
@@ -125,7 +125,7 @@ div {
 }
 .topage1 {
 	position: inherit;
-	bottom: -294px;
+	bottom: -298px;
 	margin: auto;
 	color: white;
 	border: none;
@@ -158,7 +158,7 @@ div {
 	color: black;
 }
 #page2 .topage2 {
-	bottom: -95px;
+	bottom: -28px;
 }
 #page3 .topage2 {
 	bottom: -24px;
@@ -238,13 +238,13 @@ i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;backgrou
 	height: 300px;
 }
 .ipg6 {
-	top: 45px;
+	top: 113px;
 }
 .ipg7 {
-	top: 149px;
+	top: 216px;
 }
 .ipg8 {
-	top: 253px;
+	top: 319px;
 }
 .ipg9 {
 	top: 27px;
@@ -257,7 +257,7 @@ i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;backgrou
 	text-align: center;
 	margin-left: -11px;
 	margin-top: 7px;
-	color: #237D91;
+	color: #a5efff;
 }
 #page1 {
 	position: relative;
@@ -282,6 +282,10 @@ i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;backgrou
 	color: #ffffff;
 	opacity: 70%;
 	font-weight: lighter;
+}
+#page2 h1 {
+	font-size: 26px;
+	color: #27A3C9;
 }
 #card1  {
 	position: relative;
@@ -407,6 +411,14 @@ i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;backgrou
 #bfppop {
 	bottom: 15%;
 }
+#agealert {
+	margin-left: 53px;
+	margin-bottom: 103px;
+}
+#weightalert, #heightalert {
+	margin-left: 66px;
+	margin-bottom: 103px;
+}
 .popbutt {
 	background-color: #F5AF19;
 	color: white;
@@ -463,6 +475,7 @@ i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;backgrou
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: #F5AF19;
+  background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
 }
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
@@ -527,6 +540,7 @@ i {position: absolute;left: 10px;width: 354px;height: 94px;margin: auto;backgrou
 /* When the radio button is checked, add a blue background */
 .container1 input:checked ~ .checkmark1 {
   background-color: #F5AF19;
+  background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
 }
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark1:after {

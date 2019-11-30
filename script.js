@@ -576,11 +576,11 @@ function topage2() {
        switch (user.system) {
 		case "metric":
 		if (age < 18 || age > 120) {
-			alert("Please enter a valid age");
+			document.getElementById("agealert").style.display="block";
 		} else if (weight < 20 || weight > 250) {
-			alert("Please enter a valid weight");
+			document.getElementById("weightalert").style.display="block";
 		} else if (height < 91 || height > 360) {
-			alert("Please enter a valid height");
+			document.getElementById("heightalert").style.display="block";
 		} else{
            document.getElementById("page2").style.display="block";
 	       document.getElementById("page1").style.display="none";
@@ -588,11 +588,11 @@ function topage2() {
 		break;
 		case "imperial":
 		if (age < 18 || age > 120) {
-			alert("Please enter a valid age");
+			document.getElementById("agealert").style.display="block";
 		} else if (weight < 45 || weight > 560) {
-			alert("Please enter a valid weight");
+			document.getElementById("weightalert").style.display="block";
 		} else if (height < 47 || height > 155) {
-			alert("Please enter a valid height");
+			document.getElementById("heightalert").style.display="block";
 		} else {
 		    document.getElementById("page2").style.display="block";
 	        document.getElementById("page1").style.display="none";
@@ -739,5 +739,26 @@ function hippop() {
 	    document.getElementById("hippop").style.display="none";
 	} else {
 		document.getElementById("hippop").style.display="block";
+	}
+}
+function agealert() {
+	if (document.getElementById("agealert").style.display == "block") {
+	    document.getElementById("agealert").style.display="none";
+	} else {
+		document.getElementById("agealert").style.display="block";
+	}
+}
+function weightalert() {
+	if (document.getElementById("weightalert").style.display == "block") {
+	    document.getElementById("weightalert").style.display="none";
+	} else {
+		document.getElementById("weightalert").style.display="block";
+	}
+}
+function heightalert() {
+	if (document.getElementById("heightalert").style.display == "block") {
+	    document.getElementById("heightalert").style.display="none";
+	} else {
+		document.getElementById("heightalert").style.display="block";
 	}
 }

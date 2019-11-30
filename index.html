@@ -56,10 +56,32 @@
             <input id="height" autocomplete="off" type="number" placeholder="Your Height In Centimeters" value="170">
             <br><br><br><br><br>
             <button class="topage2" onclick="topage2()">NEXT</button>
+			
+			<div class="popup" id="agealert">
+                <h3 style="margin-left: 74px">Warning</h3>
+                <p style="font-family: sans-serif">Please enter an age above 18.
+				</p>
+				<button class="popbutt" style="margin-left: 74px;" onclick="agealert()">DONE</button>
+            </div>
+			
+			<div class="popup" id="weightalert">
+                <h3 style="margin-left: 58px">Warning</h3>
+                <p style="font-family: sans-serif">Please enter a valid weight.
+				</p>
+				<button class="popbutt" style="margin-left: 60px;" onclick="weightalert()">DONE</button>
+            </div>
+			
+			<div class="popup" id="heightalert">
+                <h3 style="margin-left: 58px">Warning</h3>
+                <p style="font-family: sans-serif">Please enter a valid height.
+				</p>
+				<button class="popbutt" style="margin-left: 60px;" onclick="heightalert()">DONE</button>
+            </div>
+			
         </div>
 		
         <div id="page2" style="display: none">
-            <br>
+			<h1>For More Accurate Results</h1><br>
 			<button id="necktip" class="material-icons" onclick="neckpop()">help_outline</button>
 			<button id="waisttip" class="material-icons" onclick="waistpop()">help_outline</button>
 			<button id="hiptip" class="material-icons" onclick="hippop()">help_outline</button>
