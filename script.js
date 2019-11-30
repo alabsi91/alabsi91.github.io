@@ -39,8 +39,8 @@ function bmi() {
 	    var bmibar= Math.round(bmibar) - 7;
 	    document.getElementById("arrow").style.left= bmibar + "px";
 	}
-	results.bmi=parseFloat(bmi);
-    document.getElementById("bmi").innerHTML=bmi.toFixed(1);
+	results.bmi=Number(bmi.toFixed(1));
+    document.getElementById("bmi").innerHTML=results.bmi;
 	bmiRange();
 	
 }
@@ -83,8 +83,8 @@ function HarrisBenedictBMR() {
 	}
 	break;
 	}
-results.bmr= bmr;
-document.getElementById("bmr").innerHTML=bmr.toFixed(0) + "<span style='font-size: 15px; color: white''>" +" kcal/day" + "</span>";
+results.bmr= Number(bmr.toFixed(0));
+document.getElementById("bmr").innerHTML=results.bmr + "<span style='font-size: 15px; color: white''>" +" kcal/day" + "</span>";
 }
 function MifflinStJeorBMR() {
 	switch (user.gender) {
@@ -103,8 +103,8 @@ function MifflinStJeorBMR() {
 	}
 	    break;
 	}
-results.bmr= bmr;
-document.getElementById("bmr").innerHTML=bmr.toFixed(0) + "<span style='font-size: 15px; color: white'>" + " kcal/day"+ "</span>" ;
+results.bmr= Number(bmr.toFixed(0));
+document.getElementById("bmr").innerHTML=results.bmr + "<span style='font-size: 15px; color: white'>" + " kcal/day"+ "</span>" ;
 }
 function activityMultipier() {
 	if (user.activity == "sedentary") {
@@ -118,7 +118,8 @@ function activityMultipier() {
 	} else if (user.activity == "extra") {
 		results.dailykcal = results.bmr*1.9;
 	}
-	document.getElementById("intake").innerHTML= results.dailykcal.toFixed(0) + "<span style='font-size: 15px; color: white'>"  + " kcal/day"+ "</span>";
+	results.dailykcal= Number(results.dailykcal.toFixed(0));
+	document.getElementById("intake").innerHTML= results.dailykcal + "<span style='font-size: 15px; color: white'>"  + " kcal/day"+ "</span>";
 }
 function bmrmethod() {
 	if (document.getElementById("bmrmethod").value == "harris") {
@@ -131,8 +132,8 @@ function bmrmethod() {
 }
 function whtr() {
 	results.whtr= user.waist / user.height;
-	results.whtr= parseFloat(results.whtr);
-	document.getElementById("whtr").innerHTML=results.whtr.toFixed(2);
+	results.whtr= Number(results.whtr.toFixed(2));
+	document.getElementById("whtr").innerHTML=results.whtr;
 	whtrRange();
 }
 function whtrRange() {
@@ -370,12 +371,14 @@ function BFPbmi() {
 	switch (user.gender) {
 		case ("male"):
 		 results.bfp= 1.20 * results.bmi + 0.23 * user.age - 16.2;
+		 results.bfp= Number(results.bfp.toFixed(1));
 		 break;
 		 case ("female"):
 		 results.bfp= 1.20 * results.bmi + 0.23 * user.age - 5.4;
+		 results.bfp= Number(results.bfp.toFixed(1));
 		 break;
 	}
-	document.getElementById("bfpbmi").innerHTML= results.bfp.toFixed(1) + "<span style='font-size: 18px; color: white''>" + " %" + "</span>";
+	document.getElementById("bfpbmi").innerHTML= results.bfp + "<span style='font-size: 18px; color: white''>" + " %" + "</span>";
 }
 function BFPnavy() {
 	switch (user.system) {

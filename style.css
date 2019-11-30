@@ -114,7 +114,7 @@ div {
 #waisttip {
 	position: absolute;
 	right: 10px;
-	top: 219px;
+	top: 229px;
 	background-color: transparent;
 	color: white;
 	border: none;
@@ -126,7 +126,7 @@ div {
 #hiptip {
 	position: absolute;
 	right: 10px;
-	top: 322px;
+	top: 338px;
 	background-color: transparent;
 	color: white;
 	border: none;
@@ -137,7 +137,7 @@ div {
 }
 .topage1 {
 	position: inherit;
-	bottom: -298px;
+	bottom: -328px;
 	margin: auto;
 	color: white;
 	border: none;
@@ -170,10 +170,10 @@ div {
 	color: black;
 }
 #page2 .topage2 {
-	bottom: -28px;
+	bottom: -37px;
 }
 #page3 .topage2 {
-	bottom: -24px;
+	bottom: -78px;
 }
 #selectsys {
 	background-color: #0d3342;
@@ -218,7 +218,7 @@ div {
 	text-align: left;
 	color: #27A3C9;
 	margin-left: 23px;
-	margin-bottom: -8px;
+	margin-bottom: 2px;
 	margin-top: 5px;
 	font-size: 20px;
 }
@@ -226,7 +226,7 @@ div {
 	text-align: left;
 	color: #27A3C9;
 	margin-left: 30px;
-	margin-bottom: -8px;
+	margin-bottom: -1px;
 	font-size: 20px;
 }
 #page1 h3 {
@@ -260,21 +260,21 @@ i {
 }
 .ipg3 {
 	top: 181px;
-	height: 300px;
+	height: 321px;
 }
 .ipg6 {
-	top: 113px;
+	top: 116px;
 }
 .ipg7 {
-	top: 216px;
+	top: 226px;
 }
 .ipg8 {
-	top: 319px;
+	top: 336px;
 }
 .ipg9 {
 	top: 27px;
 	left: 6px;
-	height: 446px;
+	height: 416px;
 	width: 365px;
 	border-radius: 22px;
 }
@@ -292,6 +292,9 @@ i {
 }
 #page3 {
 	position: relative;
+}
+#page3 h4 {
+	font-size: 14px;
 }
 #page4 {
 	position: relative;
@@ -504,7 +507,7 @@ i {
 }
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: #151313;
 }
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
@@ -572,7 +575,7 @@ i {
 }
 /* On mouse-over, add a grey background color */
 .container1:hover input ~ .checkmark1 {
-  background-color: #ccc;
+  background-color: #151313;
 }
 /* When the radio button is checked, add a blue background */
 .container1 input:checked ~ .checkmark1 {
