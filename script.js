@@ -25,11 +25,13 @@ var results = {
 	lbmP:0
 };
 function bmi() {
+	
 	if (user.system == "metric") {
 	var bmi= user.weight / Math.pow(user.height/100, 2);
 	} else {
 		var bmi= (703 * user.weight) / Math.pow(user.height, 2);
 	}
+	
 	if (bmi > 35) {
 		document.getElementById("arrow").style.left= 243 + "px";
 	} else if (bmi < 0) {
@@ -39,12 +41,14 @@ function bmi() {
 	    var bmibar= Math.round(bmibar) - 7;
 	    document.getElementById("arrow").style.left= bmibar + "px";
 	}
+	
 	results.bmi=Number(bmi.toFixed(1));
     document.getElementById("bmi").innerHTML=results.bmi;
 	bmiRange();
 	
 }
 function bmiRange() {
+	
 		if (results.bmi < 18.5 && user.age >= 20) {
 			results.bmirange= "Underweight";
 			document.getElementById("bmiRange").style.color= "#d0a50b";
@@ -64,47 +68,55 @@ function bmiRange() {
 		} else {
 			results.bmirange= "Child or Teen";
 		}
+		
 		document.getElementById("bmiRange").innerHTML=results.bmirange;
 	}
 function HarrisBenedictBMR() {
+	
 	switch (user.gender) {
+		
 		case "male":
-	if (user.system=="metric") {
+	    if (user.system == "metric") {
 		var bmr= 66.47 + (13.75 * user.weight) + (5.003 * user.height) - (6.755 * user.age);
 	} else if (user.system == "imperial") {
 		var bmr= 66.47 + (6.24 * user.weight) + (12.7 * user.height) - (6.755 * user.age);
 	}
 		break;
+		
 		case "female":
-	if (user.system == "metric") {
+	    if (user.system == "metric") {
 		var bmr= 655.1 + (9.563 * user.weight) + (1.85 * user.height) - (4.676 * user.age);
     } else if (user.system == "imperial") {
 		var bmr= 655.1 + (4.35 * user.weight) + (4.7 * user.height) - (4.7 * user.age);
 	}
 	break;
 	}
-results.bmr= Number(bmr.toFixed(0));
-document.getElementById("bmr").innerHTML=results.bmr + "<span style='font-size: 15px; color: white''>" +" kcal/day" + "</span>";
+	
+    results.bmr= Number(bmr.toFixed(0));
+    document.getElementById("bmr").innerHTML=results.bmr + "<span style='font-size: 15px; color: white''>" +" kcal/day" + "</span>";
 }
 function MifflinStJeorBMR() {
+	
 	switch (user.gender) {
 		case "male":
-	if (user.system=="metric") {
+	    if (user.system == "metric") {
 		var bmr= (10 * user.weight) + (6.25 * user.height) - (5 * user.age) + 5;
 	} else if (user.system == "imperial") {
 		var bmr= (4.536 * user.weight) + (15.88 * user.height) - (5 * user.age) + 5;
 	}
 	    break;
+		
 		case "female":
-	if (user.system == "metric") {
+	    if (user.system == "metric") {
 		var bmr= (10 * user.weight) + (6.25 * user.height) - (5 * user.age) - 161;
     } else if (user.system == "imperial") {
 		var bmr= (4.3536 * user.weight) + (15.88 * user.height) - (5 * user.age) - 161;
 	}
 	    break;
 	}
-results.bmr= Number(bmr.toFixed(0));
-document.getElementById("bmr").innerHTML=results.bmr + "<span style='font-size: 15px; color: white'>" + " kcal/day"+ "</span>" ;
+	
+    results.bmr= Number(bmr.toFixed(0));
+    document.getElementById("bmr").innerHTML=results.bmr + "<span style='font-size: 15px; color: white'>" + " kcal/day"+ "</span>" ;
 }
 function activityMultipier() {
 	if (user.activity == "sedentary") {
@@ -118,6 +130,7 @@ function activityMultipier() {
 	} else if (user.activity == "extra") {
 		results.dailykcal = results.bmr*1.9;
 	}
+	
 	results.dailykcal= Number(results.dailykcal.toFixed(0));
 	document.getElementById("intake").innerHTML= results.dailykcal + "<span style='font-size: 15px; color: white'>"  + " kcal/day"+ "</span>";
 }
@@ -131,15 +144,18 @@ function bmrmethod() {
 	}
 }
 function whtr() {
+	
 	results.whtr= user.waist / user.height;
 	results.whtr= Number(results.whtr.toFixed(2));
+	
 	document.getElementById("whtr").innerHTML=results.whtr;
 	whtrRange();
 }
 function whtrRange() {
+	
 	switch (user.gender) {
 		case "male":
-	if (results.whtr <= 0.34 && user.age >= 20) {
+	    if (results.whtr <= 0.34 && user.age >= 20) {
 		results.whtrRange= "Extremely Slim";
 		document.getElementById("whtrRange").style.color= "#dc2900";
 		document.getElementById("whtrGoal").innerHTML="You Should Gain Weight";
@@ -165,6 +181,7 @@ function whtrRange() {
 		document.getElementById("whtrRange").style.color= "#dc2900";
 	}
 	break;
+	
 		case "female":
 		if (results.whtr <= 0.34 && user.age >= 20) {
 		results.whtrRange= "Extremely Slim";
@@ -193,6 +210,7 @@ function whtrRange() {
 	}
 	break;
 	}
+	
 	if (results.whtr <= 0.34 && user.age < 20) {
 		results.whtrRange= "Extremely Slim";
 		document.getElementById("whtrRange").style.color= "#dc2900";
@@ -214,144 +232,209 @@ function whtrRange() {
 		document.getElementById("whtrRange").style.color= "#dc2900";
 		document.getElementById("whtrGoal").innerHTML="You Should Lose Weight";
 	}
+	
 	document.getElementById("whtrRange").innerHTML=results.whtrRange;
 }
 function ibwBroca() {
+	
 	switch (user.gender) {
 		case "male":
 		 if (user.system == "metric") {
 	         results.ibw= user.height - 100;
              results.ibw= results.ibw - (results.ibw / 100 * 10);
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 		 } else if (user.system == "imperial") {
 			 results.ibw= user.height * 2.54 ;
 			 results.ibw= results.ibw - 100 ;
              results.ibw= results.ibw - (results.ibw / 100 * 10);
+			 results.ibw= results.ibw * 2.205;
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 	     }
 		break;
+		
 		case "female":
 		if (user.system == "metric") {
 	         results.ibw= user.height - 100;
              results.ibw= results.ibw + (results.ibw / 100 * 15);
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 		 } else if (user.system == "imperial") {
 			 results.ibw= user.height * 2.54;
 			 results.ibw= results.ibw - 100;
              results.ibw= results.ibw + (results.ibw / 100 * 15);
+			 results.ibw= results.ibw * 2.205;
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 	     }
 		break;
 	}
-	document.getElementById("ibw").innerHTML= results.ibw.toFixed(1) + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
+	
+	
 }
 function ibwDevine() {
+	
 	switch (user.gender) {
 		case "male":
 		 if (user.system == "metric") {
 			 results.ibw= user.height / 2.54;
 	         results.ibw= results.ibw - 60;
 			 results.ibw= 50 + (results.ibw * 2.3);
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 		 } else if (user.system == "imperial") {
 			 results.ibw= user.height - 60;
 			 results.ibw= 50 + (results.ibw * 2.3);
+			 results.ibw= results.ibw * 2.205;
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 	     }
 		break;
+		
 		case "female":
 		if (user.system == "metric") {
 	         results.ibw= user.height / 2.54;
 	         results.ibw= results.ibw - 60;
 			 results.ibw= 45.5 + (results.ibw * 2.3);
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 		 } else if (user.system == "imperial") {
 			 results.ibw= user.height - 60;
 			 results.ibw= 45.5 + (results.ibw * 2.3);
+			 results.ibw= results.ibw * 2.205;
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 	     }
 		break;
 	}
-	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 }
 function ibwRobinson() {
+	
 	switch (user.gender) {
 		case "male":
 		 if (user.system == "metric") {
 			 results.ibw= user.height / 2.54;
 	         results.ibw= results.ibw - 60;
 			 results.ibw= 52 + (results.ibw * 1.9);
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML=results.ibw + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 		 } else if (user.system == "imperial") {
 			 results.ibw= user.height - 60;
 			 results.ibw= 52 + (results.ibw * 1.9);
+			 results.ibw= results.ibw * 2.205;
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 	     }
 		break;
+		
 		case "female":
 		if (user.system == "metric") {
 	         results.ibw= user.height / 2.54;
 	         results.ibw= results.ibw - 60;
 			 results.ibw= 49 + (results.ibw * 1.7);
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML=results.ibw + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 		 } else if (user.system == "imperial") {
 			 results.ibw= user.height - 60;
 			 results.ibw= 49 + (results.ibw * 1.7);
+			 results.ibw= results.ibw * 2.205;
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 	     }
 		break;
 	}
-	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
+	
+	
 }
 function ibwMillier() {
+	
 	switch (user.gender) {
 		case "male":
 		 if (user.system == "metric") {
 			 results.ibw= user.height / 2.54;
 	         results.ibw= results.ibw - 60;
 			 results.ibw= 56.2 + (results.ibw * 1.41);
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML=results.ibw + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 		 } else if (user.system == "imperial") {
 			 results.ibw= user.height - 60;
 			 results.ibw= 56.2 + (results.ibw * 1.41);
+			 results.ibw= results.ibw * 2.205;
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 	     }
 		break;
+		
 		case "female":
 		if (user.system == "metric") {
 	         results.ibw= user.height / 2.54;
 	         results.ibw= results.ibw - 60;
 			 results.ibw= 53.1 + (results.ibw * 1.36);
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML=results.ibw + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 		 } else if (user.system == "imperial") {
 			 results.ibw= user.height - 60;
 			 results.ibw= 53.1 + (results.ibw * 1.36);
+			 results.ibw= results.ibw * 2.205;
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 	     }
 		break;
 	}
-	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 }
 function ibwHamwi() {
+	
 	switch (user.gender) {
 		case "male":
 		 if (user.system == "metric") {
 			 results.ibw= user.height / 2.54;
 	         results.ibw= results.ibw - 60;
 			 results.ibw= 48 + (results.ibw * 2.7);
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML=results.ibw + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 		 } else if (user.system == "imperial") {
 			 results.ibw= user.height - 60;
 			 results.ibw= 48 + (results.ibw * 2.7);
+			 results.ibw= results.ibw * 2.205;
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 	     }
 		break;
+		
 		case "female":
 		if (user.system == "metric") {
 	         results.ibw= user.height / 2.54;
 	         results.ibw= results.ibw - 60;
 			 results.ibw= 45.5 + (results.ibw * 2.2);
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML=results.ibw + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 		 } else if (user.system == "imperial") {
 			 results.ibw= user.height - 60;
 			 results.ibw= 45.5 + (results.ibw * 2.2);
+			 results.ibw= results.ibw * 2.205;
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 	     }
 		break;
 	}
-	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 }
 function ibwLemmens() {
+	
 		 if (user.system == "metric") {
 	         results.ibw= 22 * Math.pow(user.height/100, 2);
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML=results.ibw + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 		 } else if (user.system == "imperial") {
 			 results.ibw= user.height / 39.37;
 			 results.ibw= 22 * Math.pow(results.ibw, 2);
+			 results.ibw= results.ibw * 2.205;
+			 results.ibw= Number(results.ibw.toFixed(1));
+			 document.getElementById("ibw").innerHTML= results.ibw + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 		 }
-
-	document.getElementById("ibw").innerHTML=results.ibw.toFixed(1) + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 }
 function ibwmethod() {
+	
 	var formula= document.getElementById("ibwmethod").value;
 	if (formula == "borca") {
 		ibwBroca();
@@ -368,11 +451,13 @@ function ibwmethod() {
 	}
 }
 function BFPbmi() {
+	
 	switch (user.gender) {
 		case ("male"):
 		 results.bfp= 1.20 * results.bmi + 0.23 * user.age - 16.2;
 		 results.bfp= Number(results.bfp.toFixed(1));
 		 break;
+		 
 		 case ("female"):
 		 results.bfp= 1.20 * results.bmi + 0.23 * user.age - 5.4;
 		 results.bfp= Number(results.bfp.toFixed(1));
@@ -381,6 +466,7 @@ function BFPbmi() {
 	document.getElementById("bfpbmi").innerHTML= results.bfp + "<span style='font-size: 18px; color: white''>" + " %" + "</span>";
 }
 function BFPnavy() {
+	
 	switch (user.system) {
 		case "metric":
 		if (user.gender == "male") {
@@ -389,8 +475,10 @@ function BFPnavy() {
 			
 			results.bfpFM= (results.bfp / 100) * user.weight;
 	        results.bfpFM= Number(results.bfpFM.toFixed(1));
+			
 	        results.bfpLM= user.weight - results.bfpFM;
 	        results.bfpLM= Number(results.bfpLM.toFixed(1));
+			
 	        document.getElementById("bfpFM").innerHTML= results.bfpFM + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 	        document.getElementById("bfpLM").innerHTML= results.bfpLM + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 	
@@ -400,13 +488,16 @@ function BFPnavy() {
 			
 			results.bfpFM= (results.bfp / 100) * user.weight;
 	        results.bfpFM= Number(results.bfpFM.toFixed(1));
+			
 	        results.bfpLM= user.weight - results.bfpFM;
 	        results.bfpLM= Number(results.bfpLM.toFixed(1));
+			
 	        document.getElementById("bfpFM").innerHTML= results.bfpFM + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 	        document.getElementById("bfpLM").innerHTML= results.bfpLM + "<span style='font-size: 15px; color: white''>" + " Kilograms" + "</span>";
 			
 		}
 		break;
+		
 		case "imperial":
 		if (user.gender == "male") {
 			results.bfp= 86.010 * Math.log10(user.waist - user.neck) - 70.041 * Math.log10(user.height) + 36.76;
@@ -414,8 +505,10 @@ function BFPnavy() {
 			
 			results.bfpFM= (results.bfp / 100) * user.weight;
 	        results.bfpFM= Number(results.bfpFM.toFixed(1));
+			
 	        results.bfpLM= user.weight - results.bfpFM;
 	        results.bfpLM= Number(results.bfpLM.toFixed(1));
+			
 	        document.getElementById("bfpFM").innerHTML= results.bfpFM + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 	        document.getElementById("bfpLM").innerHTML= results.bfpLM + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 			
@@ -425,8 +518,10 @@ function BFPnavy() {
 			
 			results.bfpFM= (results.bfp / 100) * user.weight;
 	        results.bfpFM= Number(results.bfpFM.toFixed(1));
+			
 	        results.bfpLM= user.weight - results.bfpFM;
 	        results.bfpLM= Number(results.bfpLM.toFixed(1));
+			
 	        document.getElementById("bfpFM").innerHTML= results.bfpFM + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 	        document.getElementById("bfpLM").innerHTML= results.bfpLM + "<span style='font-size: 15px; color: white''>" + " Pounds" + "</span>";
 		}
@@ -438,6 +533,7 @@ function BFPnavy() {
 	BFPbmi();
 }
 function bfprange() {
+	
 	switch (user.gender) {
 		case "male":
 	if (results.bfp >= 2 && results.bfp <= 5) {
@@ -452,6 +548,7 @@ function bfprange() {
 		results.bfprange= "Obese";
 	}
 	break;
+	
 	case "female":
 	if (results.bfp >= 10 && results.bfp <= 13) {
 		results.bfprange= "Essential Fat";
@@ -466,9 +563,11 @@ function bfprange() {
 	}
 	break;
 	}
+	
 	document.getElementById("bfpRange").innerHTML= results.bfprange;
 }
 function lbmBoer() {
+	
 	switch(user.system) {
 		case "metric":
 		if (user.gender == "male") {
@@ -478,31 +577,38 @@ function lbmBoer() {
 			results.lbm = (0.252 * user.weight) + (0.473 * user.height) - 48.3;
 			results.lbm = Number(results.lbm.toFixed(1));
 		}
+		
 		results.lbmP = (results.lbm * 100) / user.weight;
 	    results.lbmP = Number(results.lbmP.toFixed(1));
+		document.getElementById("lbm").innerHTML = results.lbm + "<span style='font-size: 18px; color: white''>" + " Kilograms" + "</span>";
 		break;
+		
 		case "imperial":
 		var heightcm = user.height * 2.54;
 		var weightkg = user.weight / 2.205;
 		if (user.gender == "male") {
 			results.lbm = (0.407 * weightkg) + (0.267 * heightcm) - 19.2;
-            results.lbm = Number(results.lbm.toFixed(1));
+			results.lbm = results.lbm * 2.205;
+			results.lbm = Number(results.lbm.toFixed(1));
+			
 		} else if (user.gender == "female") {
 			results.lbm = (0.252 * weightkg) + (0.473 * heightcm) - 48.3;
+			results.lbm = results.lbm * 2.205;
             results.lbm = Number(results.lbm.toFixed(1));
 		}
-		results.lbmP = (results.lbm * 100) / weightkg;
+		results.lbmP = (results.lbm * 100) / user.weight;
 	    results.lbmP = Number(results.lbmP.toFixed(1));
+		document.getElementById("lbm").innerHTML = results.lbm + "<span style='font-size: 18px; color: white''>" + " Pounds" + "</span>";
 		break;
 	}
 	
 	results.lbmF = 100 - results.lbmP;
 	results.lbmF = Number(results.lbmF.toFixed(1));
-	document.getElementById("lbm").innerHTML = results.lbm + "<span style='font-size: 18px; color: white''>" + " Kilograms" + "</span>";
 	document.getElementById("lbmP").innerHTML = results.lbmP + "<span style='font-size: 18px; color: white''>" + " %" + "</span>";
 	document.getElementById("lbmF").innerHTML = results.lbmF + "<span style='font-size: 18px; color: white''>" + " %" + "</span>";
 }
 function lbmJames() {
+	
 	switch(user.system) {
 		case "metric":
 		if (user.gender == "male") {
@@ -512,31 +618,39 @@ function lbmJames() {
 			results.lbm = (1.07 * user.weight) - 148 * Math.pow((user.weight / user.height), 2);
 			results.lbm = Number(results.lbm.toFixed(1));
 		}
+		
 		results.lbmP = (results.lbm * 100) / user.weight;
 	    results.lbmP = Number(results.lbmP.toFixed(1));
+		document.getElementById("lbm").innerHTML = results.lbm + "<span style='font-size: 18px; color: white''>" + " Kilograms" + "</span>";
 		break;
+		
 		case "imperial":
 		var heightcm = user.height * 2.54;
 		var weightkg = user.weight / 2.205;
+		
 		if (user.gender == "male") {
 			results.lbm = (1.1 * weightkg) - 128 * Math.pow((weightkg / heightcm), 2);
+			results.lbm = results.lbm * 2.205;
 			results.lbm = Number(results.lbm.toFixed(1));
 		} else if (user.gender == "female") {
 			results.lbm = (1.07 * weightkg) - 148 * Math.pow((weightkg / heightcm), 2);
+			results.lbm = results.lbm * 2.205;
 			results.lbm = Number(results.lbm.toFixed(1));
 		}
-		results.lbmP = (results.lbm * 100) / weightkg;
+		
+		results.lbmP = (results.lbm * 100) / user.weight;
 	    results.lbmP = Number(results.lbmP.toFixed(1));
+		document.getElementById("lbm").innerHTML = results.lbm + "<span style='font-size: 18px; color: white''>" + " Pounds" + "</span>";
 		break;
 	}
 	
 	results.lbmF = 100 - results.lbmP;
 	results.lbmF = Number(results.lbmF.toFixed(1));
-	document.getElementById("lbm").innerHTML = results.lbm + "<span style='font-size: 18px; color: white''>" + " Kilograms" + "</span>";
 	document.getElementById("lbmP").innerHTML = results.lbmP + "<span style='font-size: 18px; color: white''>" + " %" + "</span>";
 	document.getElementById("lbmF").innerHTML = results.lbmF + "<span style='font-size: 18px; color: white''>" + " %" + "</span>";
 }
 function lbmHume() {
+	
 	switch(user.system) {
 		case "metric":
 		if (user.gender == "male") {
@@ -546,32 +660,39 @@ function lbmHume() {
 			results.lbm = (0.29569 * user.weight) + (0.41813 * user.height) - 43.2933;
 			results.lbm = Number(results.lbm.toFixed(1));
 		}
+		
 		results.lbmP = (results.lbm * 100) / user.weight;
 	    results.lbmP = Number(results.lbmP.toFixed(1));
+		document.getElementById("lbm").innerHTML = results.lbm + "<span style='font-size: 18px; color: white''>" + " Kilograms" + "</span>";
 		break;
+		
 		case "imperial":
 		var heightcm = user.height * 2.54;
 		var weightkg = user.weight / 2.205;
+		
 		if (user.gender == "male") {
 			results.lbm = (0.32810 * weightkg) + (0.33929 * heightcm) - 29.5336;
+			results.lbm = results.lbm * 2.205;
 			results.lbm = Number(results.lbm.toFixed(1));
 		} else if (user.gender == "female") {
 			results.lbm = (0.29569 * weightkg) + (0.41813 * heightcm) - 43.2933;
+			results.lbm = results.lbm * 2.205;
 			results.lbm = Number(results.lbm.toFixed(1));
 		}
-		results.lbmP = (results.lbm * 100) / weightkg;
+		results.lbmP = (results.lbm * 100) / user.weight;
 	    results.lbmP = Number(results.lbmP.toFixed(1));
+		document.getElementById("lbm").innerHTML = results.lbm + "<span style='font-size: 18px; color: white''>" + " Pounds" + "</span>";
 		break;
 	}
 	
 	results.lbmF = 100 - results.lbmP;
 	results.lbmF = Number(results.lbmF.toFixed(1));
-	document.getElementById("lbm").innerHTML = results.lbm + "<span style='font-size: 18px; color: white''>" + " Kilograms" + "</span>";
 	document.getElementById("lbmP").innerHTML = results.lbmP + "<span style='font-size: 18px; color: white''>" + " %" + "</span>";
 	document.getElementById("lbmF").innerHTML = results.lbmF + "<span style='font-size: 18px; color: white''>" + " %" + "</span>";
 }
 function lbmmethod() {
-		var formula= document.getElementById("lbmmethod").value;
+	
+	var formula= document.getElementById("lbmmethod").value;
 	if (formula == "Boer") {
 		lbmBoer();
 	} else if (formula == "James") {
@@ -586,15 +707,17 @@ function topage1() {
 	document.getElementById("welcomePage").style.display="none";
 }
 function topage2() {
+	
 	var age= document.getElementById("age").value;
     var weight= document.getElementById("weight").value;
     var height= document.getElementById("height").value;
 	var gender= document.getElementById("mgender").checked;
 	var selectsys= document.getElementById("metric").checked;
+	
 	if (gender == true) {
 	    user.gender="male";
     } else {
-	user.gender="female";
+	    user.gender="female";
     }
 	if (selectsys == true) {
 		user.system= "metric";
@@ -611,10 +734,11 @@ function topage2() {
 		} else if (height < 91 || height > 360) {
 			document.getElementById("heightalert").style.display="block";
 		} else{
-           document.getElementById("page2").style.display="block";
-	       document.getElementById("page1").style.display="none";
+            document.getElementById("page2").style.display="block";
+	        document.getElementById("page1").style.display="none";
 		}
 		break;
+		
 		case "imperial":
 		if (age < 18 || age > 120) {
 			document.getElementById("agealert").style.display="block";
@@ -628,21 +752,26 @@ function topage2() {
 		}
 		break;
 	}
-    user.age=parseFloat(age);
-    user.weight=parseFloat(weight);
-    user.height=parseFloat(height);
+	
+    user.age= Number(age);
+    user.weight= Number(weight);
+    user.height= Number(height);
 }
 function topage3() {
+	
 	document.getElementById("page3").style.display="block";
 	document.getElementById("page2").style.display="none";
+	
 	var neck= document.getElementById("neck").value;
     var waist= document.getElementById("waist").value;
     var hip= document.getElementById("hip").value;
-	user.neck=parseFloat(neck);
-    user.waist=parseFloat(waist);
-    user.hip=parseFloat(hip);
+	
+	user.neck= Number(neck);
+    user.waist= Number(waist);
+    user.hip= Number(hip);
 }
 function topage4() {
+	
 	document.getElementById("page4").style.display="block";
 	document.getElementById("page3").style.display="none";
 	document.getElementById("profile").style.display="none";
