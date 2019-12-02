@@ -31,22 +31,40 @@ function bmi() {
 	} else {
 		var bmi= (703 * user.weight) / Math.pow(user.height, 2);
 	}
-	
+
+    var pos= 0;
+    var arrow= document.getElementById("arrow");	
 	if (bmi > 35) {
-		document.getElementById("arrow").style.left= 243 + "px";
+		arrow.style.left= 243 + "px";
+		var t= setInterval(move, 10);
+        function move(){
+          if(pos >= 243) {
+           clearInterval(t);
+          } else {
+           pos += 1;
+           arrow.style.left= pos + "px";
+         }
+       }
 	} else if (bmi < 0) {
-		document.getElementById("arrow").style.left= -7 + "px";
+		arrow.style.left= -7 + "px";
 	} else {
-		var bmibar= bmi * 7.142857;
-	    var bmibar= Math.round(bmibar) - 7;
-	    document.getElementById("arrow").style.left= bmibar + "px";
-	}
-	
+	    var bmibar= bmi * 7.142857;
+		var bmibar= Math.round(bmibar) - 7;
+        var t= setInterval(move, 10);
+        function move(){
+         if(pos >= bmibar) {
+           clearInterval(t);
+         } else {
+           pos += 1;
+           arrow.style.left= pos + "px";
+         }
+        }
+    }
 	results.bmi=Number(bmi.toFixed(1));
     document.getElementById("bmi").innerHTML=results.bmi;
 	bmiRange();
-	
 }
+
 function bmiRange() {
 	
 		if (results.bmi < 18.5 && user.age >= 20) {
@@ -563,7 +581,7 @@ function bfprange() {
 	}
 	break;
 	}
-	
+
 	document.getElementById("bfpRange").innerHTML= results.bfprange;
 }
 function lbmBoer() {
@@ -820,7 +838,8 @@ function toback() {
 function restart() {
 	document.getElementById("welcomePage").style.display="block";
 	document.getElementById("page4").style.display="none";
-    document.getElementById("body").style.backgroundImage="none";
+	document.getElementById("body").style.backgroundImage="none";
+	document.getElementById("arrow").style.left= -7 + "px";
 }
 function metricSystem() {
 		document.getElementById("weight").placeholder="Your Weight In Kilograms";
