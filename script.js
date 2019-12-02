@@ -64,7 +64,6 @@ function bmi() {
     document.getElementById("bmi").innerHTML=results.bmi;
 	bmiRange();
 }
-
 function bmiRange() {
 	
 		if (results.bmi < 18.5 && user.age >= 20) {
@@ -732,16 +731,11 @@ function topage2() {
 	var gender= document.getElementById("mgender").checked;
 	var selectsys= document.getElementById("metric").checked;
 	
-	if (gender == true) {
-	    user.gender="male";
-    } else {
-	    user.gender="female";
-    }
-	if (selectsys == true) {
-		user.system= "metric";
-	} else {
-		user.system= "imperial";
-	}
+	user.gender= gender == true? "male" :"female";
+	user.system= selectsys == true? "metric" :"imperial";
+	user.age= Number(age);
+    user.weight= Number(weight);
+	user.height= Number(height);
 	
        switch (user.system) {
 		case "metric":
@@ -771,9 +765,6 @@ function topage2() {
 		break;
 	}
 	
-    user.age= Number(age);
-    user.weight= Number(weight);
-    user.height= Number(height);
 }
 function topage3() {
 	

@@ -20,6 +20,7 @@ body {
 	-webkit-box-shadow: inset 0px -145px 62px -83px rgba(7,26,35,1);
 	-moz-box-shadow: inset 0px -145px 62px -83px rgba(7,26,35,1);
 	box-shadow: inset 0px -145px 62px -83px rgba(7,26,35,1);
+	opacity: 5;
 }
 div {
 	max-width: 375px;
@@ -34,6 +35,7 @@ div {
 	font-size: 39px;
 	font-weight: BOLDER;
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -82,6 +84,7 @@ div {
 }
 #restartbutt:hover {
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	}
@@ -193,7 +196,6 @@ div {
 	width: 301px;
 	height: 18px;
 	padding: 15px 10px;
-	-moz-box-shadow: inset 0px 0px 300px -76px rgba(0,0,0,1);
 }
 #page2 input::placeholder {
 	color: #6d6d6e;
@@ -315,7 +317,7 @@ i {
 	width: 0px;
 	border-left: 7px solid transparent;
 	border-right: 7px solid transparent;
-	border-top: 14px solid #cfcfcf;
+	border-top: 14px solid #000000;
 }
 #card2 {
 	position: relative;
