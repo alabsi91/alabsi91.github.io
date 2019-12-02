@@ -22,7 +22,8 @@ var results = {
 	bfpLM:0,
 	bfprange:0,
 	lbm:0,
-	lbmP:0
+	lbmP:0,
+	tbw:0
 };
 function bmi() {
 	
@@ -87,7 +88,7 @@ function bmiRange() {
 		}
 		
 		document.getElementById("bmiRange").innerHTML=results.bmirange;
-	}
+}
 function HarrisBenedictBMR() {
 	
 	switch (user.gender) {
@@ -718,6 +719,28 @@ function lbmmethod() {
 		lbmHume();
 	}
 }
+function tbw() {
+	switch (user.system) {
+		case "metric":
+			if (user.gender == "male"){
+				results.tbw = 2.447 - (0.09156 * user.age) + (0.1074 * user.height) + (0.3362 * user.weight);
+			} else if (user.gender == "female"){
+				results.tbw = -2.097 + (0.1069 * user.height) + (0.2466 * user.weight);
+			}
+			break;
+			case "imperial":
+				let heightCM= user.height * 2.54;
+				let weightKG= user.weight / 2.205;
+				if (user.gender == "male"){
+					results.tbw = 2.447 - (0.09156 * user.age) + (0.1074 * heightCM) + (0.3362 * weightKG);
+				} else if (user.gender == "female"){
+					results.tbw = -2.097 + (0.1069 * heightCM) + (0.2466 * weightKG);
+				}
+				break;
+	}
+	results.tbw = Number(results.tbw.toFixed(1));
+	document.getElementById("tbw").innerHTML= results.tbw +"<span style='font-size: 18px; color: white''>" + " Litres" + "</span>";
+}
 function topage1() {
 	document.getElementById("page1").style.display="block";
 	document.getElementById("profile").style.display="block";
@@ -810,6 +833,7 @@ function topage4() {
 	ibwBroca();
 	BFPnavy();
 	lbmBoer();
+	tbw();
 	console.log(user);
 	console.log(results);
 }
@@ -889,6 +913,13 @@ function lbmpop() {
 	    document.getElementById("lbmpop").style.display="none";
 	} else {
 		document.getElementById("lbmpop").style.display="block";
+	}
+}
+function tbwpop() {
+	if (document.getElementById("tbwpop").style.display == "block") {
+	    document.getElementById("tbwpop").style.display="none";
+	} else {
+		document.getElementById("tbwpop").style.display="block";
 	}
 }
 function neckpop() {
