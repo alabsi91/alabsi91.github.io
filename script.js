@@ -831,6 +831,9 @@ function restart() {
 	document.getElementById("page4").style.display="none";
 	document.getElementById("body").style.backgroundImage="none";
 	document.getElementById("arrow").style.left= -7 + "px";
+	document.getElementById("Boer").selected= true;
+	document.getElementById("borca").selected= true;
+	document.getElementById("harris").selected= true;
 }
 function metricSystem() {
 		document.getElementById("weight").placeholder="Your Weight In Kilograms";

@@ -313,11 +313,11 @@ i {
 	position: absolute;
 	left: -5px;
 	bottom: 3px;
-	height: 0px;
+	height: 4px;
 	width: 0px;
 	border-left: 7px solid transparent;
 	border-right: 7px solid transparent;
-	border-top: 14px solid #000000;
+	border-top: 14px solid #ffffff;
 }
 #card2 {
 	position: relative;
