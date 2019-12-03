@@ -173,6 +173,9 @@ div {
 	position: relative;
 	bottom: -48px;
 }
+.skip:hover {
+	color: black;
+}
 #selectsys {
 	background-color: #0d3342;
 	color: white;
