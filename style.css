@@ -157,10 +157,21 @@ div {
 	color: black;
 }
 #page2 .topage2 {
-	bottom: -37px;
+	bottom: -94px;
 }
 #page3 .topage2 {
 	bottom: -78px;
+}
+.skip {
+	color: rgba(229,46,113,1);
+	border: none;
+	border-radius: 15px;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 8px 40px;
+	background: white;
+	position: relative;
+	bottom: -48px;
 }
 #selectsys {
 	background-color: #0d3342;

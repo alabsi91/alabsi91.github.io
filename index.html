@@ -97,9 +97,18 @@
             <br>
             <h2>Hip size</h2>
             <input id="hip" type="number" placeholder="Your Hip Size" value="">
-            <br><br><br><br><br><br>
+            <br>
+            <button class="skip" onclick="skippop()">SKIP</button><br>
             <button class="topage2" onclick="topage3()">NEXT</button>
             <br>
+
+            <div class="popup" id="skippop">
+                    <h3 style="text-align: left">Are You Sure?</h3>
+                    <p style="font-family: sans-serif; text-align: left">
+                        By skipping this page we will not be able to calculate your WtHR (Waist to Height Ratio) and BFP (Body Fat Percentage).
+                    </p>
+                    <button class="popbutt" style="margin: auto" onclick="skip()">I understand</button>
+            </div>
 			
 			<div class="popup" id="neckpop">
                 <h3 style="text-align: left">Neck Measurement</h3>
@@ -116,7 +125,7 @@
                 <p style="font-family: sans-serif; text-align: left">Start at the top of your hip bone, then bring the tape measure all the way around your body, level with your belly button.
 				Make sure it's not too tight and that it's straight, even at the back. Don't hold your breath while measuring.
 				Check the number on the tape measure right after you exhale.
-				</p>
+                </p>
 				<button class="popbutt" style="margin: auto" onclick="waistpop()">DONE</button>
             </div>
 
@@ -227,7 +236,7 @@
 				
                 <h1 style="margin-top: 0px; margin-bottom: 0px; color: #27A3C9">WHtR</h1>
                 <h2 style="margin-top: 5px; font-size: 23px">Your Waist to Height Ratio</h2>
-                <h1 id="whtr" style="color: #F5AF19"><br></h1>
+                <h1 id="whtr" style="color: #F5AF19"></h1>
                 <h2 id="whtrRange" style="margin-bottom: 0px; margin-top: 0px"><br></h2>
 				<h3 id="whtrGoal"></h3>
             </div>

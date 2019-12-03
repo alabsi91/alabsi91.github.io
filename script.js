@@ -7,7 +7,8 @@ var user = {
 	hip:0,
 	neck:0,
 	activity:"",
-	system:"metric"
+	system:"metric",
+	skipping: ""
 };
 var results = {
 	bmi:0,
@@ -823,7 +824,8 @@ function topage3() {
 	        document.getElementById("page2").style.display="none";
 		}
 		break;
-    }	
+	}	
+	user.skipping = false;
 }
 function topage4() {
 	
@@ -848,17 +850,38 @@ function topage4() {
 	} else if (extra.checked == true) {
 		user.activity="extra";
 	}
-	
-	bmi();
-	HarrisBenedictBMR();
-	activityMultipier();
-	whtr();
-	ibwBroca();
-	BFPnavy();
-	lbmBoer();
-	tbw();
+
+	if (user.skipping == true) {
+		bmi();
+		HarrisBenedictBMR();
+		activityMultipier();
+		ibwBroca();
+		lbmBoer();
+		tbw();
+		document.getElementById("card3").style.display="none";
+		document.getElementById("card5").style.display="none";
+
+	} else {
+		document.getElementById("card3").style.display="block";
+		document.getElementById("card5").style.display="block";
+		bmi();
+		HarrisBenedictBMR();
+		activityMultipier();
+		whtr();
+		ibwBroca();
+		BFPnavy();
+		lbmBoer();
+		tbw();
+	}
+
 	console.log(user);
 	console.log(results);
+}
+function skip(){
+	document.getElementById("page3").style.display="block";
+	document.getElementById("page2").style.display="none";
+	document.getElementById("skippop").style.display="none";
+	user.skipping = true;
 }
 function toback() {
 	if (document.getElementById("page1").style.display == "block") {
@@ -1006,5 +1029,12 @@ function hipalert() {
 	    document.getElementById("hipalert").style.display="none";
 	} else {
 		document.getElementById("hipalert").style.display="block";
+	}
+}
+function skippop() {
+	if (document.getElementById("skippop").style.display == "block") {
+	    document.getElementById("skippop").style.display="none";
+	} else {
+		document.getElementById("skippop").style.display="block";
 	}
 }
