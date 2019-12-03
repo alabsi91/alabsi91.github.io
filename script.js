@@ -791,16 +791,39 @@ function topage2() {
 }
 function topage3() {
 	
-	document.getElementById("page3").style.display="block";
-	document.getElementById("page2").style.display="none";
-	
 	var neck= document.getElementById("neck").value;
     var waist= document.getElementById("waist").value;
     var hip= document.getElementById("hip").value;
-	
 	user.neck= Number(neck);
     user.waist= Number(waist);
-    user.hip= Number(hip);
+	user.hip= Number(hip);
+	
+	switch (user.system){
+		case "metric":
+			if (neck < 25 || neck > 245){
+				document.getElementById("neckalert").style.display="block";
+			} else if (waist < 56 || waist > 250){
+				document.getElementById("waistalert").style.display="block";			
+			} else if (hip < 64 || hip > 250){
+				document.getElementById("hipalert").style.display="block";			
+			} else {
+				document.getElementById("page3").style.display="block";
+	            document.getElementById("page2").style.display="none";
+			}
+	break;
+	case "imperial":
+		if (neck < 10 || neck > 100){
+			document.getElementById("neckalert").style.display="block";
+		} else if (waist < 22 || waist > 100){
+			document.getElementById("waistalert").style.display="block";		
+		} else if (hip < 25 || hip > 100){
+			document.getElementById("hipalert").style.display="block";		
+		} else {
+			document.getElementById("page3").style.display="block";
+	        document.getElementById("page2").style.display="none";
+		}
+		break;
+    }	
 }
 function topage4() {
 	
@@ -962,5 +985,26 @@ function heightalert() {
 	    document.getElementById("heightalert").style.display="none";
 	} else {
 		document.getElementById("heightalert").style.display="block";
+	}
+}
+function neckalert() {
+	if (document.getElementById("neckalert").style.display == "block") {
+	    document.getElementById("neckalert").style.display="none";
+	} else {
+		document.getElementById("neckalert").style.display="block";
+	}
+}
+function waistalert() {
+	if (document.getElementById("waistalert").style.display == "block") {
+	    document.getElementById("waistalert").style.display="none";
+	} else {
+		document.getElementById("waistalert").style.display="block";
+	}
+}
+function hipalert() {
+	if (document.getElementById("hipalert").style.display == "block") {
+	    document.getElementById("hipalert").style.display="none";
+	} else {
+		document.getElementById("hipalert").style.display="block";
 	}
 }

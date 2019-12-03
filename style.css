@@ -405,7 +405,7 @@ i {
 	color: white;
 	border: solid 1px #F5AF19;
 	border-radius: 10px;
-	text-align: left;
+	text-align: center;
 	padding: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -426,10 +426,13 @@ i {
 #agealert {
 	margin-left: 53px;
 	margin-bottom: 103px;
+	text-align: center;
 }
-#weightalert, #heightalert {
+#weightalert, #heightalert, #neckalert, #waistalert, #hipalert {
 	margin-left: 66px;
+	text-align: center;
 	margin-bottom: 103px;
+	text-align: center;
 }
 .popbutt {
 	background-color: #F5AF19;

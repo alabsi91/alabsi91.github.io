@@ -59,24 +59,24 @@
             <button class="topage2" onclick="topage2()">NEXT</button>
 			
 			<div class="popup" id="agealert">
-                <h3 style="margin-left: 74px">Warning</h3>
+                <h3 style="text-align: center; margin: 0px">Warning</h3>
                 <p style="font-family: sans-serif">Please enter an age above 18.
 				</p>
-				<button class="popbutt" style="margin-left: 74px;" onclick="agealert()">DONE</button>
+				<button class="popbutt" style="margin: auto;" onclick="agealert()">DONE</button>
             </div>
 			
 			<div class="popup" id="weightalert">
-                <h3 style="margin-left: 58px">Warning</h3>
+                <h3 style="text-align: center; margin: 0px">Warning</h3>
                 <p style="font-family: sans-serif">Please enter a valid weight.
 				</p>
-				<button class="popbutt" style="margin-left: 60px;" onclick="weightalert()">DONE</button>
+				<button class="popbutt" style="margin: auto" onclick="weightalert()">DONE</button>
             </div>
 			
 			<div class="popup" id="heightalert">
-                <h3 style="margin-left: 58px">Warning</h3>
+                <h3 style="text-align: center; margin: 0px">Warning</h3>
                 <p style="font-family: sans-serif">Please enter a valid height.
 				</p>
-				<button class="popbutt" style="margin-left: 60px;" onclick="heightalert()">DONE</button>
+				<button class="popbutt" style="margin: auto" onclick="heightalert()">DONE</button>
             </div>
 			
         </div>
@@ -102,33 +102,55 @@
             <br>
 			
 			<div class="popup" id="neckpop">
-                <h3>Neck Measurement</h3>
-                <p style="font-family: sans-serif">Wrap the measuring tape around the neck, beginning at about one inch from the meeting of your neck and shoulders. 
+                <h3 style="text-align: left">Neck Measurement</h3>
+                <p style="font-family: sans-serif; text-align: left">Wrap the measuring tape around the neck, beginning at about one inch from the meeting of your neck and shoulders. 
 				This may also coincide with the bottom part of your Adam's apple.
 				Come fully around the neck, leaving no dangling space in between the neck and the tape.  
 				Make sure the tape is level and not being held at an angle.
 				</p>
-				<button class="popbutt" onclick="neckpop()">DONE</button>
+				<button class="popbutt" style="margin: auto" onclick="neckpop()">DONE</button>
             </div>
 			
 			<div class="popup" id="waistpop">
-                <h3>Waist Measurement</h3>
-                <p style="font-family: sans-serif">Start at the top of your hip bone, then bring the tape measure all the way around your body, level with your belly button.
+                <h3 style="text-align: left">Waist Measurement</h3>
+                <p style="font-family: sans-serif; text-align: left">Start at the top of your hip bone, then bring the tape measure all the way around your body, level with your belly button.
 				Make sure it's not too tight and that it's straight, even at the back. Don't hold your breath while measuring.
 				Check the number on the tape measure right after you exhale.
 				</p>
-				<button class="popbutt" onclick="waistpop()">DONE</button>
+				<button class="popbutt" style="margin: auto" onclick="waistpop()">DONE</button>
             </div>
 
 				<div class="popup" id="hippop">
-                <h3>Hip Measurement</h3>
-                <p style="font-family: sans-serif">Your natural waist is the smallest part of your torso, where your body dips in. 
+                <h3 style="text-align: left">Hip Measurement</h3>
+                <p style="font-family: sans-serif; text-align: left">Your natural waist is the smallest part of your torso, where your body dips in. 
 				Your hips are below that, and they are usually wider than your waist. 
 				Your hip measurement includes your butt and your hips.
 				Your hip measurements should be taken at where your hips are the widest.
 				</p>
-				<button class="popbutt" onclick="hippop()">DONE</button>
+				<button class="popbutt" style="margin: auto" onclick="hippop()">DONE</button>
             </div>
+
+            <div class="popup" id="neckalert">
+                    <h3 style="text-align: center; margin: 0px">Warning</h3>
+                    <p style="font-family: sans-serif">Please enter a valid neck size.
+                    </p>
+                    <button class="popbutt" style="margin: auto" onclick="neckalert()">DONE</button>
+            </div>
+
+            <div class="popup" id="waistalert">
+                    <h3 style="text-align: center; margin: 0px">Warning</h3>
+                    <p style="font-family: sans-serif">Please enter a valid waist size.
+                    </p>
+                    <button class="popbutt" style="margin: auto" onclick="waistalert()">DONE</button>
+            </div>
+
+            <div class="popup" id="hipalert">
+                    <h3 style="text-align: center; margin: 0px">Warning</h3>
+                    <p style="font-family: sans-serif">Please enter a valid hip size.
+                    </p>
+                    <button class="popbutt" style="margin: auto" onclick="hipalert()">DONE</button>
+            </div>
+
         </div>
 		
         <div id="page3" style="display: none">
@@ -223,7 +245,7 @@
 					<option value="lemmens">Lemmens Formula</option>
                 </select>
 				<br><br>
-                <h2 style="margin-top: 5px; font-size: 23px">Your Ideal Weight</h2>
+                <h2 style="margin-top: 5px; font-size: 23px">Your Ideal Body Weight</h2>
                 <h1 id="ibw" style="color: #F5AF19"><br></h1><br>
             </div>
 			
@@ -270,44 +292,44 @@
 
             <div class="popup" id="bmipop">
                 <h3>BMI METHOD</h3>
-                <p style="font-family: sans-serif">BMI can tell you about excess weight.However, it can’t be an indicator of excess fat as it can’t tell the difference between excess muscle, fat, or bone. Unlike children, adult BMI is not subject to age, gender, or muscle mass. Pregnancy also affects BMI, which is why you should use pre-pregnancy weight for BMI calculation.</p>
-                <button class="popbutt" onclick="bmipop()">DONE</button>
+                <p style="font-family: sans-serif;text-align: left">BMI can tell you about excess weight.However, it can’t be an indicator of excess fat as it can’t tell the difference between excess muscle, fat, or bone. Unlike children, adult BMI is not subject to age, gender, or muscle mass. Pregnancy also affects BMI, which is why you should use pre-pregnancy weight for BMI calculation.</p>
+                <button class="popbutt" style="margin: auto" onclick="bmipop()">DONE</button>
             </div>
 			
             <div class="popup" id="bmrpop">
                 <h3>BMR METHOD</h3>
-                <p style="font-family: sans-serif">Your BMR (Basal Metabolic Rate) is energy used while at rest. Two equations are used for finding BMR: Mifflin-St Jeor Equation and Harris Benedict Equation. You can switch between equations from the drop-down.</p>
-                <button class="popbutt" onclick="bmrpop()">DONE</button>
+                <p style="font-family: sans-serif;text-align: left">Your BMR (Basal Metabolic Rate) is energy used while at rest. Two equations are used for finding BMR: Mifflin-St Jeor Equation and Harris Benedict Equation. You can switch between equations from the drop-down.</p>
+                <button class="popbutt" style="margin: auto" onclick="bmrpop()">DONE</button>
             </div>
 			
 			<div class="popup" id="whtrpop">
                 <h3>WHtR METHOD</h3>
-                <p style="font-family: sans-serif">Waist to Height Ratio calculates your estimated waist-height ratio, which effectively indicates centralized obesity and cardiometabolic risk. WHtR is a measure of body fat distribution. Its higher value indicates a higher risk of cardiovascular diseases associated with obesity.</p>
-			<button class="popbutt" onclick="whtrpop()">DONE</button>
+                <p style="font-family: sans-serif;text-align: left">Waist to Height Ratio calculates your estimated waist-height ratio, which effectively indicates centralized obesity and cardiometabolic risk. WHtR is a measure of body fat distribution. Its higher value indicates a higher risk of cardiovascular diseases associated with obesity.</p>
+			<button class="popbutt" style="margin: auto" onclick="whtrpop()">DONE</button>
             </div>
 			
 			<div class="popup" id="ibwpop">
                 <h3>IDEAL WEIGHT</h3>
-                <p style="font-family: sans-serif">The IBW (Ideal Weight) indicates the ideal bodyweight based on your gender and height. Different formulas are used for the calculation of IBW. You can change the formula selection from the drop-down menu.</p>
-			<button class="popbutt" onclick="ibwpop()">DONE</button>
+                <p style="font-family: sans-serif;text-align: left">The IBW (Ideal Weight) indicates the ideal bodyweight based on your gender and height. Different formulas are used for the calculation of IBW. You can change the formula selection from the drop-down menu.</p>
+			<button class="popbutt" style="margin: auto" onclick="ibwpop()">DONE</button>
             </div>
 			
 			<div class="popup" id="bfppop">
                 <h3>BFP WEIGHT</h3>
-                <p style="font-family: sans-serif">In scientific terms, body fat is known as “adipose tissue,” which includes essential body fat and storage body fat. Essential body fat is responsible for maintaining life and reproductive functions, whereas storage fat is fat that accumulates in adipose tissue. While some storage fat is good, excess of storage fat can lead to serious health implications. The body fat accumulation rate varies from person to person, depending on various genetic and behavioral factors, including exercise and food intake. Due to varying factors, losing body fat can be difficult for some people. However, managing diet and exercise can help reducing fat. Both men and women store body fat differently. After the age of 40 (or after menopause in women), reduced sexual hormones can result in excess body fat around the stomach in men or thighs and buttocks in women.</p>
-				<button class="popbutt" onclick="bfppop()">DONE</button>
+                <p style="font-family: sans-serif;text-align: left">In scientific terms, body fat is known as “adipose tissue,” which includes essential body fat and storage body fat. Essential body fat is responsible for maintaining life and reproductive functions, whereas storage fat is fat that accumulates in adipose tissue. While some storage fat is good, excess of storage fat can lead to serious health implications. The body fat accumulation rate varies from person to person, depending on various genetic and behavioral factors, including exercise and food intake. Due to varying factors, losing body fat can be difficult for some people. However, managing diet and exercise can help reducing fat. Both men and women store body fat differently. After the age of 40 (or after menopause in women), reduced sexual hormones can result in excess body fat around the stomach in men or thighs and buttocks in women.</p>
+				<button class="popbutt" style="margin: auto" onclick="bfppop()">DONE</button>
             </div>
 			
 			<div class="popup" id="lbmpop">
                 <h3>Lean Body Mass</h3>
-                <p style="font-family: sans-serif">The Lean Body Mass Calculator computes a person's estimated lean body mass (LBM) based on body weight, height, gender, and age. For comparison purposes, the calculator provides the results of multiple formulas.</p>
-				<button class="popbutt" onclick="lbmpop()">DONE</button>
+                <p style="font-family: sans-serif;text-align: left">The Lean Body Mass Calculator computes a person's estimated lean body mass (LBM) based on body weight, height, gender, and age. For comparison purposes, the calculator provides the results of multiple formulas.</p>
+				<button class="popbutt" style="margin: auto" onclick="lbmpop()">DONE</button>
             </div>
             
             <div class="popup" id="tbwpop">
                     <h3>Total Body Water</h3>
-                    <p style="font-family: sans-serif">This total body water calculator uses your age, height, weight, and sex to estimate the volume of water in your body. It is based on a formula developed by dr. P.E. Watson and his team and described in 1980.</p>
-                    <button class="popbutt" onclick="tbwpop()">DONE</button>
+                    <p style="font-family: sans-serif;text-align: left">This total body water calculator uses your age, height, weight, and sex to estimate the volume of water in your body. It is based on a formula developed by dr. P.E. Watson and his team and described in 1980.</p>
+                    <button class="popbutt" style="margin: auto" onclick="tbwpop()">DONE</button>
                 </div>
         </div>
         <script src="script.js"></script>
