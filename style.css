@@ -157,10 +157,10 @@ div {
 	color: black;
 }
 #page2 .topage2 {
-	bottom: -94px;
+	bottom: -93px;
 }
 #page3 .topage2 {
-	bottom: -78px;
+	bottom: -66px;
 }
 .skip {
 	color: rgba(229,46,113,1);
@@ -256,13 +256,13 @@ i {
 }
 .ipg6 {
 	top: 103px;
-	height: 350px;
+	height: 338px;
 }
 .ipg9 {
 	top: 27px;
-	left: 5px;
-	height: 416px;
-	width: 365px;
+	left: 8px;
+	height: 429px;
+	width: 360px;
 	border-radius: 22px;
 }
 .checkbox1 {
@@ -279,9 +279,16 @@ i {
 }
 #page3 {
 	position: relative;
+	text-align: center;
 }
 #page3 h4 {
 	font-size: 14px;
+	font-weight: 100;
+	max-width: 275px;
+	margin-top: 7px;
+	margin-bottom: 21px;
+	margin-left: 50px;
+	text-align: center;
 }
 #page4 {
 	position: relative;
@@ -456,7 +463,6 @@ i {
 	font-weight: bold;
 	font-size: 15px;
 	padding: 5px 15px;
-	margin-left: 110px;
 	margin-bottom: 15px;
 	background: linear-gradient(90deg, rgba(229,46,113,1) 0%, rgba(255,137,1,1) 98%);
 }
@@ -563,7 +569,7 @@ i {
   z-index: -1;
   top: 0;
   left: 17px;
-  height: 54px;
+  height: 56px;
   width: 345px;
   background-color: #0D3342;
   border-radius: 7px;
