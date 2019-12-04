@@ -88,7 +88,7 @@ div {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	}
-#bmitip, #bmrtip, #whtrtip, #ibwtip, #bfptip, #lbmtip, #tbwtip {
+#bmitip, #bmrtip, #whtrtip, #ibwtip, #bfptip, #lbmtip, #tbwtip, #cancel {
 	background-color: rgba(0, 0, 0, 0);
 	color: #bebebe;
 	position: absolute;
@@ -96,7 +96,7 @@ div {
 	top: 7px;
 	border: none;
 }
-#bmitip:hover, #bmrtip:hover, #whtrtip:hover, #ibwtip:hover, #bfptip:hover, #lbmtip:hover {color: #ff5200;}
+#bmitip:hover, #bmrtip:hover, #whtrtip:hover, #ibwtip:hover, #bfptip:hover, #lbmtip:hover, #cancel:hover {color: #ff5200;}
 #necktip {
 	position: absolute;
 	right: 11px;
