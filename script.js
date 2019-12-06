@@ -749,7 +749,7 @@ function topage2() {
        switch (user.system) {
 		case "metric":
 		if (age < 18 || age > 120) {
-			$("#agealert").toggle(100);
+			$("#agealert").slideToggle(100);
 		} else if (weight < 20 || weight > 250) {
 			$("#weightalert").toggle(100);
 		} else if (height < 91 || height > 360) {
@@ -934,7 +934,7 @@ function hippop() {
 	$("#hippop").toggle(100);
 }
 function agealert() {
-	$("#agealert").toggle(100);
+	$("#agealert").slideToggle(100);
 }
 function weightalert() {
 	$("#weightalert").toggle(100);
