@@ -37,30 +37,15 @@ function bmi() {
     var pos= 0;
     var arrow= document.getElementById("arrow");	
 	if (bmi > 35) {
-		arrow.style.left= 243 + "px";
-		var t= setInterval(move, 10);
-        function move(){
-          if(pos >= 243) {
-           clearInterval(t);
-          } else {
-           pos += 1;
-           arrow.style.left= pos + "px";
-         }
-       }
+		$("#arrow").animate({left: '243px'}, 1000);
+
 	} else if (bmi < 0) {
 		arrow.style.left= -7 + "px";
+
 	} else {
 	    var bmibar= bmi * 7.142857;
 		var bmibar= Math.round(bmibar) - 7;
-        var t= setInterval(move, 10);
-        function move(){
-         if(pos >= bmibar) {
-           clearInterval(t);
-         } else {
-           pos += 1;
-           arrow.style.left= pos + "px";
-         }
-        }
+		$("#arrow").animate({left: bmibar + 'px'}, 1000);
     }
 	results.bmi=Number(bmi.toFixed(1));
     document.getElementById("bmi").innerHTML=results.bmi;
@@ -743,9 +728,9 @@ function tbw() {
 	document.getElementById("tbw").innerHTML= results.tbw +"<span style='font-size: 18px; color: white''>" + " Litres" + "</span>";
 }
 function topage1() {
-	document.getElementById("page1").style.display="block";
-	document.getElementById("profile").style.display="block";
-	document.getElementById("welcomePage").style.display="none";
+	$("#page1").fadeIn(250).css("display","block");
+	$("#profile").fadeIn(250).css("display","block");
+	$("#welcomePage").fadeOut(250).css("display","none");
 }
 function topage2() {
 	
@@ -764,27 +749,27 @@ function topage2() {
        switch (user.system) {
 		case "metric":
 		if (age < 18 || age > 120) {
-			document.getElementById("agealert").style.display="block";
+			$("#agealert").toggle(100);
 		} else if (weight < 20 || weight > 250) {
-			document.getElementById("weightalert").style.display="block";
+			$("#weightalert").toggle(100);
 		} else if (height < 91 || height > 360) {
-			document.getElementById("heightalert").style.display="block";
+			$("#heightalert").toggle(100);
 		} else{
-            document.getElementById("page2").style.display="block";
-	        document.getElementById("page1").style.display="none";
+            $("#page2").fadeIn(250).css("display","block");
+			$("#page1").fadeOut(250).css("display","none");
 		}
 		break;
 		
 		case "imperial":
 		if (age < 18 || age > 120) {
-			document.getElementById("agealert").style.display="block";
+			$("#agealert").toggle(100);
 		} else if (weight < 45 || weight > 560) {
-			document.getElementById("weightalert").style.display="block";
+			$("#weightalert").toggle(100);
 		} else if (height < 47 || height > 155) {
-			document.getElementById("heightalert").style.display="block";
+			$("#heightalert").toggle(100);
 		} else {
-		    document.getElementById("page2").style.display="block";
-	        document.getElementById("page1").style.display="none";
+			$("#page2").fadeIn(250).css("display","block");
+			$("#page1").fadeOut(250).css("display","none");
 		}
 		break;
 	}
@@ -802,26 +787,26 @@ function topage3() {
 	switch (user.system){
 		case "metric":
 			if (neck < 25 || neck > 245){
-				document.getElementById("neckalert").style.display="block";
+				$("#neckalert").toggle(100);
 			} else if (waist < 56 || waist > 250){
-				document.getElementById("waistalert").style.display="block";			
-			} else if (hip < 64 || hip > 250){
-				document.getElementById("hipalert").style.display="block";			
+				$("#waistalert").toggle(100);			
+			} else if (hip < 64 || hip > 250){	
+				$("#hipalert").toggle(100);		
 			} else {
-				document.getElementById("page3").style.display="block";
-	            document.getElementById("page2").style.display="none";
+				$("#page3").fadeIn(250).css("display","block");
+		    	$("#page2").fadeOut(250).css("display","none");
 			}
 	break;
 	case "imperial":
 		if (neck < 10 || neck > 100){
-			document.getElementById("neckalert").style.display="block";
+			d$("#neckalert").toggle(100);
 		} else if (waist < 22 || waist > 100){
-			document.getElementById("waistalert").style.display="block";		
+			d$("#waistalert").toggle(100);		
 		} else if (hip < 25 || hip > 100){
-			document.getElementById("hipalert").style.display="block";		
+			$("#hipalert").toggle(100);		
 		} else {
-			document.getElementById("page3").style.display="block";
-	        document.getElementById("page2").style.display="none";
+			$("#page3").fadeIn(250).css("display","block");
+			$("#page2").fadeOut(250).css("display","none");
 		}
 		break;
 	}	
@@ -829,9 +814,9 @@ function topage3() {
 }
 function topage4() {
 	
-	document.getElementById("page4").style.display="block";
-	document.getElementById("page3").style.display="none";
-	document.getElementById("profile").style.display="none";
+	$("#page4").fadeIn(250).css("display","block");
+	$("#page3").fadeOut(250).css("display","none");
+	$("#profile").fadeOut(250).css("display","none");
 	
 	var sedentary= document.getElementById("sedentary");
 	var light= document.getElementById("light");
@@ -878,28 +863,27 @@ function topage4() {
 	console.log(results);
 }
 function skip(){
-	document.getElementById("page3").style.display="block";
-	document.getElementById("page2").style.display="none";
-	document.getElementById("skippop").style.display="none";
+	$("#page3").fadeIn(250).css("display","block");
+	$("#page2").fadeOut(250).css("display","none");
+	$("#skippop").toggle(100);
 	user.skipping = true;
 }
 function toback() {
 	if (document.getElementById("page1").style.display == "block") {
-		document.getElementById("welcomePage").style.display="block";
-		document.getElementById("page1").style.display="none";
-		document.getElementById("profile").style.display="none";
+		$("#welcomePage").fadeIn(250).css("display","block");
+		$("#page1").fadeOut(250).css("display","none");
+		$("#profile").fadeOut(250).css("display","none");
 	} else if (document.getElementById("page2").style.display == "block") {
-		document.getElementById("page1").style.display="block";
-		document.getElementById("page2").style.display="none";
+		$("#page1").fadeIn(250).css("display","block");
+		$("#page2").fadeOut(250).css("display","none");
 	} else if (document.getElementById("page3").style.display == "block") {
-		document.getElementById("page2").style.display="block";
-		document.getElementById("page3").style.display="none";
+		$("#page2").fadeIn(250).css("display","block");
+		$("#page3").fadeOut(250).css("display","none");
 	}
 }
 function restart() {
-	document.getElementById("welcomePage").style.display="block";
-	document.getElementById("page4").style.display="none";
-	document.getElementById("body").style.backgroundImage="none";
+	$("#welcomePage").fadeIn(250).css("display","block");
+	$("#page4").fadeOut(250).css("display","none");
 	document.getElementById("arrow").style.left= -7 + "px";
 	document.getElementById("Boer").selected= true;
 	document.getElementById("borca").selected= true;
@@ -920,121 +904,53 @@ function imperialSystem() {
 		document.getElementById("hip").placeholder="Your Hip Size In Inches";
 }
 function bmipop() {
-	if (document.getElementById("bmipop").style.display == "block") {
-	    document.getElementById("bmipop").style.display="none";
-	} else {
-		document.getElementById("bmipop").style.display="block";
-	}
+	$("#bmipop").toggle(100);
 }
 function bmrpop() {
-	if (document.getElementById("bmrpop").style.display == "block") {
-	    document.getElementById("bmrpop").style.display="none";
-	} else {
-		document.getElementById("bmrpop").style.display="block";
-	}
+	$("#bmrpop").toggle(100);
 }
 function whtrpop() {
-	if (document.getElementById("whtrpop").style.display == "block") {
-	    document.getElementById("whtrpop").style.display="none";
-	} else {
-		document.getElementById("whtrpop").style.display="block";
-	}
+	$("#whtrpop").toggle(100);
 }
 function ibwpop() {
-	if (document.getElementById("ibwpop").style.display == "block") {
-	    document.getElementById("ibwpop").style.display="none";
-	} else {
-		document.getElementById("ibwpop").style.display="block";
-	}
+	$("#ibwpop").toggle(100);
 }
 function bfppop() {
-	if (document.getElementById("bfppop").style.display == "block") {
-	    document.getElementById("bfppop").style.display="none";
-	} else {
-		document.getElementById("bfppop").style.display="block";
-	}
+	$("#bfppop").toggle(100);
 }
 function lbmpop() {
-	if (document.getElementById("lbmpop").style.display == "block") {
-	    document.getElementById("lbmpop").style.display="none";
-	} else {
-		document.getElementById("lbmpop").style.display="block";
-	}
+	$("#lbmpop").toggle(100);
 }
 function tbwpop() {
-	if (document.getElementById("tbwpop").style.display == "block") {
-	    document.getElementById("tbwpop").style.display="none";
-	} else {
-		document.getElementById("tbwpop").style.display="block";
-	}
+	$("#tbwpop").toggle(100);
 }
 function neckpop() {
-	if (document.getElementById("neckpop").style.display == "block") {
-	    document.getElementById("neckpop").style.display="none";
-	} else {
-		document.getElementById("neckpop").style.display="block";
-	}
+	$("#neckpop").toggle(100);
 }
 function waistpop() {
-	if (document.getElementById("waistpop").style.display == "block") {
-	    document.getElementById("waistpop").style.display="none";
-	} else {
-		document.getElementById("waistpop").style.display="block";
-	}
+	$("#waistpop").toggle(100);
 }
 function hippop() {
-	if (document.getElementById("hippop").style.display == "block") {
-	    document.getElementById("hippop").style.display="none";
-	} else {
-		document.getElementById("hippop").style.display="block";
-	}
+	$("#hippop").toggle(100);
 }
 function agealert() {
-	if (document.getElementById("agealert").style.display == "block") {
-	    document.getElementById("agealert").style.display="none";
-	} else {
-		document.getElementById("agealert").style.display="block";
-	}
+	$("#agealert").toggle(100);
 }
 function weightalert() {
-	if (document.getElementById("weightalert").style.display == "block") {
-	    document.getElementById("weightalert").style.display="none";
-	} else {
-		document.getElementById("weightalert").style.display="block";
-	}
+	$("#weightalert").toggle(100);
 }
 function heightalert() {
-	if (document.getElementById("heightalert").style.display == "block") {
-	    document.getElementById("heightalert").style.display="none";
-	} else {
-		document.getElementById("heightalert").style.display="block";
-	}
+	$("#heightalert").toggle(100);
 }
 function neckalert() {
-	if (document.getElementById("neckalert").style.display == "block") {
-	    document.getElementById("neckalert").style.display="none";
-	} else {
-		document.getElementById("neckalert").style.display="block";
-	}
+	$("#neckalert").toggle(100);
 }
 function waistalert() {
-	if (document.getElementById("waistalert").style.display == "block") {
-	    document.getElementById("waistalert").style.display="none";
-	} else {
-		document.getElementById("waistalert").style.display="block";
-	}
+	$("#waistalert").toggle(100);
 }
 function hipalert() {
-	if (document.getElementById("hipalert").style.display == "block") {
-	    document.getElementById("hipalert").style.display="none";
-	} else {
-		document.getElementById("hipalert").style.display="block";
-	}
+	$("#hipalert").toggle(100);
 }
 function skippop() {
-	if (document.getElementById("skippop").style.display == "block") {
-	    document.getElementById("skippop").style.display="none";
-	} else {
-		document.getElementById("skippop").style.display="block";
-	}
+	$("#skippop").toggle(100);
 }
