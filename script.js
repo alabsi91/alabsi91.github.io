@@ -751,9 +751,9 @@ function topage2() {
 		if (age < 18 || age > 120) {
 			$("#agealert").slideToggle(100);
 		} else if (weight < 20 || weight > 250) {
-			$("#weightalert").toggle(100);
+			$("#weightalert").slideToggle(100);
 		} else if (height < 91 || height > 360) {
-			$("#heightalert").toggle(100);
+			$("#heightalert").slideToggle(100);
 		} else{
             $("#page2").fadeIn(250).css("display","block");
 			$("#page1").fadeOut(250).css("display","none");
@@ -762,11 +762,11 @@ function topage2() {
 		
 		case "imperial":
 		if (age < 18 || age > 120) {
-			$("#agealert").toggle(100);
+			$("#agealert").slideToggle(100);
 		} else if (weight < 45 || weight > 560) {
-			$("#weightalert").toggle(100);
+			$("#weightalert").slideToggle(100);
 		} else if (height < 47 || height > 155) {
-			$("#heightalert").toggle(100);
+			$("#heightalert").slideToggle(100);
 		} else {
 			$("#page2").fadeIn(250).css("display","block");
 			$("#page1").fadeOut(250).css("display","none");
@@ -787,11 +787,11 @@ function topage3() {
 	switch (user.system){
 		case "metric":
 			if (neck < 25 || neck > 245){
-				$("#neckalert").toggle(100);
+				$("#neckalert").slideToggle(100);
 			} else if (waist < 56 || waist > 250){
-				$("#waistalert").toggle(100);			
+				$("#waistalert").slideToggle(100);			
 			} else if (hip < 64 || hip > 250){	
-				$("#hipalert").toggle(100);		
+				$("#hipalert").slideToggle(100);		
 			} else {
 				$("#page3").fadeIn(250).css("display","block");
 		    	$("#page2").fadeOut(250).css("display","none");
@@ -799,11 +799,11 @@ function topage3() {
 	break;
 	case "imperial":
 		if (neck < 10 || neck > 100){
-			d$("#neckalert").toggle(100);
+			$("#neckalert").slideToggle(100);
 		} else if (waist < 22 || waist > 100){
-			d$("#waistalert").toggle(100);		
+			$("#waistalert").slideToggle(100);		
 		} else if (hip < 25 || hip > 100){
-			$("#hipalert").toggle(100);		
+			$("#hipalert").slideToggle(100);		
 		} else {
 			$("#page3").fadeIn(250).css("display","block");
 			$("#page2").fadeOut(250).css("display","none");
@@ -904,53 +904,53 @@ function imperialSystem() {
 		document.getElementById("hip").placeholder="Your Hip Size In Inches";
 }
 function bmipop() {
-	$("#bmipop").toggle(100);
+	$("#bmipop").slideToggle(100);
 }
 function bmrpop() {
-	$("#bmrpop").toggle(100);
+	$("#bmrpop").slideToggle(100);
 }
 function whtrpop() {
-	$("#whtrpop").toggle(100);
+	$("#whtrpop").slideToggle(100);
 }
 function ibwpop() {
-	$("#ibwpop").toggle(100);
+	$("#ibwpop").slideToggle(100);
 }
 function bfppop() {
-	$("#bfppop").toggle(100);
+	$("#bfppop").slideToggle(100);
 }
 function lbmpop() {
-	$("#lbmpop").toggle(100);
+	$("#lbmpop").slideToggle(100);
 }
 function tbwpop() {
-	$("#tbwpop").toggle(100);
+	$("#tbwpop").slideToggle(100);
 }
 function neckpop() {
-	$("#neckpop").toggle(100);
+	$("#neckpop").slideToggle(100);
 }
 function waistpop() {
-	$("#waistpop").toggle(100);
+	$("#waistpop").slideToggle(100);
 }
 function hippop() {
-	$("#hippop").toggle(100);
+	$("#hippop").slideToggle(100);
 }
 function agealert() {
 	$("#agealert").slideToggle(100);
 }
 function weightalert() {
-	$("#weightalert").toggle(100);
+	$("#weightalert").slideToggle(100);
 }
 function heightalert() {
-	$("#heightalert").toggle(100);
+	$("#heightalert").slideToggle(100);
 }
 function neckalert() {
-	$("#neckalert").toggle(100);
+	$("#neckalert").slideToggle(100);
 }
 function waistalert() {
-	$("#waistalert").toggle(100);
+	$("#waistalert").slideToggle(100);
 }
 function hipalert() {
-	$("#hipalert").toggle(100);
+	$("#hipalert").slideToggle(100);
 }
 function skippop() {
-	$("#skippop").toggle(100);
+	$("#skippop").slideToggle(100);
 }
