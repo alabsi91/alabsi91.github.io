@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "559dd101efe27fa328d14e8a30ca34b4",
+    "revision": "3721f2b897b6557bff488e6f2c92bb94",
     "url": "/index.html"
   },
   {
-    "revision": "9b8dd656e59d27bbb981",
-    "url": "/static/css/main.fc015a22.chunk.css"
+    "revision": "2c3ca59525ec08befff9",
+    "url": "/static/css/main.151ae77b.chunk.css"
   },
   {
     "revision": "452280fa96c355ef9e86",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.02d9117f.chunk.js.LICENSE"
   },
   {
-    "revision": "9b8dd656e59d27bbb981",
-    "url": "/static/js/main.c7fea440.chunk.js"
+    "revision": "2c3ca59525ec08befff9",
+    "url": "/static/js/main.fd607f32.chunk.js"
   },
   {
     "revision": "ed7b6e6bb99be4365750",
@@ -80,6 +80,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Clementine.45bc1285.png"
   },
   {
+    "revision": "5ed2f582a6ee9b6a03a55bb89f24bc4d",
+    "url": "/static/media/Cloudberry.5ed2f582.png"
+  },
+  {
     "revision": "721c3fdc855ad4faf91d6eff0f5cf260",
     "url": "/static/media/Coconut.721c3fdc.png"
   },
@@ -106,6 +110,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "64441ff66f65f2d0bc5bba57d8cd88da",
     "url": "/static/media/Fig.64441ff6.png"
+  },
+  {
+    "revision": "279a456ed306cb1f34bd71d7aff1ca0a",
+    "url": "/static/media/Gojiberry.279a456e.png"
   },
   {
     "revision": "149b45773d8d9cbedd31383f9d038fdb",
@@ -212,6 +220,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Persimmon.76ad85cf.png"
   },
   {
+    "revision": "ef7811e9cad92faa5369f30de0999513",
+    "url": "/static/media/Peruviangroundcherry.ef7811e9.png"
+  },
+  {
     "revision": "a83b4048ee0c014e4aa8b5f005bf757d",
     "url": "/static/media/Pineapple.a83b4048.png"
   },
@@ -242,6 +254,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a5769e5e46ba6e1bed366a6a9ddc43f7",
     "url": "/static/media/Quince.a5769e5e.png"
+  },
+  {
+    "revision": "33125338fb4bb780bf9380e2fd6184c0",
+    "url": "/static/media/Rambutan.33125338.png"
   },
   {
     "revision": "de01c82957d9db7adec817efb20a0ae5",

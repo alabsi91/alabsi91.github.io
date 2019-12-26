@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.fc015a22.chunk.css",
-    "main.js": "/static/js/main.c7fea440.chunk.js",
-    "main.js.map": "/static/js/main.c7fea440.chunk.js.map",
+    "main.css": "/static/css/main.151ae77b.chunk.css",
+    "main.js": "/static/js/main.fd607f32.chunk.js",
+    "main.js.map": "/static/js/main.fd607f32.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bbb624e2.js",
     "runtime-main.js.map": "/static/js/runtime-main.bbb624e2.js.map",
     "static/js/2.02d9117f.chunk.js": "/static/js/2.02d9117f.chunk.js",
     "static/js/2.02d9117f.chunk.js.map": "/static/js/2.02d9117f.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.ad741905d8d79377545d798a546ec3f2.js": "/precache-manifest.ad741905d8d79377545d798a546ec3f2.js",
+    "precache-manifest.860b71ecb8d0507a2f33ec7142f4983b.js": "/precache-manifest.860b71ecb8d0507a2f33ec7142f4983b.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.fc015a22.chunk.css.map": "/static/css/main.fc015a22.chunk.css.map",
+    "static/css/main.151ae77b.chunk.css.map": "/static/css/main.151ae77b.chunk.css.map",
     "static/js/2.02d9117f.chunk.js.LICENSE": "/static/js/2.02d9117f.chunk.js.LICENSE",
     "static/media/Apple.png": "/static/media/Apple.de35c642.png",
     "static/media/Apricot.png": "/static/media/Apricot.e94d5f63.png",
@@ -26,6 +26,7 @@
     "static/media/Cherimoya.png": "/static/media/Cherimoya.9f91361f.png",
     "static/media/Cherry.png": "/static/media/Cherry.7bb1b0cf.png",
     "static/media/Clementine.png": "/static/media/Clementine.45bc1285.png",
+    "static/media/Cloudberry.png": "/static/media/Cloudberry.5ed2f582.png",
     "static/media/Coconut.png": "/static/media/Coconut.721c3fdc.png",
     "static/media/Cranberry.png": "/static/media/Cranberry.ff7bf4de.png",
     "static/media/Dates.png": "/static/media/Dates.18ef8381.png",
@@ -33,6 +34,7 @@
     "static/media/Elderberry.png": "/static/media/Elderberry.c018ede3.png",
     "static/media/Feijoa.png": "/static/media/Feijoa.ae7fb239.png",
     "static/media/Fig.png": "/static/media/Fig.64441ff6.png",
+    "static/media/Gojiberry.png": "/static/media/Gojiberry.279a456e.png",
     "static/media/Gooseberry.png": "/static/media/Gooseberry.149b4577.png",
     "static/media/Grape.png": "/static/media/Grape.9aeadc19.png",
     "static/media/Grapefruit.png": "/static/media/Grapefruit.3b9b4da0.png",
@@ -59,6 +61,7 @@
     "static/media/Peach.png": "/static/media/Peach.3b1cfca4.png",
     "static/media/Pear.png": "/static/media/Pear.55e5ab52.png",
     "static/media/Persimmon.png": "/static/media/Persimmon.76ad85cf.png",
+    "static/media/Peruviangroundcherry.png": "/static/media/Peruviangroundcherry.ef7811e9.png",
     "static/media/Pineapple.png": "/static/media/Pineapple.a83b4048.png",
     "static/media/Pitaya.png": "/static/media/Pitaya.908d17eb.png",
     "static/media/Plum.png": "/static/media/Plum.4f325871.png",
@@ -67,6 +70,7 @@
     "static/media/Pricklypear.png": "/static/media/Pricklypear.01a00fdf.png",
     "static/media/Prune.png": "/static/media/Prune.59104387.png",
     "static/media/Quince.png": "/static/media/Quince.a5769e5e.png",
+    "static/media/Rambutan.png": "/static/media/Rambutan.33125338.png",
     "static/media/Rose-apple.png": "/static/media/Rose-apple.de01c829.png",
     "static/media/Sapodilla.png": "/static/media/Sapodilla.6d7411b3.png",
     "static/media/Soursop.png": "/static/media/Soursop.d0b6ade1.png",
@@ -78,7 +82,7 @@
   "entrypoints": [
     "static/js/runtime-main.bbb624e2.js",
     "static/js/2.02d9117f.chunk.js",
-    "static/css/main.fc015a22.chunk.css",
-    "static/js/main.c7fea440.chunk.js"
+    "static/css/main.151ae77b.chunk.css",
+    "static/js/main.fd607f32.chunk.js"
   ]
 }
