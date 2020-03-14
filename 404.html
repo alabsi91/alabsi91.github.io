@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    (function redirecte(L) {
+        document.cookie = "pathName=" + L.pathname + L.hash;
+        window.open((L.protocol + "//" + L.hostname), "_self");
+    }(window.location))
+</script>
+
+</html>
