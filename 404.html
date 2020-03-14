@@ -12,7 +12,8 @@
 </body>
 <script>
 (function redirecte(L) {
-    window.open( (L.protocol + "//" + L.hostname), "_self")
+    window.open( (L.protocol + "//" + L.hostname), "_self");
+    window.history.pushState(undefined, undefined, L.pathname + L.hash);
 }(window.location))
 </script>
 
