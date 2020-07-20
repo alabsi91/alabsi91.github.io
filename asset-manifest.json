@@ -1,22 +1,38 @@
 {
   "files": {
-    "main.css": "/static/css/main.9b2e121f.chunk.css",
-    "main.js": "/static/js/main.d86ec47a.chunk.js",
-    "main.js.map": "/static/js/main.d86ec47a.chunk.js.map",
+    "main.css": "/static/css/main.f3a58a78.chunk.css",
+    "main.js": "/static/js/main.8e5574dd.chunk.js",
+    "main.js.map": "/static/js/main.8e5574dd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.80fbe52c.js",
     "runtime-main.js.map": "/static/js/runtime-main.80fbe52c.js.map",
-    "static/js/2.f4c0f085.chunk.js": "/static/js/2.f4c0f085.chunk.js",
-    "static/js/2.f4c0f085.chunk.js.map": "/static/js/2.f4c0f085.chunk.js.map",
+    "static/js/2.123ad09c.chunk.js": "/static/js/2.123ad09c.chunk.js",
+    "static/js/2.123ad09c.chunk.js.map": "/static/js/2.123ad09c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.21d9f63cc79b9c6e83611a25df3ddfef.js": "/precache-manifest.21d9f63cc79b9c6e83611a25df3ddfef.js",
+    "precache-manifest.50dc3327c109d92c7829158992ef5f8a.js": "/precache-manifest.50dc3327c109d92c7829158992ef5f8a.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.9b2e121f.chunk.css.map": "/static/css/main.9b2e121f.chunk.css.map",
-    "static/js/2.f4c0f085.chunk.js.LICENSE.txt": "/static/js/2.f4c0f085.chunk.js.LICENSE.txt"
+    "static/css/main.f3a58a78.chunk.css.map": "/static/css/main.f3a58a78.chunk.css.map",
+    "static/js/2.123ad09c.chunk.js.LICENSE.txt": "/static/js/2.123ad09c.chunk.js.LICENSE.txt",
+    "static/media/banana.png": "/static/media/banana.adbb0532.png",
+    "static/media/bread.png": "/static/media/bread.9c7653be.png",
+    "static/media/cake.png": "/static/media/cake.e6034378.png",
+    "static/media/chicken.png": "/static/media/chicken.eefa8633.png",
+    "static/media/dairy.png": "/static/media/dairy.4c7759ec.png",
+    "static/media/index.css": "/static/media/mealIcon.ffe6a2c7.png",
+    "static/media/fat.png": "/static/media/fat.0e309105.png",
+    "static/media/fish.png": "/static/media/fish.b7036e74.png",
+    "static/media/fruit.png": "/static/media/fruit.4532cbbc.png",
+    "static/media/grains.png": "/static/media/grains.51add9f5.png",
+    "static/media/legume.png": "/static/media/legume.74f05756.png",
+    "static/media/nut.png": "/static/media/nut.fe4dec30.png",
+    "static/media/paste.png": "/static/media/paste.7c1bcd82.png",
+    "static/media/seeds.png": "/static/media/seeds.fc27b4b5.png",
+    "static/media/supplement.png": "/static/media/supplement.710ead3e.png",
+    "static/media/vegetable.png": "/static/media/vegetable.5a3f9a7b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.80fbe52c.js",
-    "static/js/2.f4c0f085.chunk.js",
-    "static/css/main.9b2e121f.chunk.css",
-    "static/js/main.d86ec47a.chunk.js"
+    "static/js/2.123ad09c.chunk.js",
+    "static/css/main.f3a58a78.chunk.css",
+    "static/js/main.8e5574dd.chunk.js"
   ]
 }
