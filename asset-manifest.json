@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.0e256e96.chunk.css",
-    "main.js": "/static/js/main.5e5acb7a.chunk.js",
-    "main.js.map": "/static/js/main.5e5acb7a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.80fbe52c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.80fbe52c.js.map",
-    "static/js/2.6fc37aec.chunk.js": "/static/js/2.6fc37aec.chunk.js",
-    "static/js/2.6fc37aec.chunk.js.map": "/static/js/2.6fc37aec.chunk.js.map",
+    "main.css": "/static/css/main.3d9d6cac.chunk.css",
+    "main.js": "/static/js/main.cb15311e.chunk.js",
+    "main.js.map": "/static/js/main.cb15311e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c17e415f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c17e415f.js.map",
+    "static/js/2.708d4579.chunk.js": "/static/js/2.708d4579.chunk.js",
+    "static/js/2.708d4579.chunk.js.map": "/static/js/2.708d4579.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.df70c5a994ecebf439a4a275fcc2d81b.js": "/precache-manifest.df70c5a994ecebf439a4a275fcc2d81b.js",
+    "precache-manifest.7e480a728d10a298a5c7ed5b57ea1744.js": "/precache-manifest.7e480a728d10a298a5c7ed5b57ea1744.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.0e256e96.chunk.css.map": "/static/css/main.0e256e96.chunk.css.map",
-    "static/js/2.6fc37aec.chunk.js.LICENSE.txt": "/static/js/2.6fc37aec.chunk.js.LICENSE.txt",
+    "static/css/main.3d9d6cac.chunk.css.map": "/static/css/main.3d9d6cac.chunk.css.map",
+    "static/js/2.708d4579.chunk.js.LICENSE.txt": "/static/js/2.708d4579.chunk.js.LICENSE.txt",
     "static/media/banana.png": "/static/media/banana.adbb0532.png",
     "static/media/bread.png": "/static/media/bread.9c7653be.png",
     "static/media/cake.png": "/static/media/cake.e6034378.png",
     "static/media/chicken.png": "/static/media/chicken.eefa8633.png",
     "static/media/dairy.png": "/static/media/dairy.4c7759ec.png",
+    "static/media/down-arrow-black.svg": "/static/media/down-arrow-black.ca29e37c.svg",
+    "static/media/down-arrow-white.svg": "/static/media/down-arrow-white.2d249c43.svg",
     "static/media/index.css": "/static/media/mealIcon.ffe6a2c7.png",
     "static/media/fat.png": "/static/media/fat.0e309105.png",
     "static/media/fish.png": "/static/media/fish.b7036e74.png",
@@ -30,9 +32,9 @@
     "static/media/vegetable.png": "/static/media/vegetable.5a3f9a7b.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.80fbe52c.js",
-    "static/js/2.6fc37aec.chunk.js",
-    "static/css/main.0e256e96.chunk.css",
-    "static/js/main.5e5acb7a.chunk.js"
+    "static/js/runtime-main.c17e415f.js",
+    "static/js/2.708d4579.chunk.js",
+    "static/css/main.3d9d6cac.chunk.css",
+    "static/js/main.cb15311e.chunk.js"
   ]
 }
