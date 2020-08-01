@@ -1,10 +1,5 @@
 [{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "io.github.alabsi91.twa",
-    "sha256_cert_fingerprints": [
-      "8D:86:C0:90:4D:A9:3D:85:A6:3A:90:31:AC:DB:62:42:88:86:D8:3A:9D:5A:60:DD:91:6A:B8:D6:F8:C7:AB:ED"
-    ]
-  }
-}]
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target" : { "namespace": "android_app", "package_name": "app.netlify.life_sum.twa",
+                   "sha256_cert_fingerprints": ["DE:34:99:EF:2E:8F:34:67:B4:9D:24:BB:E9:8E:36:F0:8A:47:FD:19:90:4E:12:E7:5E:96:3A:A0:8A:BC:2B:06"] }
+    }]
