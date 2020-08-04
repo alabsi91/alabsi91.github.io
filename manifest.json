@@ -41,12 +41,17 @@
       "src": "apple-16.png",
       "type": "image/png",
       "sizes": "16x16"
+    },
+    {
+      "src": "maskable_icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "splash_pages": null,
-  "theme_color": "#41cd8c",
+  "theme_color": "#099a97",
   "background_color": "#2b2b2b"
 }
