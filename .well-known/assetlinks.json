@@ -1,5 +1,5 @@
 [{
       "relation": ["delegate_permission/common.handle_all_urls"],
       "target" : { "namespace": "android_app", "package_name": "io.github.alabsi91.twa",
-                   "sha256_cert_fingerprints": ["C5:FA:44:C6:F1:98:28:35:FB:20:15:A6:3F:10:F5:3F:22:EF:9E:B1:E5:18:2F:2C:DE:F1:21:48:B5:EA:9F:36"] }
+                   "sha256_cert_fingerprints": ["54:BE:A0:B1:8E:E7:EF:EB:50:83:5C:01:F4:D6:B4:9E:38:AE:8F:08:3D:0E:9B:F7:E7:38:1B:B7:46:82:5E:8A"] }
     }]
