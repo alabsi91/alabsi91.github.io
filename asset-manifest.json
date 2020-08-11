@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.58e276f8.chunk.css",
-    "main.js": "/static/js/main.f70abe87.chunk.js",
-    "main.js.map": "/static/js/main.f70abe87.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c17e415f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c17e415f.js.map",
-    "static/js/2.df311acf.chunk.js": "/static/js/2.df311acf.chunk.js",
-    "static/js/2.df311acf.chunk.js.map": "/static/js/2.df311acf.chunk.js.map",
+    "main.css": "/static/css/main.c9aa0232.chunk.css",
+    "main.js": "/static/js/main.d7c458ed.chunk.js",
+    "main.js.map": "/static/js/main.d7c458ed.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0e8a9bc8.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0e8a9bc8.js.map",
+    "static/js/2.baeb20e5.chunk.js": "/static/js/2.baeb20e5.chunk.js",
+    "static/js/2.baeb20e5.chunk.js.map": "/static/js/2.baeb20e5.chunk.js.map",
+    "static/js/3.2c41171e.chunk.js": "/static/js/3.2c41171e.chunk.js",
+    "static/js/3.2c41171e.chunk.js.map": "/static/js/3.2c41171e.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.461563957e53177f5ea953be2102db7e.js": "/precache-manifest.461563957e53177f5ea953be2102db7e.js",
+    "precache-manifest.3c66e931893126b31ef61b41b7934f48.js": "/precache-manifest.3c66e931893126b31ef61b41b7934f48.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.58e276f8.chunk.css.map": "/static/css/main.58e276f8.chunk.css.map",
-    "static/js/2.df311acf.chunk.js.LICENSE.txt": "/static/js/2.df311acf.chunk.js.LICENSE.txt",
+    "static/css/main.c9aa0232.chunk.css.map": "/static/css/main.c9aa0232.chunk.css.map",
+    "static/js/2.baeb20e5.chunk.js.LICENSE.txt": "/static/js/2.baeb20e5.chunk.js.LICENSE.txt",
     "static/media/banana.png": "/static/media/banana.adbb0532.png",
     "static/media/bread.png": "/static/media/bread.9c7653be.png",
     "static/media/cake.png": "/static/media/cake.e6034378.png",
@@ -30,12 +32,12 @@
     "static/media/seeds.png": "/static/media/seeds.fc27b4b5.png",
     "static/media/supplement.png": "/static/media/supplement.710ead3e.png",
     "static/media/vegetable.png": "/static/media/vegetable.5a3f9a7b.png",
-    "static/media/videoBackground.mp4": "/static/media/videoBackground.73235023.mp4"
+    "static/media/videoBackground.mp4": "/static/media/videoBackground.bc32f368.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.c17e415f.js",
-    "static/js/2.df311acf.chunk.js",
-    "static/css/main.58e276f8.chunk.css",
-    "static/js/main.f70abe87.chunk.js"
+    "static/js/runtime-main.0e8a9bc8.js",
+    "static/js/2.baeb20e5.chunk.js",
+    "static/css/main.c9aa0232.chunk.css",
+    "static/js/main.d7c458ed.chunk.js"
   ]
 }
