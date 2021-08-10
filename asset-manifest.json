@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.200c2b01.chunk.css",
-    "main.js": "/static/js/main.78b5884f.chunk.js",
-    "main.js.map": "/static/js/main.78b5884f.chunk.js.map",
+    "main.js": "/static/js/main.7f6a8116.chunk.js",
+    "main.js.map": "/static/js/main.7f6a8116.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.016cbb28.js",
     "runtime-main.js.map": "/static/js/runtime-main.016cbb28.js.map",
     "static/css/2.46b159e9.chunk.css": "/static/css/2.46b159e9.chunk.css",
-    "static/js/2.3cbe8ae9.chunk.js": "/static/js/2.3cbe8ae9.chunk.js",
-    "static/js/2.3cbe8ae9.chunk.js.map": "/static/js/2.3cbe8ae9.chunk.js.map",
+    "static/js/2.4f070fc1.chunk.js": "/static/js/2.4f070fc1.chunk.js",
+    "static/js/2.4f070fc1.chunk.js.map": "/static/js/2.4f070fc1.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e0f7d5f8cfaf09d6dd9c2c78220675d4.js": "/precache-manifest.e0f7d5f8cfaf09d6dd9c2c78220675d4.js",
+    "precache-manifest.d803bef3fcf06a7cd6e6f965640f7cd7.js": "/precache-manifest.d803bef3fcf06a7cd6e6f965640f7cd7.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.46b159e9.chunk.css.map": "/static/css/2.46b159e9.chunk.css.map",
     "static/css/main.200c2b01.chunk.css.map": "/static/css/main.200c2b01.chunk.css.map",
-    "static/js/2.3cbe8ae9.chunk.js.LICENSE.txt": "/static/js/2.3cbe8ae9.chunk.js.LICENSE.txt",
+    "static/js/2.4f070fc1.chunk.js.LICENSE.txt": "/static/js/2.4f070fc1.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/Cairo-SemiBold.df4b7a4f.ttf",
     "static/media/banana.png": "/static/media/banana.adbb0532.png",
+    "static/media/beef.png": "/static/media/beef.cf3a2050.png",
     "static/media/bread.png": "/static/media/bread.9c7653be.png",
     "static/media/cake.png": "/static/media/cake.e6034378.png",
     "static/media/chicken.png": "/static/media/chicken.eefa8633.png",
@@ -27,6 +28,7 @@
     "static/media/fish.png": "/static/media/fish.b7036e74.png",
     "static/media/fruit.png": "/static/media/fruit.4532cbbc.png",
     "static/media/grains.png": "/static/media/grains.51add9f5.png",
+    "static/media/lamb.png": "/static/media/lamb.4661c458.png",
     "static/media/legume.png": "/static/media/legume.74f05756.png",
     "static/media/nut.png": "/static/media/nut.fe4dec30.png",
     "static/media/paste.png": "/static/media/paste.7c1bcd82.png",
@@ -40,8 +42,8 @@
   "entrypoints": [
     "static/js/runtime-main.016cbb28.js",
     "static/css/2.46b159e9.chunk.css",
-    "static/js/2.3cbe8ae9.chunk.js",
+    "static/js/2.4f070fc1.chunk.js",
     "static/css/main.200c2b01.chunk.css",
-    "static/js/main.78b5884f.chunk.js"
+    "static/js/main.7f6a8116.chunk.js"
   ]
 }
