@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.c3e73929.chunk.css",
-    "main.js": "/static/js/main.30983723.chunk.js",
-    "main.js.map": "/static/js/main.30983723.chunk.js.map",
+    "main.js": "/static/js/main.2a9a1e11.chunk.js",
+    "main.js.map": "/static/js/main.2a9a1e11.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.016cbb28.js",
     "runtime-main.js.map": "/static/js/runtime-main.016cbb28.js.map",
     "static/css/2.46b159e9.chunk.css": "/static/css/2.46b159e9.chunk.css",
-    "static/js/2.bf726ef5.chunk.js": "/static/js/2.bf726ef5.chunk.js",
-    "static/js/2.bf726ef5.chunk.js.map": "/static/js/2.bf726ef5.chunk.js.map",
+    "static/js/2.f1a03f75.chunk.js": "/static/js/2.f1a03f75.chunk.js",
+    "static/js/2.f1a03f75.chunk.js.map": "/static/js/2.f1a03f75.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e43820a2493229fe977edbf1a8be3ba7.js": "/precache-manifest.e43820a2493229fe977edbf1a8be3ba7.js",
+    "precache-manifest.649ec9ea40563d337a6aecb538548b4a.js": "/precache-manifest.649ec9ea40563d337a6aecb538548b4a.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.46b159e9.chunk.css.map": "/static/css/2.46b159e9.chunk.css.map",
     "static/css/main.c3e73929.chunk.css.map": "/static/css/main.c3e73929.chunk.css.map",
-    "static/js/2.bf726ef5.chunk.js.LICENSE.txt": "/static/js/2.bf726ef5.chunk.js.LICENSE.txt",
+    "static/js/2.f1a03f75.chunk.js.LICENSE.txt": "/static/js/2.f1a03f75.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/Cairo-SemiBold.df4b7a4f.ttf",
     "static/media/banana.png": "/static/media/banana.adbb0532.png",
     "static/media/beef.png": "/static/media/beef.cf3a2050.png",
@@ -23,6 +23,7 @@
     "static/media/dairy.png": "/static/media/dairy.4c7759ec.png",
     "static/media/down-arrow-black.svg": "/static/media/down-arrow-black.ca29e37c.svg",
     "static/media/down-arrow-white.svg": "/static/media/down-arrow-white.2d249c43.svg",
+    "static/media/drink.png": "/static/media/drink.7af244df.png",
     "static/media/ItemCard.css": "/static/media/empty.29c5f5cf.png",
     "static/media/fat.png": "/static/media/fat.0e309105.png",
     "static/media/fish.png": "/static/media/fish.b7036e74.png",
@@ -42,8 +43,8 @@
   "entrypoints": [
     "static/js/runtime-main.016cbb28.js",
     "static/css/2.46b159e9.chunk.css",
-    "static/js/2.bf726ef5.chunk.js",
+    "static/js/2.f1a03f75.chunk.js",
     "static/css/main.c3e73929.chunk.css",
-    "static/js/main.30983723.chunk.js"
+    "static/js/main.2a9a1e11.chunk.js"
   ]
 }
